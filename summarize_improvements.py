@@ -1,0 +1,96 @@
+import json,os,shutil
+from pathlib import Path
+import numpy as np
+from train_baseline import write_csv
+
+
+def main():
+    root=Path('artifacts/improved_fusion');s=json.loads((root/'summary.json').read_text())
+    baseline=json.loads(Path('artifacts/baseline_a1_seed42/metrics.json').read_text())
+    rooms=['a1','c1','g1']
+    original={r:json.loads(Path(f'artifacts/iterations_v2/original_{r}_seed42/metrics.json').read_text()) for r in rooms}
+    old=[original[r]['accuracy'] for r in rooms];new=[s['folds'][r]['accuracy'] for r in rooms]
+    fits=[]
+    for parent in ['iterations_v2','iterations_phase','iterations_tf']:
+        for p in Path('artifacts',parent).glob('*/metrics.json'):
+            d=json.loads(p.read_text());fits.append(dict(mode=d['mode'],room=d['room'],seed=d['seed'],accuracy=d['accuracy'],
+                    macro_recall=d['macro_recall'],train_accuracy=d['train_accuracy'],best_epoch=d['best_epoch'],epochs_run=d['epochs_run']))
+    write_csv(root/'neural_experiments.csv',fits)
+    physics=json.loads(Path('artifacts/physics/summary.json').read_text());projected=json.loads(Path('artifacts/projected/summary.json').read_text())
+    ensembles=json.loads(Path('artifacts/ensembles/summary.json').read_text())
+    os.environ['MPLCONFIGDIR']=str((root/'matplotlib_cache').resolve())
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    fig,ax=plt.subplots(figsize=(9,4.5));x=np.arange(3)
+    a=ax.bar(x-.18,np.array(old)*100,.36,label='Original architecture (matched protocol)',color='#a9b7c4')
+    b=ax.bar(x+.18,np.array(new)*100,.36,label='Improved fusion',color='#247c9c')
+    ax.bar_label(a,fmt='%.1f%%',padding=3);ax.bar_label(b,fmt='%.1f%%',padding=3)
+    ax.set(xticks=x,xticklabels=rooms,ylabel='Window accuracy (%)',ylim=(0,85),title='Room-disjoint development results; not hidden-test scores')
+    ax.legend();ax.grid(axis='y',alpha=.2);fig.tight_layout();fig.savefig(root/'comparison.png',dpi=160);plt.close(fig)
+    fig,axes=plt.subplots(1,3,figsize=(14,4.5))
+    for room,ax in zip(rooms,axes):
+        d=s['folds'][room];cm=np.array(d['confusion_matrix']);mask=np.repeat((cm.sum(1)==0)[:,None],5,axis=1)
+        ax.imshow(np.ma.array(cm,mask=mask),cmap='Blues',vmin=0)
+        for i in range(5):
+            for j in range(5):ax.text(j,i,'N/A' if mask[i,j] else str(cm[i,j]),ha='center',va='center',fontsize=9)
+        ax.set(xticks=range(5),yticks=range(5),xlabel='Predicted headcount',ylabel='True headcount',title=f'{room}: {d["accuracy"]:.2%}')
+    fig.tight_layout();fig.savefig(root/'confusion_matrices.png',dpi=160);plt.close(fig)
+    fig,ax=plt.subplots(figsize=(8,4))
+    a=ax.bar(np.arange(5)-.18,[100*baseline['recall'][str(i)] for i in range(5)],.36,label='First baseline')
+    b=ax.bar(np.arange(5)+.18,[100*s['folds']['a1']['recall'][str(i)] for i in range(5)],.36,label='Improved fusion')
+    ax.bar_label(a,fmt='%.1f',padding=3);ax.bar_label(b,fmt='%.1f',padding=3)
+    ax.set(xticks=range(5),xlabel='True headcount',ylabel='Recall (%)',ylim=(0,115),title='a1: gains are uneven across classes');ax.legend();fig.tight_layout();fig.savefig(root/'a1_class_recall.png',dpi=160);plt.close(fig)
+    cpu=json.loads(Path('artifacts/submission_candidate/cpu_validation.json').read_text())
+    candidate=Path('artifacts/submission_candidate/model.onnx')
+    lines=['# 模型验证与迭代报告','',
+           '2026-10-18。保留原始基线；本轮未使用外部数据或官方无标签数据。开发阶段严格排除房间未知记录；最终全量提交候选才加入这些有标签记录。', '',
+           '## 已实现的提升','',
+           f'- 主验证a1：最初基线{baseline["accuracy"]:.2%} → 改进融合{new[0]:.2%}，提升{100*(new[0]-baseline["accuracy"]):.2f}个百分点（39/240 → 89/240）。',
+           f'- 同批原结构对照的三房间宏平均：{np.mean(old):.2%} → {np.mean(new):.2%}。',
+           f'- 改进模型三个留出房间合计370/820个窗口正确，窗口加权准确率{s["window_accuracy"]:.2%}；房间宏平均{s["room_macro_accuracy"]:.2%}。两者权重不同，不混用。',
+           '- 这些是多轮选型使用的开发分数，不是独立测试或比赛隐藏测试成绩；没有证据声称已达到隐藏集0.52。', '',
+           '| 留出房间 | 同批原结构对照 | 改进融合（CPU ONNX） | 验证窗口数 |', '|---|---:|---:|---:|']
+    for r,o,n in zip(rooms,old,new):lines.append(f'| {r} | {o:.2%} | {n:.2%} | {s["folds"][r]["samples"]} |')
+    lines += ['', '同批原结构对照使用与最初基线略不同的优化器超参数，所以a1为15.83%，不能替换或掩盖最初16.25%的记录。', '',
+              '## 改进结构与训练','',
+              '- 融合3个GPU训练组件：逐频点标准化的1D时序网络、二维时频CNN、带MixStyle的二维时频CNN。',
+              '- 时频CNN输入：将1024频点压缩为128组，600帧按4帧平均为150步，保留3根Rx的频率轮廓及3根Rx的动态分量，形成6×150×128图像。时频共享卷积替代把频率位置全部当作独立通道。',
+              '- CNN为4个降采样卷积阶段（24/48/96/128通道），后接时频均值/标准差/最大值聚合和分类头。',
+              '- 训练采用按类别、类别内房间均衡采样，频率偏移、频点屏蔽、增益扰动、时间反转；MixStyle混合中间特征的均值和标准差。',
+              '- 融合等权平均每个组件经窗口内分数标准化后的softmax，输出其对数作为logits。没有对验证标签拟合堆叠分类器。',
+              '- 两个CNN只使用幅度；ATI通过1D组件进入融合。4帧池化按帧索引进行，不保证等物理时间间隔；长间隔仍是局限。相对相位候选在本轮未改善，不推断所有相位方法均无价值。',
+              f'- 最终融合共{s["parameters"]:,}个参数，开发模型ONNX约4.93MB。', '',
+              '## 反复实验与选型风险','',
+              f'- 完成{len(fits)}次神经网络留出训练；比较{len(physics)}组物理特征分类器、{len(projected)}组投影分类器，每组3折，共{3*(len(physics)+len(projected))}次拟合。',
+              f'- 比较{len(ensembles)}种1至3组件的等权融合。全记录见neural_experiments.csv及各实验目录summary.json。',
+              '- 选型依据a1/c1/g1三折，不仅是a1。最高均分的相位频谱融合为42.72%；选中的融合为42.69%，差约0.03个百分点，后者避免288维协方差频谱计算且a1更好。这个近似平局的取舍不是统计显著性结论。',
+              '- 相同验证房间被反复用于模型设计、早停、组合选择，存在开发集过拟合。不能给这些分数附上独立测试保证。',
+              '- MixStyle组件换种子7、42、123复验，a1为34.17%、34.58%、25.42%；c1为32.92%、32.92%、23.75%；g1为58.53%、57.94%、61.47%。仍有种子敏感性，未对整个融合做多种子复验。',
+              '- b1/e1未作为本轮验证折，只在相应训练折中使用，不能声称覆盖全部房间的交叉验证。每个已知布局只有一个有标签房间，房间与布局效应仍混杂。', '',
+              '## 类别短板（a1）','',
+              '| 人数 | 原基线召回 | 改进召回 |', '|---|---:|---:|']
+    for i in range(5):lines.append(f'| {i} | {baseline["recall"][str(i)]:.2%} | {s["folds"]["a1"]["recall"][str(i)]:.2%} |')
+    lines += ['', '提升主要来自1人与4人；a1的0人、3人召回仍为0，2人召回退步，不能把总分提升解释为五类都已解决。g1的0人与1人召回为59.29%和65.00%；c1的4人召回仍为0。', '',
+              '## CPU、导出与候选文件','',
+              '- 三个开发模型均在完整留出窗口上进行CPU ONNX推理，所有820个预测类别与GPU缓存评估一致。开发模型每窗口平均约18–20毫秒，固定输入输出接口通过。',
+              f'- 全量候选文件：`artifacts/submission_candidate/model.onnx`，{candidate.stat().st_size:,}字节；所有权重内嵌，opset18，CPUExecutionProvider。',
+              '- 全量候选使用48条有标签记录、960个固定窗口，三个组件分别训练2、9、3轮（对应三开发折最佳轮数的中位数），不再使用验证集选择全量权重；全量重训使用固定初始学习率。',
+              '- unknown记录在最终训练中按单条记录代理分组，不假定来自同一房间；不用于任何严格留出成绩。',
+              '- 全量候选的真实准确率未知。37.08%等开发分数属于另行训练的留出模型，绝不属于这个已经见过全部标签的模型。',
+              f'- 独立CPU子进程4种输入（正常/原留出窗口/间断/全零）通过数值与接口检查；平均{min(v["mean_s"] for v in cpu["cases"]):.4f}–{max(v["mean_s"] for v in cpu["cases"]):.4f}秒，峰值工作集{cpu["peak_working_set_bytes"]/1e6:.1f}MB，峰值提交内存{cpu["peak_commit_bytes"]/1e6:.1f}MB。',
+              '- CPU测试不含原始文件解压；最终资源与成绩以平台评测为准。本轮没有上传平台。', '',
+              '## 文件位置','',
+              '- `artifacts/improved_fusion/holdout_*/`：可追溯的开发权重、ONNX、逐窗口预测、CPU核验。',
+              '- `artifacts/submission_candidate/`：全量训练提交候选、配置、权重和CPU核验，不附独立准确率。',
+              '- `tf_model.py`、`improved_models.py`、`fusion_model.py`：选中结构。',
+              '- `run_iterations.py`：房间隔离神经网络实验；`train_submission.py`：冻结方案的全量重训。',
+              '- `artifacts/improved_fusion/source_snapshot/`：本轮完成时的源码快照。', '']
+    Path('docs/ITERATION_REPORT.md').write_text('\n'.join(lines),encoding='utf-8')
+    snapshot=root/'source_snapshot';snapshot.mkdir(exist_ok=True)
+    for p in list(Path('.').glob('*.py'))+[Path('requirements-training.txt'),Path('requirements-lock.txt')]:shutil.copy2(p,snapshot/p.name)
+    shutil.copytree('experiments',snapshot/'experiments',dirs_exist_ok=True)
+    print('Report and figures ready',flush=True)
+
+
+if __name__=='__main__':main()

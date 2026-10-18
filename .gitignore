@@ -1,0 +1,33 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data, checkpoints and generated artifacts
+data/
+artifacts/
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.npz
+*.b2
+*.zip
+
+# Local competition reference PDFs (redistribution not established)
+/docs/reference/*.pdf
+
+# Local credentials and editor/OS files
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
