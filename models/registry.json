@@ -1,0 +1,38 @@
+{
+  "reported_date": "2026-10-19",
+  "source": "user-reported official platform scores; hidden test unavailable",
+  "previous": 0.22,
+  "teammate": 0.31,
+  "candidate": 0.18,
+  "target": 0.52,
+  "candidate_sha256": "c177e7dbf68c08b9c4351465974842a3165fd48f7f01f8c444f22036c12c66cb",
+  "candidate_status": "recommendation_withdrawn",
+  "best_observed_platform_model": "structured_v1",
+  "structured_v1": {
+    "score": 0.37,
+    "sha256": "0fb02b7410899ad24be99b0b4d7a4077b3de106da3666dc054fc4e1d4e299aed",
+    "path": "models/best_037/model.onnx",
+    "source": "user-reported platform"
+  },
+  "sam_v1": {
+    "score": 0.32,
+    "sha256": "6d0fd68aca2836e6a0e19f398f78cd9601f846d6b6721c823365aa0e8266d5c2",
+    "path": "models/sam_032/model.onnx",
+    "status": "evaluated_below_best",
+    "submission_id": null,
+    "source": "user-reported successful platform evaluation",
+    "delta_from_best": -0.05,
+    "history": [
+      {
+        "submission_id": 47074,
+        "status": "download_failed",
+        "error": "Unable to download the submission file."
+      },
+      {
+        "submission_id": null,
+        "status": "evaluated",
+        "score": 0.32
+      }
+    ]
+  }
+}

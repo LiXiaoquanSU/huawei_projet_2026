@@ -31,3 +31,9 @@ artifacts/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Archived research and retained local binaries
+_archive/
+_clean/
+outputs/
+/models/*/

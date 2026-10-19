@@ -1,62 +1,35 @@
-# Huawei 2026 · CSI 人数识别
+# CSI 人数识别
 
-使用 CSI 与 ATI 数据进行人数分类，包含数据审计、房间隔离验证、GPU 训练及 CPU ONNX 导出。
+当前最高平台成绩为 **0.37**；SAM 已成功评测，成绩 **0.32**，不替换基准。训练和结构扩展继续暂停。
 
-当前方案融合 1D 时序网络、时频 CNN 与 MixStyle 时频 CNN。开发阶段三个留出房间的宏平均准确率为 **42.69%**，窗口加权准确率为 **45.12%**。这些是反复选型使用的开发成绩，不是独立测试或比赛成绩；全量训练提交候选没有独立本地准确率。详见 [迭代报告](docs/ITERATION_REPORT.md)。
+| 位置 | 用途 |
+|---|---|
+| `models/best_037/model.onnx` | 平台已评测 0.37，当前基准 |
+| `models/sam_032/model.onnx` | SAM 版，平台已评测 0.32 |
+| `models/*/final.pt` | 对应训练权重，用于恢复和重新导出 |
+| `src/` | 6 个必要代码文件：模型、特征、工具、训练、导出、检查 |
+| `manifests/train_windows.csv` | 48 条记录、960 个训练窗口的清单 |
+| `docs/SUMMARY.md` | 模型介绍、训练方法和实验结论 |
+| `docs/SAM_DOWNLOAD.md` | 本次平台报错及本地检查结果 |
+| `docs/IMPROVEMENT.md` | 后续改进优先级及验证方法 |
+| `_archive/history_20261019/` | 旧代码、实验、缓存、长篇报告的可恢复归档 |
 
-## 目录
+提交时只选所需版本的 **model.onnx**。两份文件均约 82.06 MB，权重全部嵌入；本次整理没有改变它们的内容或哈希。
 
-| 位置 | 内容 |
-| --- | --- |
-| 根目录 `*_model.py`、`*_models.py` | 模型、预处理及公共依赖 |
-| `train_baseline.py`、`run_iterations.py` | 基线训练及房间隔离实验 |
-| `train_submission.py`、`export_improved.py` | 全量候选训练及开发模型导出 |
-| `validate_model.py`、`verify_gpu_export.py` | 接口、数值及 CPU/GPU 验证 |
-| `analyze_data.py`、`prepare_data.py` | 数据审计、划分及解压校验 |
-| `cache_tf.py`、`compare_ensembles.py`、`summarize_improvements.py` | 特征缓存、融合比较及报告生成 |
-| `experiments/` | 相位缓存、物理特征及投影实验入口 |
-| `analysis/` | 数据审计报告、统计及固定划分清单 |
-| `docs/` | 环境、数据策略、模型设计及训练记录 |
-| `artifacts/` | 本地缓存、权重、预测及 ONNX；不上传 Git |
-
-## 环境与数据
-
-本项目原验证环境为 Windows、Python 3.13、PyTorch 2.9.1 CUDA 12.6。训练脚本需要 NVIDIA GPU；导出模型使用 ONNX Runtime CPU 推理。
+从本目录检查文件：
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cu126
-.\.venv\Scripts\python.exe -m pip install -r requirements-training.txt
+.\.venv\Scripts\python.exe -X utf8 src/check_model.py models/sam_032/model.onnx
 ```
 
-`requirements-lock.txt` 记录原机器环境的精确版本。详细环境记录见 [ENVIRONMENT.md](docs/ENVIRONMENT.md)。
+保留的训练入口为 `src/train.py --method baseline` 或 `--method sam`，需要指定新的 `--output` 目录。数据默认在 `D:\huawei2026-data`，也可用 `--data-root` 指定。训练已暂停，本次未运行训练。
 
-按 [数据下载说明](docs/data_downloads.md) 获取数据，默认放在 `D:\huawei2026-data`。当前部分脚本与已保存清单包含该绝对路径；换机器时需修改脚本中的数据路径，并重新生成审计及划分清单：
+恢复权重后导出到新文件：
 
 ```powershell
-.\.venv\Scripts\python.exe -X utf8 analyze_data.py --data-root D:\huawei2026-data
+.\.venv\Scripts\python.exe -X utf8 src/export_model.py models/best_037/final.pt --output outputs/reexport/model.onnx
 ```
 
-仓库中的 `analysis/` 保留实验追溯记录；训练前应确保清单路径与本机数据一致。
+模型数学计算与旧代码一致；整理前后两份权重的原始输入及特征输入输出误差均为 0。原有 `.venv` 和 `.git` 保留。重新训练不保证逐字节复现原文件；已评测版本以保存的 ONNX 及其哈希为准。
 
-## 运行顺序
-
-请从仓库根目录运行所有命令。完整流程及历史参数见 [基线训练](docs/TRAINING.md) 与 [迭代报告](docs/ITERATION_REPORT.md)。
-
-1. 准备环境、下载数据，运行 `analyze_data.py` 生成本机清单。
-2. 运行 `train_baseline.py` 生成基线权重、特征缓存与训练/验证窗口清单。
-3. 运行 `cache_tf.py` 生成时频缓存，再用 `run_iterations.py` 运行所需开发实验（参数见 `--help`）。
-4. 用 `compare_ensembles.py` 比较融合，`export_improved.py` 导出选定开发模型。
-5. `train_submission.py` 依赖选中组件的开发实验指标、基线和时频缓存，以及 `artifacts/model_design/` 的验证用例；后者由 `validate_model.py` 的默认流程生成。准备齐全后才运行全量重训。
-
-这些是历史研究脚本，尚不是一个命令即可重建的训练管线。`train_submission.py` 会拒绝覆盖已存在的 `final.pt`。已有本地提交候选位于 `artifacts/submission_candidate/model.onnx`；克隆仓库不会包含它。
-
-## 文档
-
-- [数据策略](docs/DATA_STRATEGY.md)
-- [初版模型设计](docs/MODEL_DESIGN.md)
-- [数据审计报告](analysis/REPORT.md)
-- [独立实验用法](experiments/README.md)
-- [比赛参考资料位置](docs/reference/README.md)
-
-原始数据、权重、缓存和比赛 PDF 保留在本地并由 `.gitignore` 排除。项目尚未添加开源许可证。
+Git 仓库只保存精简代码、说明、窗口清单与少量检查记录。ONNX、权重、原始数据、测试样例、环境、归档和比赛 PDF 留在本地，不随代码推送。没有本地测试样例时，检查／导出脚本使用全零占位输入，只用于检查接口，不能评估准确率。

@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "model": "best_037",
+      "feature_error": 0.0,
+      "raw_error": 0.0
+    },
+    {
+      "model": "sam_unscored",
+      "feature_error": 0.0,
+      "raw_error": 0.0
+    }
+  ],
+  "training_windows": 960,
+  "records": 48
+}
