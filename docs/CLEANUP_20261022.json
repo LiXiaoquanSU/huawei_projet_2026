@@ -1,0 +1,72 @@
+{
+  "removed_completed_scripts": [
+    {
+      "path": "experiments/data_revision_20261021/feedback.py",
+      "sha256": "1e8b9a815f8f95bee92403f4ffbadf23ab85c775de3c8382215cf9607c9059cf",
+      "bytes": 3091
+    },
+    {
+      "path": "experiments/evidence_20261021/record_ordinal_038.py",
+      "sha256": "7acc485e7c4a0c5f5226162f3634cecf5768031c098577e187d844d46695550e",
+      "bytes": 3084
+    },
+    {
+      "path": "experiments/fresh_backbones_20261022/record_033.py",
+      "sha256": "1f74b41f2a40564752c7d6712262213dd614bf3d2da708432d8cc9cc70ef4b3f",
+      "bytes": 3115
+    },
+    {
+      "path": "experiments/global_local_20261021/record_039.py",
+      "sha256": "31db8e32cd13acdca75c79ea47678284681d9934619d7d9b4aef7b4fdfdd1cdf",
+      "bytes": 6234
+    },
+    {
+      "path": "experiments/global_local_20261021/record_context_039.py",
+      "sha256": "bb46807984247cca7f2be69538a9dd0e8a93800b957b8cd8cd551b11c344e8ac",
+      "bytes": 4173
+    },
+    {
+      "path": "experiments/sliding_windows_20261022/record_mixer_028.py",
+      "sha256": "34977d8cd94fb6fdfa6f20ad32cf7fb1b3ab0303cb5a28352b0c7680a4429479",
+      "bytes": 3185
+    },
+    {
+      "path": "experiments/spatial_research_20261021/record_037.py",
+      "sha256": "037748fdda4b9389a4420a39808318cbb2a0a6cf91f5b784e85d2b0e6e3ede78",
+      "bytes": 3096
+    },
+    {
+      "path": "experiments/spectral_diversity_20261022/record_035.py",
+      "sha256": "9b01da12333747f9f8721dd221c01cb5d0432f4b1a3a6e2fae5e8776d8ec637a",
+      "bytes": 3133
+    },
+    {
+      "path": "experiments/structure_events_20261021/feedback.py",
+      "sha256": "83c87604d0bfeb09c6248c1a6478f9254917330d4b8a3d70996471364db9e759",
+      "bytes": 2959
+    },
+    {
+      "path": "experiments/structure_events_20261021/record_038.py",
+      "sha256": "634c0f6d0a9c3c35cf548ce804e3c193b88b162a228595ac147df99e5e8b0fa7",
+      "bytes": 4937
+    }
+  ],
+  "removed_cache_directories": 15,
+  "updated_checker_references": [
+    "experiments/data_revision_20261021/export.py",
+    "experiments/evidence_20261021/deliver.py",
+    "experiments/evidence_20261021/export_ordinal.py",
+    "experiments/external_upgrade_20261021/export.py",
+    "experiments/fresh_backbones_20261022/deliver.py",
+    "experiments/global_local_20261021/deliver.py",
+    "experiments/motion_external_20261021/export_candidates.py",
+    "experiments/relation_contrast_20261022/deliver.py",
+    "experiments/sliding_windows_20261022/deliver.py",
+    "experiments/spatial_research_20261021/deliver.py",
+    "experiments/spectral_diversity_20261022/deliver.py",
+    "experiments/structure_events_20261021/deliver.py",
+    "experiments/timefreq_mixer_20261022/deliver.py"
+  ],
+  "backup": "_archive/cleanup_20261022/completed_feedback_scripts.zip",
+  "preserved": "all model weights, raw data, training and architecture code, experiment reports and score records"
+}

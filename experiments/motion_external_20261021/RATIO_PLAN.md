@@ -1,0 +1,5 @@
+# Additional antenna-ratio check
+
+Declared before ratio training; raw feature extraction may run concurrently on CPU. Keep the8-variant stage1 selection unchanged. Separately train a stabilized log-amplitude-ratio evidence adapter for each actual Rx pair, seed42,a1/c1/g1, same5epochs and official update budget. Ratios are derived from actual raw frames, not already independently normalized amplitude channels. Validity masks exclude weak inputs; clip log-ratio values, average frequency groups, center in time. Existing relative-phase/conjugate information remains in the original backbone.
+
+This is a supplemental hypothesis motivated by shared-gain rejection; no assertion that it reproduces the inaccessible lecture's exact algorithm. Report all folds independently of main top2 selection. If its selection score exceeds the seed42 baseline, confirm seed2026 and only then consider a full48 fit. No claim that every possible adaptive spectral method (including IAA) has been implemented; high-cost methods are deferred until these evidence representations justify them.

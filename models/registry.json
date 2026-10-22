@@ -7,7 +7,7 @@
   "target": 0.52,
   "candidate_sha256": "c177e7dbf68c08b9c4351465974842a3165fd48f7f01f8c444f22036c12c66cb",
   "candidate_status": "recommendation_withdrawn",
-  "best_observed_platform_model": "structured_v1",
+  "best_observed_platform_model": "global_local_20261021",
   "structured_v1": {
     "score": 0.37,
     "sha256": "0fb02b7410899ad24be99b0b4d7a4077b3de106da3666dc054fc4e1d4e299aed",
@@ -32,6 +32,2439 @@
         "submission_id": null,
         "status": "evaluated",
         "score": 0.32
+      }
+    ]
+  },
+  "updated_date": "2026-10-21",
+  "frequency_set_v1": {
+    "score": 0.25,
+    "path": "models/architecture_batch_20261019/SUBMIT/01_frequency_set_original_e4.onnx",
+    "sha256": "6b3a16012e9b8c98de93b5345e5748a1220e7490a03f78745245f2d4412604a7",
+    "source": "user-reported platform evaluation",
+    "reported_date": "2026-10-20",
+    "submission_id": null,
+    "status": "evaluated_below_best_recommendation_withdrawn",
+    "delta_from_best": -0.12,
+    "local_A": 0.4727272689342499,
+    "local_B": 0.40454545617103577,
+    "note": "Local development scores are not platform scores. Other variants/blends have no reported new platform score."
+  },
+  "recommendations": {
+    "current": "global_local_20261021",
+    "frequency_set_v1": "withdrawn_after_platform_025",
+    "untested_candidates": "no proven platform improvement; not ranked as upgrades",
+    "historical_priority_file": "models/architecture_batch_20261019/priority.json; frozen historical selection, not current recommendation",
+    "all_official_data_experiment": "evaluated .35, below structured_v1 .37; not recommended as upgrade",
+    "next_submission": "sliding_windows_20261022",
+    "next_submission_note": "Test 01_context_events_step_0p5s_seed2026.onnx next; sliding Mixer scored .28, original Mixer .33",
+    "exploratory_candidate": "fresh_backbones_20261022"
+  },
+  "training_20261020_mean_teacher_ema": {
+    "score": 0.35,
+    "path": "models/training_batch_20261020/SUBMIT/01_all_official_mean_teacher_ema.onnx",
+    "sha256": "7ba1ac1604c946b9fc0b51dfc89a2e20ec013653a286161d53621bd93addc261",
+    "source": "user-reported platform evaluation",
+    "status": "evaluated_below_best",
+    "local_A": 0.44545453786849976,
+    "local_B": 0.4636363685131073,
+    "room_mean": 0.29019607106844586,
+    "labeled_records": 48,
+    "unlabeled_records": 150,
+    "initialization": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\models\\best_037\\final.pt; sha256=3519ffd3bc683044457ac8f39f8e639313a8da88dc8809da11519e03c6f0222b",
+    "architecture": "same StructuredModel as best_037",
+    "note": "Full-data file has no independent local accuracy. Fold scores are reused development references.",
+    "delta_from_best": -0.02,
+    "reported_date": "2026-10-20",
+    "submission_id": null,
+    "verified_aliases": [
+      "model.onnx"
+    ]
+  },
+  "training_20261020_mean_teacher": {
+    "score": null,
+    "path": "models/training_batch_20261020/SUBMIT/02_all_official_mean_teacher_student.onnx",
+    "sha256": "de67db31dd69e29a1ad521dc74e3df2155869c3a4b69fb4de6ef933a543f69a0",
+    "source": "new local experiment; platform score not yet reported",
+    "status": "awaiting_platform",
+    "local_A": 0.4318181872367859,
+    "local_B": 0.44090908765792847,
+    "room_mean": 0.2962418347597122,
+    "labeled_records": 48,
+    "unlabeled_records": 150,
+    "initialization": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\models\\best_037\\final.pt; sha256=3519ffd3bc683044457ac8f39f8e639313a8da88dc8809da11519e03c6f0222b",
+    "architecture": "same StructuredModel as best_037",
+    "note": "Full-data file has no independent local accuracy. Fold scores are reused development references."
+  },
+  "training_20261020_polish": {
+    "score": null,
+    "path": "models/training_batch_20261020/SUBMIT/03_best037_low_lr_polish.onnx",
+    "sha256": "813f4fae88675ada1ddce4051ee9f2fd19a3a1057d2d00305ae5d41ef62f8324",
+    "source": "new local experiment; platform score not yet reported",
+    "status": "awaiting_platform",
+    "local_A": 0.4363636374473572,
+    "local_B": 0.44090908765792847,
+    "room_mean": 0.29828430712223053,
+    "labeled_records": 48,
+    "unlabeled_records": 0,
+    "initialization": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\models\\best_037\\final.pt; sha256=3519ffd3bc683044457ac8f39f8e639313a8da88dc8809da11519e03c6f0222b",
+    "architecture": "same StructuredModel as best_037",
+    "note": "Full-data file has no independent local accuracy. Fold scores are reused development references."
+  },
+  "training_20261020_rdrop": {
+    "score": null,
+    "path": "models/training_batch_20261020/SUBMIT/04_full_labels_rdrop.onnx",
+    "sha256": "3a23b4250b18d3be4ab8e515621916d60c8e3979a322a47e0d90d0ce70ea4ff6",
+    "source": "new local experiment; platform score not yet reported",
+    "status": "awaiting_platform",
+    "local_A": 0.3545454442501068,
+    "local_B": 0.44090908765792847,
+    "room_mean": 0.23423202832539877,
+    "labeled_records": 48,
+    "unlabeled_records": 0,
+    "initialization": "fresh seed42",
+    "architecture": "same StructuredModel as best_037",
+    "note": "Full-data file has no independent local accuracy. Fold scores are reused development references."
+  },
+  "rx_symmetry_20261020": {
+    "platform_score": 0.33,
+    "status": "evaluated_below_best_recommendation_withdrawn",
+    "path": "models/review_20261020/model.onnx",
+    "sha256": "c3c5e664f56ec4ca2d06f86d4340b780c801b2c59fec2582711d88d305c0833c",
+    "method": "0.37 backbone; supervised RX permutations + unlabeled physical consistency",
+    "inference": "raw",
+    "labeled_records": 48,
+    "unlabeled_records": 150,
+    "checkpoint": "D:\\huawei2026-experiments\\review_20261020\\fits\\perm_su_full\\final.pt",
+    "experiment_directory": "D:\\huawei2026-experiments\\review_20261020",
+    "selection": {
+      "policy": "perm_su",
+      "mode": "raw",
+      "room_mean_accuracy": 0.3409722149372101,
+      "macro_recall": 0.38820236921310425,
+      "selection_score": 0.3409722149372101,
+      "A": 0.44090908765792847,
+      "B": 0.44545453786849976
+    },
+    "preprocessing_arithmetic": "float64, cast t/s back to float32; input/output float32",
+    "export_repair": "D:\\huawei2026-experiments\\review_20261020\\export_repair.json",
+    "score": 0.33,
+    "alias": "submit_rx_symmetry_20261020.onnx",
+    "source": "user-reported platform evaluation",
+    "reported_date": "2026-10-20",
+    "submission_id": null,
+    "delta_from_best": -0.04,
+    "note": "Only the submitted SU/raw/float64-preprocessing file has this score; S-only and six-permutation averaging remain unscored."
+  },
+  "capacity_20261020": {
+    "score": 0.33,
+    "platform_score": 0.33,
+    "status": "evaluated_below_best",
+    "path": "models/capacity_20261020/model.onnx",
+    "sha256": "15dcaaa2adbee039c09e4fd347d96bb4a3586c2907c302cb56b990b2d9b11da4",
+    "topology": "same four routes, depth, attention heads, embedding/gating/classification; only temporal FFN hidden 1024->4160",
+    "parameter_count": 24532328,
+    "bytes": 97913568,
+    "checkpoint": "D:\\huawei2026-experiments\\capacity_20261020\\fits\\wide_full\\final.pt",
+    "initialization": "best_037; function-preserving widening",
+    "training": "three supervised continuation epochs; original multitask loss and balanced sampler; no U or RX permutations",
+    "source_checkpoint_sha256": "3519ffd3bc683044457ac8f39f8e639313a8da88dc8809da11519e03c6f0222b",
+    "local_controls": [
+      {
+        "wide": false,
+        "room_mean_accuracy": 0.2996732046206792,
+        "macro_recall": 0.3000595271587372
+      },
+      {
+        "wide": true,
+        "room_mean_accuracy": 0.29901960988839466,
+        "macro_recall": 0.29345235228538513
+      }
+    ],
+    "experiment_directory": "D:\\huawei2026-experiments\\capacity_20261020",
+    "preprocessing": "statistics float64, learned operations/input/output float32",
+    "full_data_coverage": {
+      "config": {
+        "fold": "full",
+        "wide": true,
+        "FFN_hidden": 4160,
+        "epochs": 3,
+        "lr": 2e-05,
+        "weight_decay": 0.01,
+        "batch_size": 32,
+        "seed": 42,
+        "source": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\models\\best_037\\final.pt",
+        "source_sha256": "3519ffd3bc683044457ac8f39f8e639313a8da88dc8809da11519e03c6f0222b",
+        "train_records": 48,
+        "train_windows": 960,
+        "val_records": 0,
+        "val_windows": 0,
+        "unlabeled_loss": false,
+        "rx_permutation": false,
+        "parameter_count": 24532328,
+        "source_manifest_sha256": "67a39940de3d281b1e9db6f7c6c29880014838beda8faa8e488b97a3f7cd0f8e"
+      },
+      "validation": null,
+      "actual_distinct_windows": 757,
+      "actual_records": 48,
+      "added_parameters_have_nonzero_gradient": true,
+      "replica_incoming_mean_absolute_divergence": [
+        3.1457460863748565e-05,
+        2.6673242246033624e-05,
+        2.1092248061904684e-05
+      ],
+      "platform_score": null
+    },
+    "source": "user-reported platform evaluation",
+    "reported_date": "2026-10-20",
+    "submission_id": null,
+    "delta_from_best": -0.04
+  },
+  "random_restart_20261020": {
+    "score": null,
+    "platform_score": null,
+    "status": "download_failed",
+    "path": "models/random_restart_20261020/01_wide_seed42.onnx",
+    "sha256": "3a2ba0de05dc81a726f7c06be71a748a6ac6b414c9b2d2bcd51f88745ec3f7ed",
+    "alias": "submit_random_restart_best_20261020.onnx",
+    "candidates": [
+      {
+        "local_priority": 1,
+        "score": null,
+        "platform_score": null,
+        "status": "download_failed",
+        "path": "models/random_restart_20261020/01_wide_seed42.onnx",
+        "sha256": "3a2ba0de05dc81a726f7c06be71a748a6ac6b414c9b2d2bcd51f88745ec3f7ed",
+        "bytes": 97913568,
+        "wide": true,
+        "init_seed": 42,
+        "initialization": "independent fresh random; no pretrained weights",
+        "initial_state_sha256": "0f974536a038ea12688c4788dd89d9b3a61555d240f9dd67f80df18369e144f7",
+        "checkpoint": "D:\\huawei2026-experiments\\random_restart_20261020\\fits\\wide_s42_full\\final.pt",
+        "parameters": 24532328,
+        "development": {
+          "wide": true,
+          "init_seed": 42,
+          "room_mean_accuracy": 0.3166666676600774,
+          "macro_recall": 0.33500000834465027,
+          "selection_score": 0.3166666676600774,
+          "worst_room_accuracy": 0.21250000596046448,
+          "mean_nll": 2.178520917892456,
+          "rooms": {
+            "a1": 0.21250000596046448,
+            "c1": 0.23749999701976776,
+            "g1": 0.5
+          }
+        },
+        "training_records": 48,
+        "actual_records": 48,
+        "distinct_train_windows": 823,
+        "resource": {
+          "status": "pass",
+          "bytes": 97913568,
+          "sha256": "3a2ba0de05dc81a726f7c06be71a748a6ac6b414c9b2d2bcd51f88745ec3f7ed",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 3.111185109538894e-08,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.8916080591913205,
+              "cpu_mean_s": 0.07303919499991025,
+              "cpu_p95_s": 0.07495337499995004
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 2.502752793898111e-08,
+              "logit_max_error": 1.430511474609375e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.8090644243456336,
+              "cpu_mean_s": 0.07265773000008266,
+              "cpu_p95_s": 0.07513961999966341
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 2.634326721484559e-07,
+              "logit_max_error": 2.1457672119140625e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.7188278638640605,
+              "cpu_mean_s": 0.07094085499957145,
+              "cpu_p95_s": 0.07417797499947483
+            }
+          ],
+          "peak_working_set_bytes": 532373504,
+          "peak_commit_bytes": 1401196544,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        },
+        "submission_id": 47547,
+        "platform_error": "Submission 47547 could not be evaluated. Unable to download the submission file.",
+        "retry_path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\submission_retry_47547\\model.onnx",
+        "submission_history": [
+          {
+            "submission_id": 47547,
+            "status": "download_failed",
+            "error": "Submission 47547 could not be evaluated. Unable to download the submission file.",
+            "source": "user-reported platform error",
+            "sha256": "3a2ba0de05dc81a726f7c06be71a748a6ac6b414c9b2d2bcd51f88745ec3f7ed",
+            "platform_score": null,
+            "score": null,
+            "uploaded_filename": "submit_random_restart_best_20261020.onnx",
+            "retry_path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\submission_retry_47547\\model.onnx",
+            "retry_changes": "filename/path only; identical model bytes",
+            "note": "Not evaluated. Do not assign zero accuracy or infer model-runtime failure from this message."
+          }
+        ],
+        "retry_feedback": {
+          "user_report": "Standard-name retry still could not be evaluated",
+          "new_submission_id": null,
+          "exact_error": null,
+          "note": "Original 47547 error was download failure; no new exact message supplied. Download/URL timeout remains unconfirmed."
+        }
+      },
+      {
+        "local_priority": 2,
+        "score": 0.37,
+        "platform_score": 0.37,
+        "status": "evaluated_tied_best",
+        "path": "models/random_restart_20261020/02_original_seed42.onnx",
+        "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+        "bytes": 78608334,
+        "wide": false,
+        "init_seed": 42,
+        "initialization": "independent fresh random; no pretrained weights",
+        "initial_state_sha256": "6330085577bc2ea48daf588162a50ab038db14d63c8d490dbf41b26d7ffdd54e",
+        "checkpoint": "D:\\huawei2026-experiments\\random_restart_20261020\\fits\\original_s42_full\\final.pt",
+        "parameters": 19706024,
+        "development": {
+          "wide": false,
+          "init_seed": 42,
+          "room_mean_accuracy": 0.28145424524943036,
+          "macro_recall": 0.30125001072883606,
+          "selection_score": 0.28145424524943036,
+          "worst_room_accuracy": 0.22499999403953552,
+          "mean_nll": 2.4542003075281777,
+          "rooms": {
+            "a1": 0.22499999403953552,
+            "c1": 0.2958333194255829,
+            "g1": 0.3235294222831726
+          }
+        },
+        "training_records": 48,
+        "actual_records": 48,
+        "distinct_train_windows": 823,
+        "resource": {
+          "status": "pass",
+          "bytes": 78608334,
+          "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 5.688732762632043e-08,
+              "logit_max_error": 1.430511474609375e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.8921970928943629,
+              "cpu_mean_s": 0.06813042500007213,
+              "cpu_p95_s": 0.07237857500012979
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 6.345531994300657e-08,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.40621527897110593,
+              "cpu_mean_s": 0.07050596499984749,
+              "cpu_p95_s": 0.0790583299987702
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 3.0319327459782386e-07,
+              "logit_max_error": 6.67572021484375e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.49015201053622126,
+              "cpu_mean_s": 0.06807563499996831,
+              "cpu_p95_s": 0.07528113499938627
+            }
+          ],
+          "peak_working_set_bytes": 512376832,
+          "peak_commit_bytes": 1381896192,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        },
+        "source": "user-reported platform evaluation",
+        "reported_date": "2026-10-20",
+        "submission_id": null,
+        "note": "Fresh original-width seed42 scored 0.37; tied with historical best, distinct weights."
+      },
+      {
+        "local_priority": 3,
+        "score": null,
+        "platform_score": null,
+        "status": "awaiting_platform",
+        "path": "models/random_restart_20261020/03_wide_seed21.onnx",
+        "sha256": "0a2f21effea79b5c6aef6cc0a263e21735e77a77237330cf5d9bc3f050836cbd",
+        "bytes": 97913568,
+        "wide": true,
+        "init_seed": 21,
+        "initialization": "independent fresh random; no pretrained weights",
+        "initial_state_sha256": "f2b056b55a48726df252ce80dc0dede886172e479f52b8297b1c0f64ef5c4413",
+        "checkpoint": "D:\\huawei2026-experiments\\random_restart_20261020\\fits\\wide_s21_full\\final.pt",
+        "parameters": 24532328,
+        "development": {
+          "wide": true,
+          "init_seed": 21,
+          "room_mean_accuracy": 0.2765522946914037,
+          "macro_recall": 0.29672619700431824,
+          "selection_score": 0.2765522946914037,
+          "worst_room_accuracy": 0.19583334028720856,
+          "mean_nll": 2.296802520751953,
+          "rooms": {
+            "a1": 0.19583334028720856,
+            "c1": 0.2750000059604645,
+            "g1": 0.3588235378265381
+          }
+        },
+        "training_records": 48,
+        "actual_records": 48,
+        "distinct_train_windows": 823,
+        "resource": {
+          "status": "pass",
+          "bytes": 97913568,
+          "sha256": "0a2f21effea79b5c6aef6cc0a263e21735e77a77237330cf5d9bc3f050836cbd",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 1.197661422813745e-08,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.8524458733625458,
+              "cpu_mean_s": 0.07239696999968145,
+              "cpu_p95_s": 0.08120029000056093
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 8.56219087297383e-09,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.8279230338754235,
+              "cpu_mean_s": 0.07162160000007134,
+              "cpu_p95_s": 0.07493278499987355
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 2.423517911909201e-07,
+              "logit_max_error": 2.6226043701171875e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.7096224753438624,
+              "cpu_mean_s": 0.07020533499980956,
+              "cpu_p95_s": 0.07450500499990086
+            }
+          ],
+          "peak_working_set_bytes": 531574784,
+          "peak_commit_bytes": 1400492032,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        }
+      },
+      {
+        "local_priority": 4,
+        "score": null,
+        "platform_score": null,
+        "status": "awaiting_platform",
+        "path": "models/random_restart_20261020/04_original_seed2026.onnx",
+        "sha256": "4860c3fef429af3ba234f2bc530a479cb0d8e927185b24a23ecf306a62d29f4a",
+        "bytes": 78608334,
+        "wide": false,
+        "init_seed": 2026,
+        "initialization": "independent fresh random; no pretrained weights",
+        "initial_state_sha256": "b955169e6c9615036f8bc9d0f396d0af561f926cad3440c837807fb5f598228a",
+        "checkpoint": "D:\\huawei2026-experiments\\random_restart_20261020\\fits\\original_s2026_full\\final.pt",
+        "parameters": 19706024,
+        "development": {
+          "wide": false,
+          "init_seed": 2026,
+          "room_mean_accuracy": 0.25931372741858166,
+          "macro_recall": 0.2857142686843872,
+          "selection_score": 0.25931372741858166,
+          "worst_room_accuracy": 0.19166666269302368,
+          "mean_nll": 2.5193868478139243,
+          "rooms": {
+            "a1": 0.19166666269302368,
+            "c1": 0.23333333432674408,
+            "g1": 0.3529411852359772
+          }
+        },
+        "training_records": 48,
+        "actual_records": 48,
+        "distinct_train_windows": 823,
+        "resource": {
+          "status": "pass",
+          "bytes": 78608334,
+          "sha256": "4860c3fef429af3ba234f2bc530a479cb0d8e927185b24a23ecf306a62d29f4a",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 5.1921209998084805e-08,
+              "logit_max_error": 3.725290298461914e-09,
+              "argmax_matches": true,
+              "reference_margin": 0.9250421741579226,
+              "cpu_mean_s": 0.06677517999996781,
+              "cpu_p95_s": 0.0735028399991279
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 4.162648248318135e-08,
+              "logit_max_error": 9.5367431640625e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.8150245632611144,
+              "cpu_mean_s": 0.06781117499995162,
+              "cpu_p95_s": 0.07055558999936694
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 9.927965316514076e-08,
+              "logit_max_error": 1.430511474609375e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.6608738612534528,
+              "cpu_mean_s": 0.06815681000025506,
+              "cpu_p95_s": 0.07255335000127161
+            }
+          ],
+          "peak_working_set_bytes": 511827968,
+          "peak_commit_bytes": 1381507072,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        }
+      }
+    ],
+    "selection": "top2 per width by predeclared room/macro rule, merged by same rule",
+    "local_seed_statistics": [
+      {
+        "wide": false,
+        "seeds": [
+          7,
+          21,
+          42,
+          2026
+        ],
+        "mean": 0.25549428164958954,
+        "sample_std": 0.020694231172059045,
+        "minimum": 0.2318627486626307,
+        "maximum": 0.28145424524943036
+      },
+      {
+        "wide": true,
+        "seeds": [
+          7,
+          21,
+          42,
+          2026
+        ],
+        "mean": 0.2774918315311273,
+        "sample_std": 0.03104965830323116,
+        "minimum": 0.24068627258141836,
+        "maximum": 0.3166666676600774
+      }
+    ],
+    "experiment_directory": "D:\\huawei2026-experiments\\random_restart_20261020",
+    "platform_best_unchanged": 0.37,
+    "submission_id": 47547,
+    "platform_error": "Submission 47547 could not be evaluated. Unable to download the submission file.",
+    "retry_path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\submission_retry_47547\\model.onnx",
+    "submission_history": [
+      {
+        "submission_id": 47547,
+        "status": "download_failed",
+        "error": "Submission 47547 could not be evaluated. Unable to download the submission file.",
+        "source": "user-reported platform error",
+        "sha256": "3a2ba0de05dc81a726f7c06be71a748a6ac6b414c9b2d2bcd51f88745ec3f7ed",
+        "platform_score": null,
+        "score": null,
+        "uploaded_filename": "submit_random_restart_best_20261020.onnx",
+        "retry_path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\submission_retry_47547\\model.onnx",
+        "retry_changes": "filename/path only; identical model bytes",
+        "note": "Not evaluated. Do not assign zero accuracy or infer model-runtime failure from this message."
+      }
+    ],
+    "next_to_try": {
+      "path": "models/random_restart_20261020/02_original_seed42.onnx",
+      "ready_path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\submissions\\next_original_seed42\\model.onnx",
+      "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+      "bytes": 78608334,
+      "score": 0.37,
+      "status": "evaluated_tied_best",
+      "note": "Fresh original-width seed42 scored 0.37; tied with historical best, distinct weights.",
+      "platform_score": 0.37,
+      "source": "user-reported platform evaluation",
+      "reported_date": "2026-10-20",
+      "submission_id": null
+    },
+    "retry_feedback": {
+      "user_report": "Standard-name retry still could not be evaluated",
+      "new_submission_id": null,
+      "exact_error": null,
+      "note": "Original 47547 error was download failure; no new exact message supplied. Download/URL timeout remains unconfirmed."
+    },
+    "latest_evaluated": {
+      "path": "models/random_restart_20261020/02_original_seed42.onnx",
+      "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+      "bytes": 78608334,
+      "score": 0.37,
+      "platform_score": 0.37,
+      "status": "evaluated_tied_best",
+      "source": "user-reported platform evaluation",
+      "reported_date": "2026-10-20",
+      "submission_id": null,
+      "note": "Fresh original-width seed42 scored 0.37; tied with historical best, distinct weights.",
+      "alias": "submissions/next_original_seed42/model.onnx",
+      "previous_best_score": 0.37,
+      "improvement_over_previous_best": 0.0
+    },
+    "best_evaluated_in_batch": {
+      "path": "models/random_restart_20261020/02_original_seed42.onnx",
+      "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+      "bytes": 78608334,
+      "score": 0.37,
+      "platform_score": 0.37,
+      "status": "evaluated_tied_best",
+      "source": "user-reported platform evaluation",
+      "reported_date": "2026-10-20",
+      "submission_id": null,
+      "note": "Fresh original-width seed42 scored 0.37; tied with historical best, distinct weights.",
+      "alias": "submissions/next_original_seed42/model.onnx",
+      "previous_best_score": 0.37,
+      "improvement_over_previous_best": 0.0
+    }
+  },
+  "random_restart_original_seed42": {
+    "local_priority": 2,
+    "score": 0.37,
+    "platform_score": 0.37,
+    "status": "evaluated_tied_best",
+    "path": "models/random_restart_20261020/02_original_seed42.onnx",
+    "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+    "bytes": 78608334,
+    "wide": false,
+    "init_seed": 42,
+    "initialization": "independent fresh random; no pretrained weights",
+    "initial_state_sha256": "6330085577bc2ea48daf588162a50ab038db14d63c8d490dbf41b26d7ffdd54e",
+    "checkpoint": "D:\\huawei2026-experiments\\random_restart_20261020\\fits\\original_s42_full\\final.pt",
+    "parameters": 19706024,
+    "development": {
+      "wide": false,
+      "init_seed": 42,
+      "room_mean_accuracy": 0.28145424524943036,
+      "macro_recall": 0.30125001072883606,
+      "selection_score": 0.28145424524943036,
+      "worst_room_accuracy": 0.22499999403953552,
+      "mean_nll": 2.4542003075281777,
+      "rooms": {
+        "a1": 0.22499999403953552,
+        "c1": 0.2958333194255829,
+        "g1": 0.3235294222831726
+      }
+    },
+    "training_records": 48,
+    "actual_records": 48,
+    "distinct_train_windows": 823,
+    "resource": {
+      "status": "pass",
+      "bytes": 78608334,
+      "sha256": "c4fa83755c11a057e970649004ad0fb4dd582dc98fb7acce569ec28714270e74",
+      "embedded_weights": true,
+      "cpu_threads": 4,
+      "cases": [
+        {
+          "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+          "probability_max_error": 5.688732762632043e-08,
+          "logit_max_error": 1.430511474609375e-06,
+          "argmax_matches": true,
+          "reference_margin": 0.8921970928943629,
+          "cpu_mean_s": 0.06813042500007213,
+          "cpu_p95_s": 0.07237857500012979
+        },
+        {
+          "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+          "probability_max_error": 6.345531994300657e-08,
+          "logit_max_error": 4.76837158203125e-07,
+          "argmax_matches": true,
+          "reference_margin": 0.40621527897110593,
+          "cpu_mean_s": 0.07050596499984749,
+          "cpu_p95_s": 0.0790583299987702
+        },
+        {
+          "input": "zero",
+          "probability_max_error": 3.0319327459782386e-07,
+          "logit_max_error": 6.67572021484375e-06,
+          "argmax_matches": true,
+          "reference_margin": 0.49015201053622126,
+          "cpu_mean_s": 0.06807563499996831,
+          "cpu_p95_s": 0.07528113499938627
+        }
+      ],
+      "peak_working_set_bytes": 512376832,
+      "peak_commit_bytes": 1381896192,
+      "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+    },
+    "source": "user-reported platform evaluation",
+    "reported_date": "2026-10-20",
+    "submission_id": null,
+    "note": "Fresh original-width seed42 scored 0.37; tied with historical best, distinct weights."
+  },
+  "best_observed_platform_models": [
+    "global_local_20261021"
+  ],
+  "best_observed_platform_score": 0.39,
+  "motion_external_20261021": {
+    "status": "complete",
+    "platform_score": null,
+    "previous_platform_best": 0.37,
+    "best_observed_platform_unchanged": true,
+    "candidates": [
+      {
+        "variant": "fast",
+        "path": "models/motion_external_20261021/fast_seed42.onnx",
+        "sha256": "dbb0af13e8181bc7e953bfad89ba159ab6b1e3af719b3c77aaa64054d5149b13",
+        "bytes": 78925675,
+        "platform_score": null,
+        "status": "research_candidate_platform_unknown",
+        "resource": {
+          "status": "pass",
+          "bytes": 78925675,
+          "sha256": "dbb0af13e8181bc7e953bfad89ba159ab6b1e3af719b3c77aaa64054d5149b13",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 9.081885843365001e-08,
+              "logit_max_error": 9.5367431640625e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.89067142388253,
+              "cpu_mean_s": 0.16543571499933024,
+              "cpu_p95_s": 0.18671219499301514
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 1.0485886614564066e-07,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.2605806143880452,
+              "cpu_mean_s": 0.17104956999901333,
+              "cpu_p95_s": 0.2267158399918117
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 2.2090143037001297e-07,
+              "logit_max_error": 3.337860107421875e-06,
+              "argmax_matches": true,
+              "reference_margin": 0.765856677633695,
+              "cpu_mean_s": 0.17160387000112678,
+              "cpu_p95_s": 0.20429385499519412
+            }
+          ],
+          "peak_working_set_bytes": 513110016,
+          "peak_commit_bytes": 1382404096,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        },
+        "external_data": false,
+        "checkpoint": "D:\\huawei2026-experiments\\motion_external_20261021\\fits\\fast_s42_full\\final.pt",
+        "config": {
+          "variant": "fast",
+          "seed": 42,
+          "fold": "full",
+          "epochs": 5,
+          "lr": 0.0004,
+          "weight_decay": 0.01,
+          "batch_size": 32,
+          "train_records": 48,
+          "train_windows": 960,
+          "validation_records": 0,
+          "initialization": "fresh random",
+          "transfer_checkpoint": null,
+          "parameter_count": 19782632,
+          "official_U": false,
+          "training_seed": 42,
+          "sampling_seed": 42,
+          "platform_score": null
+        },
+        "training_records": 48,
+        "note": "Full48 fit has no independent local accuracy; development results belong to separate fold fits.",
+        "development_results": [
+          {
+            "variant": "fast",
+            "seed": 42,
+            "room_mean_accuracy": 0.25457516809304553,
+            "macro_recall": 0.27119047619047615,
+            "selection_score": 0.25457516809304553,
+            "worst_room_accuracy": 0.1666666716337204,
+            "mean_nll": 2.6249287128448486,
+            "confusion_matrix": [
+              [
+                116,
+                11,
+                1,
+                12,
+                20
+              ],
+              [
+                134,
+                46,
+                36,
+                52,
+                12
+              ],
+              [
+                0,
+                48,
+                49,
+                11,
+                12
+              ],
+              [
+                0,
+                64,
+                49,
+                7,
+                0
+              ],
+              [
+                0,
+                79,
+                61,
+                0,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.1666666716337204,
+              "c1": 0.25,
+              "g1": 0.34705883264541626
+            }
+          },
+          {
+            "variant": "fast",
+            "seed": 2026,
+            "room_mean_accuracy": 0.24052287638187408,
+            "macro_recall": 0.24714285714285716,
+            "selection_score": 0.24052287638187408,
+            "worst_room_accuracy": 0.17916665971279144,
+            "mean_nll": 2.525854150454203,
+            "confusion_matrix": [
+              [
+                80,
+                18,
+                17,
+                13,
+                32
+              ],
+              [
+                77,
+                59,
+                51,
+                72,
+                21
+              ],
+              [
+                0,
+                52,
+                63,
+                2,
+                3
+              ],
+              [
+                2,
+                59,
+                59,
+                0,
+                0
+              ],
+              [
+                8,
+                58,
+                73,
+                1,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.17916665971279144,
+              "c1": 0.2541666626930237,
+              "g1": 0.28823530673980713
+            }
+          }
+        ],
+        "baseline_results": [
+          {
+            "variant": "baseline",
+            "seed": 42,
+            "room_mean_accuracy": 0.28145424524943036,
+            "macro_recall": 0.30125,
+            "selection_score": 0.28145424524943036,
+            "worst_room_accuracy": 0.22499999403953552,
+            "mean_nll": 2.4542003075281777,
+            "confusion_matrix": [
+              [
+                105,
+                8,
+                14,
+                16,
+                17
+              ],
+              [
+                102,
+                49,
+                51,
+                62,
+                16
+              ],
+              [
+                0,
+                38,
+                68,
+                10,
+                4
+              ],
+              [
+                1,
+                42,
+                64,
+                13,
+                0
+              ],
+              [
+                25,
+                40,
+                74,
+                1,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.22499999403953552,
+              "c1": 0.2958333194255829,
+              "g1": 0.3235294222831726
+            }
+          },
+          {
+            "variant": "baseline",
+            "seed": 2026,
+            "room_mean_accuracy": 0.25931372741858166,
+            "macro_recall": 0.2857142857142857,
+            "selection_score": 0.25931372741858166,
+            "worst_room_accuracy": 0.19166666269302368,
+            "mean_nll": 2.5193868478139243,
+            "confusion_matrix": [
+              [
+                104,
+                6,
+                16,
+                8,
+                26
+              ],
+              [
+                113,
+                43,
+                57,
+                57,
+                10
+              ],
+              [
+                0,
+                34,
+                74,
+                0,
+                12
+              ],
+              [
+                2,
+                40,
+                66,
+                1,
+                11
+              ],
+              [
+                0,
+                72,
+                68,
+                0,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.19166666269302368,
+              "c1": 0.23333333432674408,
+              "g1": 0.3529411852359772
+            }
+          }
+        ]
+      },
+      {
+        "variant": "slow",
+        "path": "models/motion_external_20261021/slow_seed42.onnx",
+        "sha256": "d4fdce5fcc29fe1fb28ac33c76eb6067bd7bd4c012a1e8ec918adc10c3f6cb58",
+        "bytes": 78925605,
+        "platform_score": null,
+        "status": "research_candidate_platform_unknown",
+        "resource": {
+          "status": "pass",
+          "bytes": 78925605,
+          "sha256": "d4fdce5fcc29fe1fb28ac33c76eb6067bd7bd4c012a1e8ec918adc10c3f6cb58",
+          "embedded_weights": true,
+          "cpu_threads": 4,
+          "cases": [
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+              "probability_max_error": 1.0196755650948575e-07,
+              "logit_max_error": 4.76837158203125e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.8831160668043998,
+              "cpu_mean_s": 0.10036829999953625,
+              "cpu_p95_s": 0.14485802500203135
+            },
+            {
+              "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+              "probability_max_error": 7.773281301970414e-08,
+              "logit_max_error": 9.5367431640625e-07,
+              "argmax_matches": true,
+              "reference_margin": 0.5007804212254152,
+              "cpu_mean_s": 0.14052436500132898,
+              "cpu_p95_s": 0.19346200499931007
+            },
+            {
+              "input": "zero",
+              "probability_max_error": 1.2714878812603025e-06,
+              "logit_max_error": 1.71661376953125e-05,
+              "argmax_matches": true,
+              "reference_margin": 0.27983597848255365,
+              "cpu_mean_s": 0.16801212000136728,
+              "cpu_p95_s": 0.2042794299995876
+            }
+          ],
+          "peak_working_set_bytes": 512528384,
+          "peak_commit_bytes": 1381666816,
+          "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+        },
+        "external_data": false,
+        "checkpoint": "D:\\huawei2026-experiments\\motion_external_20261021\\fits\\slow_s42_full\\final.pt",
+        "config": {
+          "variant": "slow",
+          "seed": 42,
+          "fold": "full",
+          "epochs": 5,
+          "lr": 0.0004,
+          "weight_decay": 0.01,
+          "batch_size": 32,
+          "train_records": 48,
+          "train_windows": 960,
+          "validation_records": 0,
+          "initialization": "fresh random",
+          "transfer_checkpoint": null,
+          "parameter_count": 19782632,
+          "official_U": false,
+          "training_seed": 42,
+          "sampling_seed": 42,
+          "platform_score": null
+        },
+        "training_records": 48,
+        "note": "Full48 fit has no independent local accuracy; development results belong to separate fold fits.",
+        "development_results": [
+          {
+            "variant": "slow",
+            "seed": 42,
+            "room_mean_accuracy": 0.2592320293188095,
+            "macro_recall": 0.26958333333333334,
+            "selection_score": 0.2592320293188095,
+            "worst_room_accuracy": 0.22499999403953552,
+            "mean_nll": 2.46736208597819,
+            "confusion_matrix": [
+              [
+                101,
+                12,
+                12,
+                23,
+                12
+              ],
+              [
+                103,
+                56,
+                60,
+                47,
+                14
+              ],
+              [
+                0,
+                51,
+                45,
+                17,
+                7
+              ],
+              [
+                0,
+                74,
+                29,
+                17,
+                0
+              ],
+              [
+                0,
+                91,
+                45,
+                4,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.22499999403953552,
+              "c1": 0.2291666716337204,
+              "g1": 0.3235294222831726
+            }
+          },
+          {
+            "variant": "slow",
+            "seed": 2026,
+            "room_mean_accuracy": 0.25939542551835376,
+            "macro_recall": 0.2660119047619048,
+            "selection_score": 0.25939542551835376,
+            "worst_room_accuracy": 0.20000000298023224,
+            "mean_nll": 2.4831149578094482,
+            "confusion_matrix": [
+              [
+                89,
+                4,
+                13,
+                14,
+                40
+              ],
+              [
+                101,
+                58,
+                33,
+                53,
+                35
+              ],
+              [
+                0,
+                38,
+                58,
+                8,
+                16
+              ],
+              [
+                2,
+                64,
+                36,
+                10,
+                8
+              ],
+              [
+                13,
+                67,
+                51,
+                9,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.20000000298023224,
+              "c1": 0.2958333194255829,
+              "g1": 0.2823529541492462
+            }
+          }
+        ],
+        "baseline_results": [
+          {
+            "variant": "baseline",
+            "seed": 42,
+            "room_mean_accuracy": 0.28145424524943036,
+            "macro_recall": 0.30125,
+            "selection_score": 0.28145424524943036,
+            "worst_room_accuracy": 0.22499999403953552,
+            "mean_nll": 2.4542003075281777,
+            "confusion_matrix": [
+              [
+                105,
+                8,
+                14,
+                16,
+                17
+              ],
+              [
+                102,
+                49,
+                51,
+                62,
+                16
+              ],
+              [
+                0,
+                38,
+                68,
+                10,
+                4
+              ],
+              [
+                1,
+                42,
+                64,
+                13,
+                0
+              ],
+              [
+                25,
+                40,
+                74,
+                1,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.22499999403953552,
+              "c1": 0.2958333194255829,
+              "g1": 0.3235294222831726
+            }
+          },
+          {
+            "variant": "baseline",
+            "seed": 2026,
+            "room_mean_accuracy": 0.25931372741858166,
+            "macro_recall": 0.2857142857142857,
+            "selection_score": 0.25931372741858166,
+            "worst_room_accuracy": 0.19166666269302368,
+            "mean_nll": 2.5193868478139243,
+            "confusion_matrix": [
+              [
+                104,
+                6,
+                16,
+                8,
+                26
+              ],
+              [
+                113,
+                43,
+                57,
+                57,
+                10
+              ],
+              [
+                0,
+                34,
+                74,
+                0,
+                12
+              ],
+              [
+                2,
+                40,
+                66,
+                1,
+                11
+              ],
+              [
+                0,
+                72,
+                68,
+                0,
+                0
+              ]
+            ],
+            "rooms": {
+              "a1": 0.19166666269302368,
+              "c1": 0.23333333432674408,
+              "g1": 0.3529411852359772
+            }
+          }
+        ]
+      }
+    ],
+    "experiment_directory": "D:\\huawei2026-experiments\\motion_external_20261021",
+    "development_results": [
+      {
+        "variant": "baseline",
+        "seed": 42,
+        "room_mean_accuracy": 0.28145424524943036,
+        "macro_recall": 0.30125,
+        "selection_score": 0.28145424524943036,
+        "worst_room_accuracy": 0.22499999403953552,
+        "mean_nll": 2.4542003075281777,
+        "confusion_matrix": [
+          [
+            105,
+            8,
+            14,
+            16,
+            17
+          ],
+          [
+            102,
+            49,
+            51,
+            62,
+            16
+          ],
+          [
+            0,
+            38,
+            68,
+            10,
+            4
+          ],
+          [
+            1,
+            42,
+            64,
+            13,
+            0
+          ],
+          [
+            25,
+            40,
+            74,
+            1,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.22499999403953552,
+          "c1": 0.2958333194255829,
+          "g1": 0.3235294222831726
+        }
+      },
+      {
+        "variant": "baseline",
+        "seed": 2026,
+        "room_mean_accuracy": 0.25931372741858166,
+        "macro_recall": 0.2857142857142857,
+        "selection_score": 0.25931372741858166,
+        "worst_room_accuracy": 0.19166666269302368,
+        "mean_nll": 2.5193868478139243,
+        "confusion_matrix": [
+          [
+            104,
+            6,
+            16,
+            8,
+            26
+          ],
+          [
+            113,
+            43,
+            57,
+            57,
+            10
+          ],
+          [
+            0,
+            34,
+            74,
+            0,
+            12
+          ],
+          [
+            2,
+            40,
+            66,
+            1,
+            11
+          ],
+          [
+            0,
+            72,
+            68,
+            0,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.19166666269302368,
+          "c1": 0.23333333432674408,
+          "g1": 0.3529411852359772
+        }
+      },
+      {
+        "variant": "capacity_control",
+        "seed": 42,
+        "room_mean_accuracy": 0.282352939248085,
+        "macro_recall": 0.3082142857142857,
+        "selection_score": 0.282352939248085,
+        "worst_room_accuracy": 0.17916665971279144,
+        "mean_nll": 2.5752158562342324,
+        "confusion_matrix": [
+          [
+            118,
+            12,
+            2,
+            19,
+            9
+          ],
+          [
+            137,
+            50,
+            27,
+            43,
+            23
+          ],
+          [
+            0,
+            33,
+            62,
+            18,
+            7
+          ],
+          [
+            7,
+            37,
+            61,
+            13,
+            2
+          ],
+          [
+            45,
+            23,
+            71,
+            1,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.17916665971279144,
+          "c1": 0.2708333432674408,
+          "g1": 0.3970588147640228
+        }
+      },
+      {
+        "variant": "external_transfer",
+        "seed": 42,
+        "room_mean_accuracy": 0.22704248627026877,
+        "macro_recall": 0.2548214285714286,
+        "selection_score": 0.22704248627026877,
+        "worst_room_accuracy": 0.15833333134651184,
+        "mean_nll": 2.4319801727930703,
+        "confusion_matrix": [
+          [
+            101,
+            8,
+            8,
+            20,
+            23
+          ],
+          [
+            100,
+            33,
+            60,
+            72,
+            15
+          ],
+          [
+            0,
+            40,
+            62,
+            4,
+            14
+          ],
+          [
+            0,
+            49,
+            48,
+            1,
+            22
+          ],
+          [
+            0,
+            76,
+            64,
+            0,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.15833333134651184,
+          "c1": 0.1875,
+          "g1": 0.33529412746429443
+        }
+      },
+      {
+        "variant": "fast",
+        "seed": 42,
+        "room_mean_accuracy": 0.25457516809304553,
+        "macro_recall": 0.27119047619047615,
+        "selection_score": 0.25457516809304553,
+        "worst_room_accuracy": 0.1666666716337204,
+        "mean_nll": 2.6249287128448486,
+        "confusion_matrix": [
+          [
+            116,
+            11,
+            1,
+            12,
+            20
+          ],
+          [
+            134,
+            46,
+            36,
+            52,
+            12
+          ],
+          [
+            0,
+            48,
+            49,
+            11,
+            12
+          ],
+          [
+            0,
+            64,
+            49,
+            7,
+            0
+          ],
+          [
+            0,
+            79,
+            61,
+            0,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.1666666716337204,
+          "c1": 0.25,
+          "g1": 0.34705883264541626
+        }
+      },
+      {
+        "variant": "fast",
+        "seed": 2026,
+        "room_mean_accuracy": 0.24052287638187408,
+        "macro_recall": 0.24714285714285716,
+        "selection_score": 0.24052287638187408,
+        "worst_room_accuracy": 0.17916665971279144,
+        "mean_nll": 2.525854150454203,
+        "confusion_matrix": [
+          [
+            80,
+            18,
+            17,
+            13,
+            32
+          ],
+          [
+            77,
+            59,
+            51,
+            72,
+            21
+          ],
+          [
+            0,
+            52,
+            63,
+            2,
+            3
+          ],
+          [
+            2,
+            59,
+            59,
+            0,
+            0
+          ],
+          [
+            8,
+            58,
+            73,
+            1,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.17916665971279144,
+          "c1": 0.2541666626930237,
+          "g1": 0.28823530673980713
+        }
+      },
+      {
+        "variant": "ratio",
+        "seed": 42,
+        "room_mean_accuracy": 0.2343137264251709,
+        "macro_recall": 0.23488095238095236,
+        "selection_score": 0.2343137264251709,
+        "worst_room_accuracy": 0.20000000298023224,
+        "mean_nll": 2.606640338897705,
+        "confusion_matrix": [
+          [
+            102,
+            17,
+            6,
+            17,
+            18
+          ],
+          [
+            116,
+            57,
+            37,
+            68,
+            2
+          ],
+          [
+            3,
+            70,
+            37,
+            1,
+            9
+          ],
+          [
+            5,
+            86,
+            26,
+            3,
+            0
+          ],
+          [
+            11,
+            99,
+            30,
+            0,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.20000000298023224,
+          "c1": 0.20000000298023224,
+          "g1": 0.3029411733150482
+        }
+      },
+      {
+        "variant": "slow",
+        "seed": 42,
+        "room_mean_accuracy": 0.2592320293188095,
+        "macro_recall": 0.26958333333333334,
+        "selection_score": 0.2592320293188095,
+        "worst_room_accuracy": 0.22499999403953552,
+        "mean_nll": 2.46736208597819,
+        "confusion_matrix": [
+          [
+            101,
+            12,
+            12,
+            23,
+            12
+          ],
+          [
+            103,
+            56,
+            60,
+            47,
+            14
+          ],
+          [
+            0,
+            51,
+            45,
+            17,
+            7
+          ],
+          [
+            0,
+            74,
+            29,
+            17,
+            0
+          ],
+          [
+            0,
+            91,
+            45,
+            4,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.22499999403953552,
+          "c1": 0.2291666716337204,
+          "g1": 0.3235294222831726
+        }
+      },
+      {
+        "variant": "slow",
+        "seed": 2026,
+        "room_mean_accuracy": 0.25939542551835376,
+        "macro_recall": 0.2660119047619048,
+        "selection_score": 0.25939542551835376,
+        "worst_room_accuracy": 0.20000000298023224,
+        "mean_nll": 2.4831149578094482,
+        "confusion_matrix": [
+          [
+            89,
+            4,
+            13,
+            14,
+            40
+          ],
+          [
+            101,
+            58,
+            33,
+            53,
+            35
+          ],
+          [
+            0,
+            38,
+            58,
+            8,
+            16
+          ],
+          [
+            2,
+            64,
+            36,
+            10,
+            8
+          ],
+          [
+            13,
+            67,
+            51,
+            9,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.20000000298023224,
+          "c1": 0.2958333194255829,
+          "g1": 0.2823529541492462
+        }
+      },
+      {
+        "variant": "source_pretrain_control",
+        "seed": 42,
+        "room_mean_accuracy": 0.2032679778834184,
+        "macro_recall": 0.23869047619047618,
+        "selection_score": 0.2032679778834184,
+        "worst_room_accuracy": 0.03333333507180214,
+        "mean_nll": 2.2588030894597373,
+        "confusion_matrix": [
+          [
+            122,
+            0,
+            0,
+            20,
+            18
+          ],
+          [
+            138,
+            18,
+            24,
+            70,
+            30
+          ],
+          [
+            3,
+            32,
+            35,
+            17,
+            33
+          ],
+          [
+            4,
+            23,
+            42,
+            9,
+            42
+          ],
+          [
+            29,
+            44,
+            49,
+            18,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.03333333507180214,
+          "c1": 0.20000000298023224,
+          "g1": 0.3764705955982208
+        }
+      },
+      {
+        "variant": "spectrum",
+        "seed": 42,
+        "room_mean_accuracy": 0.21830066045125326,
+        "macro_recall": 0.21333333333333332,
+        "selection_score": 0.21333333333333332,
+        "worst_room_accuracy": 0.1666666716337204,
+        "mean_nll": 2.609145402908325,
+        "confusion_matrix": [
+          [
+            88,
+            21,
+            18,
+            8,
+            25
+          ],
+          [
+            85,
+            63,
+            64,
+            48,
+            20
+          ],
+          [
+            0,
+            80,
+            34,
+            6,
+            0
+          ],
+          [
+            0,
+            90,
+            29,
+            1,
+            0
+          ],
+          [
+            2,
+            91,
+            46,
+            1,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.1666666716337204,
+          "c1": 0.20000000298023224,
+          "g1": 0.28823530673980713
+        }
+      },
+      {
+        "variant": "static",
+        "seed": 42,
+        "room_mean_accuracy": 0.24117647111415863,
+        "macro_recall": 0.25142857142857145,
+        "selection_score": 0.24117647111415863,
+        "worst_room_accuracy": 0.15833333134651184,
+        "mean_nll": 2.355748176574707,
+        "confusion_matrix": [
+          [
+            88,
+            8,
+            22,
+            27,
+            15
+          ],
+          [
+            77,
+            58,
+            63,
+            74,
+            8
+          ],
+          [
+            0,
+            61,
+            45,
+            11,
+            3
+          ],
+          [
+            1,
+            64,
+            40,
+            15,
+            0
+          ],
+          [
+            4,
+            95,
+            41,
+            0,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.24166665971279144,
+          "c1": 0.15833333134651184,
+          "g1": 0.3235294222831726
+        }
+      },
+      {
+        "variant": "three",
+        "seed": 42,
+        "room_mean_accuracy": 0.22426470617453256,
+        "macro_recall": 0.22863095238095235,
+        "selection_score": 0.22426470617453256,
+        "worst_room_accuracy": 0.18333333730697632,
+        "mean_nll": 2.4466727574666343,
+        "confusion_matrix": [
+          [
+            97,
+            19,
+            10,
+            14,
+            20
+          ],
+          [
+            114,
+            50,
+            46,
+            58,
+            12
+          ],
+          [
+            1,
+            69,
+            40,
+            10,
+            0
+          ],
+          [
+            2,
+            90,
+            24,
+            3,
+            1
+          ],
+          [
+            3,
+            114,
+            20,
+            3,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.20416666567325592,
+          "c1": 0.18333333730697632,
+          "g1": 0.2852941155433655
+        }
+      },
+      {
+        "variant": "three_spectrum",
+        "seed": 42,
+        "room_mean_accuracy": 0.1825980395078659,
+        "macro_recall": 0.17136904761904764,
+        "selection_score": 0.17136904761904764,
+        "worst_room_accuracy": 0.17916665971279144,
+        "mean_nll": 2.39932648340861,
+        "confusion_matrix": [
+          [
+            63,
+            18,
+            20,
+            33,
+            26
+          ],
+          [
+            70,
+            55,
+            44,
+            100,
+            11
+          ],
+          [
+            0,
+            76,
+            28,
+            16,
+            0
+          ],
+          [
+            0,
+            93,
+            23,
+            4,
+            0
+          ],
+          [
+            4,
+            116,
+            14,
+            6,
+            0
+          ]
+        ],
+        "rooms": {
+          "a1": 0.17916665971279144,
+          "c1": 0.18333333730697632,
+          "g1": 0.18529412150382996
+        }
+      }
+    ],
+    "paired_comparisons": [
+      {
+        "variant": "capacity_control",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": 0.0008986939986546649,
+            "macro_recall_delta": 0.006964285714285701
+          }
+        ],
+        "mean_room_delta": 0.0008986939986546649,
+        "improves_both_metrics_all_tested_seeds": true,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "external_transfer",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.05441175897916159,
+            "macro_recall_delta": -0.04642857142857143
+          }
+        ],
+        "mean_room_delta": -0.05441175897916159,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "fast",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.026879077156384823,
+            "macro_recall_delta": -0.03005952380952387
+          },
+          {
+            "seed": 2026,
+            "room_mean_delta": -0.01879085103670758,
+            "macro_recall_delta": -0.038571428571428534
+          }
+        ],
+        "mean_room_delta": -0.0228349640965462,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 2
+      },
+      {
+        "variant": "ratio",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.04714051882425946,
+            "macro_recall_delta": -0.06636904761904766
+          }
+        ],
+        "mean_room_delta": -0.04714051882425946,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "slow",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.022222215930620848,
+            "macro_recall_delta": -0.031666666666666676
+          },
+          {
+            "seed": 2026,
+            "room_mean_delta": 8.169809977209841e-05,
+            "macro_recall_delta": -0.019702380952380916
+          }
+        ],
+        "mean_room_delta": -0.011070258915424375,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 2
+      },
+      {
+        "variant": "source_pretrain_control",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.07818626736601195,
+            "macro_recall_delta": -0.06255952380952384
+          }
+        ],
+        "mean_room_delta": -0.07818626736601195,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "spectrum",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.06315358479817709,
+            "macro_recall_delta": -0.0879166666666667
+          }
+        ],
+        "mean_room_delta": -0.06315358479817709,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "static",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.04027777413527173,
+            "macro_recall_delta": -0.04982142857142857
+          }
+        ],
+        "mean_room_delta": -0.04027777413527173,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "three",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.057189539074897794,
+            "macro_recall_delta": -0.07261904761904767
+          }
+        ],
+        "mean_room_delta": -0.057189539074897794,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      },
+      {
+        "variant": "three_spectrum",
+        "paired_seed_deltas": [
+          {
+            "seed": 42,
+            "room_mean_delta": -0.09885620574156445,
+            "macro_recall_delta": -0.12988095238095237
+          }
+        ],
+        "mean_room_delta": -0.09885620574156445,
+        "improves_both_metrics_all_tested_seeds": false,
+        "tested_seeds": 1
+      }
+    ],
+    "fits": 44,
+    "development_fits": 42,
+    "full_fits": 2,
+    "external_pretrain_fits": 4,
+    "old_model_hashes_verified": 49,
+    "external_window_counts": {
+      "external_train": {
+        "0": 115,
+        "1": 228,
+        "2": 135,
+        "3": 20,
+        "4": 20
+      },
+      "external_holdout": {
+        "0": 113,
+        "1": 190,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    "external_mat_files": 117,
+    "external_mat_bytes": 8183072201,
+    "full_fit_coverage": {
+      "records": 48,
+      "distinct_windows": 823,
+      "pool_windows": 960,
+      "draws": 4800,
+      "method": "Reconstructed independent seeded sampler, same every full fit"
+    },
+    "external_pretraining": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.0877815476235222
+        },
+        {
+          "epoch": 2,
+          "loss": 0.15863712055279927
+        },
+        {
+          "epoch": 3,
+          "loss": 0.05511617956354337
+        },
+        {
+          "epoch": 4,
+          "loss": 0.034044538569801
+        },
+        {
+          "epoch": 5,
+          "loss": 0.021406274398460108
+        }
+      ],
+      "validation": {
+        "accuracy": 0.2970297038555145,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            113
+          ],
+          [
+            0,
+            90,
+            20,
+            0,
+            80
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "represented_classes": [
+          0,
+          1
+        ],
+        "note": "External date holdout; absent classes are not evaluated."
+      },
+      "training_samples_per_epoch": 518,
+      "steps_per_epoch": 17,
+      "train_class_counts": [
+        115,
+        228,
+        135,
+        20,
+        20
+      ]
+    }
+  },
+  "external_upgrade_20261021": {
+    "platform_score": 0.34,
+    "status": "primary_evaluated_below_best",
+    "primary": "models/external_upgrade_20261021/01_external_multitask_seed42.onnx",
+    "submission_alias": "submissions/external_upgrade_20261021/model.onnx",
+    "models": [
+      {
+        "path": "models/external_upgrade_20261021/01_external_multitask_seed42.onnx",
+        "sha256": "106ae34d405e651fc91230e9df17a44a338e8b0a00c4f88d5df86af19a4e8349",
+        "bytes": 79164012,
+        "platform_score": 0.34,
+        "status": "evaluated_below_best",
+        "submission_id": null,
+        "score_source": "user-reported platform feedback",
+        "delta_from_best": -0.03
+      },
+      {
+        "path": "models/external_upgrade_20261021/02_source_control_seed42.onnx",
+        "sha256": "fc20c6903d316ec0c953669e77800c72c30cfaab986ea7b2a08d8bc11968f315",
+        "bytes": 79164012,
+        "platform_score": null
+      }
+    ],
+    "report": "docs/EXTERNAL_UPGRADE_20261021.md",
+    "work_directory": "D:\\huawei2026-experiments\\external_upgrade_20261021"
+  },
+  "data_revision_20261021": {
+    "platform_score": 0.35,
+    "status": "primary_evaluated_below_best",
+    "primary": "models/data_revision_20261021/01_ehu_radio_seed42.onnx",
+    "alias": "submissions/data_revision_20261021/model.onnx",
+    "models": [
+      {
+        "path": "models/data_revision_20261021/01_ehu_radio_seed42.onnx",
+        "bytes": 78608334,
+        "sha256": "21e7a4d38b650133e8ba9c3c0e335c30c3fd7fa53dc1067e9158e3ffc181b83a",
+        "platform_score": 0.35,
+        "status": "evaluated_below_best",
+        "submission_id": null,
+        "score_source": "user-reported platform feedback"
+      },
+      {
+        "path": "models/data_revision_20261021/02_source_transfer_seed42.onnx",
+        "bytes": 78608334,
+        "sha256": "542827c9c07ecc8ca2ce67e6307589bbc9de035da29ef0e26dc838a978533785",
+        "platform_score": null
+      }
+    ],
+    "report": "docs/DATA_REVISION_20261021.md",
+    "work_directory": "D:\\huawei2026-experiments\\data_revision_20261021"
+  },
+  "structure_events_20261021": {
+    "platform_score": 0.38,
+    "status": "evaluated_historical_best",
+    "primary": "models/structure_events_20261021/01_events_seed42.onnx",
+    "alias": "submissions/structure_events_20261021/model.onnx",
+    "models": [
+      {
+        "path": "models/structure_events_20261021/01_events_seed42.onnx",
+        "sha256": "6d3799c7179b01f0cb9c36194aa8f60d6709b4851db82290bdb60db1143a06e3",
+        "bytes": 69362182,
+        "platform_score": 0.38,
+        "status": "evaluated_current_best",
+        "submission_id": null,
+        "score_source": "user-reported platform feedback",
+        "recommendation": "current_platform_best",
+        "previous_best_score": 0.37,
+        "improvement_over_previous_best": 0.01
+      }
+    ],
+    "report": "docs/STRUCTURE_EVENTS_20261021.md",
+    "work_directory": "D:\\huawei2026-experiments\\structure_events_20261021",
+    "stress_gate_passed": false,
+    "recommendation": "historical_platform038_baseline",
+    "known_limitations": {
+      "e1_stress_accuracy": 0.0,
+      "e1_description": "60 zero/one-person windows all predicted3",
+      "two_seed_four_person_recall": 0.0035714285714285713,
+      "teacher_platform_score_unknown": false
+    },
+    "submission_id": null,
+    "score_source": "user-reported platform feedback",
+    "previous_best_score": 0.37,
+    "improvement_over_previous_best": 0.01,
+    "score": 0.38,
+    "best_copy": "models/best_038/model.onnx"
+  },
+  "global_local_20261021": {
+    "platform_score": 0.39,
+    "status": "two_models_evaluated_tied_best",
+    "primary": "models/global_local_20261021/01_cross_events_seed42.onnx",
+    "alias": "submissions/global_local_20261021/model.onnx",
+    "models": [
+      {
+        "path": "models/global_local_20261021/01_cross_events_seed42.onnx",
+        "sha256": "5553bdec10f5faeab55759aab5750c522634ae149a4730bbe185cf26710ea24d",
+        "bytes": 84861141,
+        "platform_score": 0.39,
+        "status": "evaluated_current_best",
+        "score_source": "user-reported platform feedback",
+        "submission_id": null,
+        "recommendation": "current_platform_best",
+        "previous_best_score": 0.38,
+        "improvement_over_previous_best": 0.01
+      },
+      {
+        "path": "models/global_local_20261021/02_context_events_seed2026.onnx",
+        "sha256": "f2ed6fb013e74cdf8d22f3597d11250df517f73a852048603efa64993b50cfb8",
+        "bytes": 70777629,
+        "platform_score": 0.39,
+        "status": "evaluated_tied_best",
+        "score_source": "user-reported platform feedback",
+        "submission_id": null,
+        "recommendation": "tied_platform_best"
+      }
+    ],
+    "report": "docs/GLOBAL_LOCAL_20261021.md",
+    "work_directory": "D:\\huawei2026-experiments\\global_local_20261021",
+    "score_source": "user-reported platform feedback",
+    "submission_id": null,
+    "recommendation": "current_platform_best",
+    "previous_best_score": 0.38,
+    "improvement_over_previous_best": 0.01,
+    "score": 0.39,
+    "best_copy": "models/best_039/model.onnx",
+    "tied_best_copies": [
+      "models/best_039/model.onnx",
+      "models/best_039_context/model.onnx"
+    ]
+  },
+  "best_observed_platform_files": [
+    "models/global_local_20261021/01_cross_events_seed42.onnx",
+    "models/global_local_20261021/02_context_events_seed2026.onnx"
+  ],
+  "ordinal_readout_20261021": {
+    "path": "models/ordinal_readout_20261021/01_context_ordinal_seed2026.onnx",
+    "alias": "submissions/ordinal_readout_20261021/model.onnx",
+    "sha256": "d148937719c1d55395c10a87dbbbbff7ce53866425965be5a9e898352081c36a",
+    "bytes": 70182993,
+    "platform_score": 0.38,
+    "status": "evaluated_below_best",
+    "report": "docs/ORDINAL_READOUT_20261021.md",
+    "score_source": "user-reported platform feedback",
+    "submission_id": null
+  },
+  "evidence_20261021": {
+    "platform_score": null,
+    "status": "development_improvement_platform_unverified",
+    "primary": "models/evidence_20261021/01_aligned_events_seed42.onnx",
+    "alias": "submissions/evidence_20261021/model.onnx",
+    "sha256": "3af15d94a9f67e4eda2d80ea48d78bfd0e3cf170a9ee2d24243661e52ed6ad23",
+    "report": "docs/EVIDENCE_20261021.md"
+  },
+  "spatial_research_20261021": {
+    "path": "models/spatial_research_20261021/01_pyramid_context_seed42.onnx",
+    "alias": "submissions/spatial_research_20261021/model.onnx",
+    "sha256": "37d2d0b8b9aec7d9cca16a4865d00b4b85b7bccef8023da890beaf7760f3b9c3",
+    "bytes": 84974998,
+    "platform_score": 0.37,
+    "status": "evaluated_below_best",
+    "score_source": "user-reported platform feedback",
+    "submission_id": null
+  },
+  "spectral_diversity_20261022": {
+    "path": "models/spectral_diversity_20261022/01_diversity_context_seed42.onnx",
+    "alias": "submissions/spectral_diversity_20261022/model.onnx",
+    "sha256": "170ebf48937364fb15e0291998ad9ccef1e1d1c371bb598c624945353d74c1bd",
+    "bytes": 71093164,
+    "platform_score": 0.35,
+    "status": "evaluated_below_best",
+    "score_source": "user-reported platform feedback",
+    "submission_id": null
+  },
+  "fresh_backbones_20261022": {
+    "path": "models/fresh_backbones_20261022/01_mixer_seed42.onnx",
+    "alias": "submissions/fresh_backbones_20261022/model.onnx",
+    "sha256": "50fc32fab06f3d8a4d21a434415938e39ff5a8001e75b1946bead71afbeaa361",
+    "bytes": 2760922,
+    "platform_score": 0.33,
+    "status": "evaluated_below_best",
+    "score_source": "user-reported platform feedback",
+    "submission_id": null
+  },
+  "sliding_windows_20261022": {
+    "platform_score": null,
+    "status": "three_existing_architectures_retrained_with_overlapping_windows",
+    "candidates": [
+      {
+        "path": "models/sliding_windows_20261022/01_context_events_step_0p5s_seed2026.onnx",
+        "alias": "submissions/sliding_windows_20261022/01_context_events.onnx",
+        "sha256": "d64a04abc30b1953a9f63685efdca45d168bdbf2f1ad1a1f1835aae8f94c9efe",
+        "bytes": 70777629,
+        "platform_score": null,
+        "architecture": "context_events",
+        "recipe": "step_0p5s"
+      },
+      {
+        "path": "models/sliding_windows_20261022/02_cross_events_step_0p5s_seed42.onnx",
+        "alias": "submissions/sliding_windows_20261022/02_cross_events.onnx",
+        "sha256": "f9aff5575d7d263cf7ae821945d23c1947bdef417ad6211b117931462ca583be",
+        "bytes": 84861141,
+        "platform_score": null,
+        "architecture": "cross_events",
+        "recipe": "step_0p5s"
+      },
+      {
+        "path": "models/sliding_windows_20261022/03_mixer_step_1s_seed42.onnx",
+        "alias": "submissions/sliding_windows_20261022/03_mixer.onnx",
+        "sha256": "0271b06917b21dbceff634d700a53a3749cffaf5006d69a560dfca29bf4a6db6",
+        "bytes": 2760922,
+        "platform_score": 0.28,
+        "architecture": "mixer",
+        "recipe": "step_1s",
+        "status": "evaluated_below_best",
+        "score_source": "user-reported platform feedback",
+        "submission_id": null
       }
     ]
   }

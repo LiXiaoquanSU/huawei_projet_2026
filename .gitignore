@@ -36,4 +36,13 @@ Thumbs.db
 _archive/
 _clean/
 outputs/
+runs/
 /models/*/
+
+# Generated local reports, visualizations and submission copies
+/output/
+/submissions/
+/submission_retry_47547/
+/checks/*
+!/checks/cleanup_equivalence.json
+!/checks/sam_download_error_audit.json
