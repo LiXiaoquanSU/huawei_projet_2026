@@ -1,0 +1,3 @@
+*.onnx binary
+*.pt binary
+*.b2 binary
