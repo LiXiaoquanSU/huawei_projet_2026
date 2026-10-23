@@ -1,0 +1,115 @@
+{
+  "sha256": "d64a04abc30b1953a9f63685efdca45d168bdbf2f1ad1a1f1835aae8f94c9efe",
+  "platform_score": 0.35,
+  "source": "user-reported platform feedback",
+  "submission_id": null,
+  "updated_metadata": [
+    "models\\registry.json",
+    "models\\sliding_windows_20261022\\01_context_events_step_0p5s_seed2026.json",
+    "submissions\\sliding_windows_20261022\\01_context_events.json",
+    "submissions\\sliding_windows_20261022\\model.json",
+    "checks\\sliding_training_20261022.json"
+  ],
+  "conclusion": "滑窗上下文模型平台已测 **0.35**，低于原上下文 0.39；滑窗 Mixer 为 0.28，低于原 Mixer 0.33。目前两项平台结果均不支持这套重叠窗口训练方案带来提升，但不能据此断言重叠窗口本身无效。跨注意力滑窗版尚未测试，仅作为完成对照的可选项，不作为已验证升级。",
+  "remaining_untested_existing_models": [
+    {
+      "model": "全量官方数据：学生",
+      "platform_score": "",
+      "path": "models/training_batch_20261020/SUBMIT/02_all_official_mean_teacher_student.onnx",
+      "sha256": "de67db31dd69e29a1ad521dc74e3df2155869c3a4b69fb4de6ef933a543f69a0",
+      "source": "new local experiment; platform score not yet reported",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "0.37低学习率微调",
+      "platform_score": "",
+      "path": "models/training_batch_20261020/SUBMIT/03_best037_low_lr_polish.onnx",
+      "sha256": "813f4fae88675ada1ddce4051ee9f2fd19a3a1057d2d00305ae5d41ef62f8324",
+      "source": "new local experiment; platform score not yet reported",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "R-Drop全量标签对照",
+      "platform_score": "",
+      "path": "models/training_batch_20261020/SUBMIT/04_full_labels_rdrop.onnx",
+      "sha256": "3a23b4250b18d3be4ab8e515621916d60c8e3979a322a47e0d90d0ce70ea4ff6",
+      "source": "new local experiment; platform score not yet reported",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "随机重训大号 seed21",
+      "platform_score": "",
+      "path": "models/random_restart_20261020/03_wide_seed21.onnx",
+      "sha256": "0a2f21effea79b5c6aef6cc0a263e21735e77a77237330cf5d9bc3f050836cbd",
+      "source": "fresh restart experiment; platform score unknown",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "随机重训原版 seed2026",
+      "platform_score": "",
+      "path": "models/random_restart_20261020/04_original_seed2026.onnx",
+      "sha256": "4860c3fef429af3ba234f2bc530a479cb0d8e927185b24a23ecf306a62d29f4a",
+      "source": "fresh restart experiment; platform score unknown",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "快变化分支 seed42",
+      "platform_score": "",
+      "path": "models/motion_external_20261021/fast_seed42.onnx",
+      "sha256": "dbb0af13e8181bc7e953bfad89ba159ab6b1e3af719b3c77aaa64054d5149b13",
+      "source": "local research; platform accuracy unknown",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "慢变化分支 seed42",
+      "platform_score": "",
+      "path": "models/motion_external_20261021/slow_seed42.onnx",
+      "sha256": "d4fdce5fcc29fe1fb28ac33c76eb6067bd7bd4c012a1e8ec918adc10c3f6cb58",
+      "source": "local research; platform accuracy unknown",
+      "status": "awaiting_platform",
+      "submission_id": ""
+    },
+    {
+      "model": "外部数据升级研究：source_control seed42",
+      "platform_score": "",
+      "path": "models/external_upgrade_20261021/02_source_control_seed42.onnx",
+      "sha256": "fc20c6903d316ec0c953669e77800c72c30cfaab986ea7b2a08d8bc11968f315",
+      "source": "local external-data training; no platform evaluation",
+      "status": "research_candidate_platform_unknown",
+      "submission_id": ""
+    },
+    {
+      "model": "数据修订研究：source_transfer seed42",
+      "platform_score": "",
+      "path": "models/data_revision_20261021/02_source_transfer_seed42.onnx",
+      "sha256": "542827c9c07ecc8ca2ce67e6307589bbc9de035da29ef0e26dc838a978533785",
+      "source": "local training only",
+      "status": "research_candidate_platform_unknown",
+      "submission_id": ""
+    },
+    {
+      "model": "aligned_events seed42",
+      "platform_score": "",
+      "path": "models/evidence_20261021/01_aligned_events_seed42.onnx",
+      "sha256": "3af15d94a9f67e4eda2d80ea48d78bfd0e3cf170a9ee2d24243661e52ed6ad23",
+      "source": "matched development only",
+      "status": "development_improvement_platform_unverified",
+      "submission_id": ""
+    },
+    {
+      "model": "cross_events step_0p5s seed42",
+      "platform_score": "",
+      "path": "models/sliding_windows_20261022/02_cross_events_step_0p5s_seed42.onnx",
+      "sha256": "f9aff5575d7d263cf7ae821945d23c1947bdef417ad6211b117931462ca583be",
+      "source": "overlapping-window retraining; platform unverified",
+      "status": "overlapping_window_research_candidate_platform_unverified",
+      "submission_id": ""
+    }
+  ]
+}

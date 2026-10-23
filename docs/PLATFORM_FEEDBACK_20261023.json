@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-23",
+  "source": "user-reported platform feedback",
+  "submission_id": null,
+  "scores_by_sha256": {
+    "f9aff5575d7d263cf7ae821945d23c1947bdef417ad6211b117931462ca583be": 0.34,
+    "c129649a841d103975ea481254bd303b87810179e1789166f72dbb42fbc2b250": 0.4
+  },
+  "best_alias": "models/best_040/model.onnx",
+  "previous_best": 0.39,
+  "new_best": 0.4
+}

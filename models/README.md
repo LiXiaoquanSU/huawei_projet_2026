@@ -1,7 +1,7 @@
 # 模型记录
 
-当前平台并列最佳：`best_039/model.onnx`（跨注意力）和 `best_039_context/model.onnx`（上下文），均为 0.39。
+**2026-10-23 平台反馈：固定概率融合版 0.40，成为当前最佳，比原两份 0.39 高 0.01；跨注意力滑窗版 0.34。滑窗三项全部低于对应原版（上下文 0.35 vs 0.39、跨注意力 0.34 vs 0.39、Mixer 0.28 vs 0.33）。以下待测措辞属于历史状态。**
 
-`platform_scores.csv` 按具体文件 SHA256 记录平台反馈；空白分数表示未知。`registry.json` 保存更多训练和来源信息。权重仅在本机保留，GitHub 不包含 ONNX 或训练检查点。
+最佳入口：`best_040/model.onnx`，对应 `dual039_20261022/01_dual039_equalprob_fp16storage.onnx`，78.24 MB。原两份 0.39 和所有已评测模型保留。
 
-最近滑窗 Mixer 为 0.28；下一份待测是 `sliding_windows_20261022/01_context_events_step_0p5s_seed2026.onnx`。原结构分数不能转移到新权重。
+`platform_scores.csv` 按文件 SHA256 记录成绩，`registry.json` 保存来源。权重仅在本机保存，不进入 GitHub。

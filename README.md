@@ -2,18 +2,22 @@
 
 华为 France Tech Arena 2026 项目：从 WiFi CSI 的 600 帧窗口预测 0–4 人。
 
+**当前平台最佳：固定概率融合版 0.40**，78.24 MB。最佳入口 `models/best_040/model.onnx`，与 `models/dual039_20261022/01_dual039_equalprob_fp16storage.onnx` 内容相同。[实验报告](docs/DUAL039_20261022.md)。
+
 ## 当前结果
 
 | 模型 | 平台分数 | 本地文件 |
 |---|---:|---|
+| 原两份 0.39 的概率融合 | **0.40** | `models/best_040/model.onnx` |
 | 跨注意力事件，seed42 | **0.39** | `models/best_039/model.onnx` |
 | 上下文事件，seed2026 | **0.39** | `models/best_039_context/model.onnx` |
 | 局部事件 | 0.38 | `models/best_038/model.onnx` |
 | 四路线原版 | 0.37 | `models/best_037/model.onnx` |
 | 原始小型 Mixer | 0.33 | `models/fresh_backbones_20261022/01_mixer_seed42.onnx` |
+| 0.5 秒滑窗上下文 | 0.35 | `models/sliding_windows_20261022/01_context_events_step_0p5s_seed2026.onnx` |
 | 1 秒滑窗 Mixer | 0.28 | `models/sliding_windows_20261022/03_mixer_step_1s_seed42.onnx` |
 
-下一份待测是 `models/sliding_windows_20261022/01_context_events_step_0p5s_seed2026.onnx`（70.78 MB）。这是重新训练的权重，平台成绩未知，不继承原版 0.39。根目录 `model.onnx` 是旧 0.35 模型。
+**2026-10-23 平台反馈：固定概率融合版 0.40，成为当前最佳，比原两份 0.39 高 0.01；跨注意力滑窗版 0.34。滑窗三项全部低于对应原版（上下文 0.35 vs 0.39、跨注意力 0.34 vs 0.39、Mixer 0.28 vs 0.33）。以下待测措辞属于历史状态。** 根目录 `model.onnx` 仍为旧 0.35 模型。
 
 完整成绩与文件 SHA256 见 [成绩表](models/platform_scores.csv) 和 [模型登记](models/registry.json)。模型权重、原始数据及生成结果只保存在本机，不上传 GitHub。
 

@@ -1,0 +1,628 @@
+{
+  "architecture": "dual039_equal_probability",
+  "method": "0.5 cross42 probability + 0.5 context2026 probability",
+  "platform_score": 0.4,
+  "status": "current_best",
+  "bytes": 78238992,
+  "sha256": "c129649a841d103975ea481254bd303b87810179e1789166f72dbb42fbc2b250",
+  "compression": [
+    {
+      "architecture": "cross_events",
+      "seed": 42,
+      "source_sha256": "5553bdec10f5faeab55759aab5750c522634ae149a4730bbe185cf26710ea24d",
+      "half_stored_values": 21128448
+    },
+    {
+      "architecture": "context_events",
+      "seed": 2026,
+      "source_sha256": "f2ed6fb013e74cdf8d22f3597d11250df517f73a852048603efa64993b50cfb8",
+      "half_stored_values": 17621632
+    }
+  ],
+  "development": {
+    "method": "fixed 0.5 probability average; no parameter search; reused historical development folds",
+    "results": [
+      {
+        "seeds": [
+          42,
+          2026
+        ],
+        "rooms": [
+          {
+            "room": "a1",
+            "cross_accuracy": 0.225,
+            "context_accuracy": 0.26666666666666666,
+            "ensemble_accuracy": 0.24166666666666667,
+            "confusion_matrix": [
+              [
+                0,
+                17,
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                28,
+                3,
+                9,
+                0
+              ],
+              [
+                0,
+                32,
+                12,
+                16,
+                0
+              ],
+              [
+                1,
+                34,
+                7,
+                18,
+                0
+              ],
+              [
+                22,
+                38,
+                0,
+                0,
+                0
+              ]
+            ],
+            "disagreement_windows": 146
+          },
+          {
+            "room": "c1",
+            "cross_accuracy": 0.2791666666666667,
+            "context_accuracy": 0.24583333333333332,
+            "ensemble_accuracy": 0.24583333333333332,
+            "confusion_matrix": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                1,
+                31,
+                2,
+                0
+              ],
+              [
+                0,
+                1,
+                58,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                60,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                79,
+                0,
+                0
+              ]
+            ],
+            "disagreement_windows": 36
+          },
+          {
+            "room": "g1",
+            "cross_accuracy": 0.4117647058823529,
+            "context_accuracy": 0.3588235294117647,
+            "ensemble_accuracy": 0.39705882352941174,
+            "confusion_matrix": [
+              [
+                106,
+                27,
+                0,
+                1,
+                6
+              ],
+              [
+                119,
+                29,
+                30,
+                21,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "disagreement_windows": 138
+          }
+        ],
+        "cross_accuracy": 0.30531045751633984,
+        "context_accuracy": 0.29044117647058826,
+        "ensemble_accuracy": 0.2948529411764706
+      },
+      {
+        "seeds": [
+          2026,
+          42
+        ],
+        "rooms": [
+          {
+            "room": "a1",
+            "cross_accuracy": 0.2375,
+            "context_accuracy": 0.23333333333333334,
+            "ensemble_accuracy": 0.225,
+            "confusion_matrix": [
+              [
+                0,
+                10,
+                0,
+                10,
+                0
+              ],
+              [
+                0,
+                32,
+                1,
+                7,
+                0
+              ],
+              [
+                0,
+                37,
+                5,
+                17,
+                1
+              ],
+              [
+                0,
+                31,
+                12,
+                17,
+                0
+              ],
+              [
+                4,
+                53,
+                3,
+                0,
+                0
+              ]
+            ],
+            "disagreement_windows": 132
+          },
+          {
+            "room": "c1",
+            "cross_accuracy": 0.23333333333333334,
+            "context_accuracy": 0.25,
+            "ensemble_accuracy": 0.25,
+            "confusion_matrix": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                4,
+                16,
+                13,
+                0
+              ],
+              [
+                0,
+                0,
+                48,
+                12,
+                0
+              ],
+              [
+                1,
+                0,
+                51,
+                8,
+                0
+              ],
+              [
+                1,
+                0,
+                60,
+                19,
+                0
+              ]
+            ],
+            "disagreement_windows": 95
+          },
+          {
+            "room": "g1",
+            "cross_accuracy": 0.36764705882352944,
+            "context_accuracy": 0.36470588235294116,
+            "ensemble_accuracy": 0.37058823529411766,
+            "confusion_matrix": [
+              [
+                112,
+                11,
+                1,
+                1,
+                15
+              ],
+              [
+                124,
+                14,
+                29,
+                31,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "disagreement_windows": 144
+          }
+        ],
+        "cross_accuracy": 0.2794934640522876,
+        "context_accuracy": 0.2826797385620915,
+        "ensemble_accuracy": 0.2818627450980392
+      }
+    ],
+    "note": "Not an independent new test; not a forecast of platform accuracy."
+  },
+  "resource": {
+    "status": "current_best",
+    "bytes": 78238992,
+    "sha256": "c129649a841d103975ea481254bd303b87810179e1789166f72dbb42fbc2b250",
+    "embedded_weights": true,
+    "cpu_threads": 4,
+    "cases": [
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+        "probability_max_error": 3.997095812857676e-05,
+        "logit_max_error": 0.00022639981439098733,
+        "argmax_matches": true,
+        "reference_margin": 0.6461351206832107,
+        "cpu_mean_s": 0.07704653000109829,
+        "cpu_p95_s": 0.0843776799767511
+      },
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+        "probability_max_error": 2.2435927424124813e-05,
+        "logit_max_error": 0.0002467008523137082,
+        "argmax_matches": true,
+        "reference_margin": 0.64482297937693,
+        "cpu_mean_s": 0.07517248999793083,
+        "cpu_p95_s": 0.08037606998404953
+      },
+      {
+        "input": "zero",
+        "probability_max_error": 2.233291305142604e-05,
+        "logit_max_error": 9.948084129796086e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.5707415458178764,
+        "cpu_mean_s": 0.0735241650021635,
+        "cpu_p95_s": 0.07503337000234751
+      }
+    ],
+    "peak_working_set_bytes": 596652032,
+    "peak_commit_bytes": 1466523648,
+    "note": "local CPU resource/numerical verification; not hidden platform accuracy",
+    "platform_score": 0.4,
+    "score_source": "user-reported platform feedback",
+    "feedback_date": "2026-10-23",
+    "submission_id": null
+  },
+  "numerical_audit": {
+    "status": "pass",
+    "windows": 30,
+    "rooms": [
+      "a1",
+      "b1",
+      "c1",
+      "e1",
+      "g1",
+      "unknown"
+    ],
+    "labels": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "cases": [
+      {
+        "identifier": "a_a1_hash813694_1",
+        "start": 0,
+        "headcount": "1",
+        "probability_max_error": 0.00017312659346030435,
+        "argmax_matches": true,
+        "reference_margin": 0.16085541248321533
+      },
+      {
+        "identifier": "a_a1_hash813694_1",
+        "start": 5700,
+        "headcount": "1",
+        "probability_max_error": 3.859113118165336e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.4558056890964508
+      },
+      {
+        "identifier": "a_a1_hash813694_1",
+        "start": 11400,
+        "headcount": "1",
+        "probability_max_error": 1.2867355294404748e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.03570371866226196
+      },
+      {
+        "identifier": "a_a1_hash058655_2",
+        "start": 0,
+        "headcount": "2",
+        "probability_max_error": 2.5010373221057147e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.3604224920272827
+      },
+      {
+        "identifier": "a_a1_hash058655_2",
+        "start": 5700,
+        "headcount": "2",
+        "probability_max_error": 2.4186740300802256e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.036937981843948364
+      },
+      {
+        "identifier": "a_a1_hash058655_2",
+        "start": 11400,
+        "headcount": "2",
+        "probability_max_error": 2.229050799587573e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.5562819838523865
+      },
+      {
+        "identifier": "a_a1_hash861722_3",
+        "start": 0,
+        "headcount": "3",
+        "probability_max_error": 4.9001927183045524e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.5091369152069092
+      },
+      {
+        "identifier": "a_a1_hash861722_3",
+        "start": 5700,
+        "headcount": "3",
+        "probability_max_error": 4.718525624414216e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.5210086107254028
+      },
+      {
+        "identifier": "a_a1_hash861722_3",
+        "start": 11400,
+        "headcount": "3",
+        "probability_max_error": 9.302074934713911e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.5720397233963013
+      },
+      {
+        "identifier": "a_a1_hash844151_4",
+        "start": 0,
+        "headcount": "4",
+        "probability_max_error": 1.3260151649929774e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.8372973799705505
+      },
+      {
+        "identifier": "a_a1_hash844151_4",
+        "start": 5700,
+        "headcount": "4",
+        "probability_max_error": 1.1911011717491427e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.8744800090789795
+      },
+      {
+        "identifier": "a_a1_hash844151_4",
+        "start": 11400,
+        "headcount": "4",
+        "probability_max_error": 2.0084395441322123e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.8713667392730713
+      },
+      {
+        "identifier": "a_a1_hash957492_0",
+        "start": 0,
+        "headcount": "0",
+        "probability_max_error": 4.615112353445472e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.2981821298599243
+      },
+      {
+        "identifier": "a_a1_hash957492_0",
+        "start": 5700,
+        "headcount": "0",
+        "probability_max_error": 0.00020323291791204956,
+        "argmax_matches": true,
+        "reference_margin": 0.20996779203414917
+      },
+      {
+        "identifier": "a_a1_hash957492_0",
+        "start": 11400,
+        "headcount": "0",
+        "probability_max_error": 5.278041057393823e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.15858107805252075
+      },
+      {
+        "identifier": "c_c1_hash906339_1",
+        "start": 0,
+        "headcount": "1",
+        "probability_max_error": 3.3337379966802416e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.64614337682724
+      },
+      {
+        "identifier": "c_c1_hash906339_1",
+        "start": 5700,
+        "headcount": "1",
+        "probability_max_error": 3.425918208899148e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.8088355660438538
+      },
+      {
+        "identifier": "c_c1_hash906339_1",
+        "start": 11400,
+        "headcount": "1",
+        "probability_max_error": 2.823361398818225e-05,
+        "argmax_matches": true,
+        "reference_margin": 0.7354627251625061
+      },
+      {
+        "identifier": "b_b1_hash962037_0",
+        "start": 0,
+        "headcount": "0",
+        "probability_max_error": 1.8799042349471051e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.8733767867088318
+      },
+      {
+        "identifier": "b_b1_hash962037_0",
+        "start": 5700,
+        "headcount": "0",
+        "probability_max_error": 6.86405470062823e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.8294258117675781
+      },
+      {
+        "identifier": "b_b1_hash962037_0",
+        "start": 11400,
+        "headcount": "0",
+        "probability_max_error": 5.852832220210047e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.833214521408081
+      },
+      {
+        "identifier": "e_e1_hash508136_0",
+        "start": 0,
+        "headcount": "0",
+        "probability_max_error": 3.5998824373661975e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.7403069734573364
+      },
+      {
+        "identifier": "e_e1_hash508136_0",
+        "start": 5700,
+        "headcount": "0",
+        "probability_max_error": 4.528971322748099e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.801882803440094
+      },
+      {
+        "identifier": "e_e1_hash508136_0",
+        "start": 11400,
+        "headcount": "0",
+        "probability_max_error": 3.590526882923939e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.6960719227790833
+      },
+      {
+        "identifier": "unknown_unknown_hash287936_1",
+        "start": 0,
+        "headcount": "1",
+        "probability_max_error": 5.857768783257278e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.9253323674201965
+      },
+      {
+        "identifier": "unknown_unknown_hash287936_1",
+        "start": 5700,
+        "headcount": "1",
+        "probability_max_error": 1.2388851917989607e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.931252658367157
+      },
+      {
+        "identifier": "unknown_unknown_hash287936_1",
+        "start": 11400,
+        "headcount": "1",
+        "probability_max_error": 2.666340775281384e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.9223284721374512
+      },
+      {
+        "identifier": "g_g1_hash748206_0",
+        "start": 0,
+        "headcount": "0",
+        "probability_max_error": 4.723427571518002e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.8123841881752014
+      },
+      {
+        "identifier": "g_g1_hash748206_0",
+        "start": 5700,
+        "headcount": "0",
+        "probability_max_error": 2.8077750543475943e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.8028519749641418
+      },
+      {
+        "identifier": "g_g1_hash748206_0",
+        "start": 11400,
+        "headcount": "0",
+        "probability_max_error": 7.749821147817748e-06,
+        "argmax_matches": true,
+        "reference_margin": 0.6733661890029907
+      }
+    ],
+    "note": "Numerical probes only; not held-out accuracy."
+  },
+  "training": "No new training. Reuses two original platform .39 checkpoints.",
+  "storage": "Large float32 initializers rounded to float16, cast back to float32 before computation.",
+  "limitations": "Development gain is small and inconsistent across seeds; +0.05 platform gain is not established.",
+  "path": "models/dual039_20261022/01_dual039_equalprob_fp16storage.onnx",
+  "report": "docs/DUAL039_20261022.md",
+  "score_source": "user-reported platform feedback",
+  "submission_id": null,
+  "alias": "submissions/dual039_20261022/model.onnx",
+  "feedback_date": "2026-10-23"
+}

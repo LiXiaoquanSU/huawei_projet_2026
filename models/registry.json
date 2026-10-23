@@ -7,7 +7,7 @@
   "target": 0.52,
   "candidate_sha256": "c177e7dbf68c08b9c4351465974842a3165fd48f7f01f8c444f22036c12c66cb",
   "candidate_status": "recommendation_withdrawn",
-  "best_observed_platform_model": "global_local_20261021",
+  "best_observed_platform_model": "dual039_20261022",
   "structured_v1": {
     "score": 0.37,
     "sha256": "0fb02b7410899ad24be99b0b4d7a4077b3de106da3666dc054fc4e1d4e299aed",
@@ -35,7 +35,7 @@
       }
     ]
   },
-  "updated_date": "2026-10-21",
+  "updated_date": "2026-10-23",
   "frequency_set_v1": {
     "score": 0.25,
     "path": "models/architecture_batch_20261019/SUBMIT/01_frequency_set_original_e4.onnx",
@@ -50,13 +50,13 @@
     "note": "Local development scores are not platform scores. Other variants/blends have no reported new platform score."
   },
   "recommendations": {
-    "current": "global_local_20261021",
+    "current": "dual039_20261022",
     "frequency_set_v1": "withdrawn_after_platform_025",
     "untested_candidates": "no proven platform improvement; not ranked as upgrades",
     "historical_priority_file": "models/architecture_batch_20261019/priority.json; frozen historical selection, not current recommendation",
     "all_official_data_experiment": "evaluated .35, below structured_v1 .37; not recommended as upgrade",
-    "next_submission": "sliding_windows_20261022",
-    "next_submission_note": "Test 01_context_events_step_0p5s_seed2026.onnx next; sliding Mixer scored .28, original Mixer .33",
+    "next_submission": null,
+    "next_submission_note": "All three sliding models evaluated below their originals. Dual039 ensemble scored .40, new best; no new candidate selected.",
     "exploratory_candidate": "fresh_backbones_20261022"
   },
   "training_20261020_mean_teacher_ema": {
@@ -717,7 +717,7 @@
   "best_observed_platform_models": [
     "global_local_20261021"
   ],
-  "best_observed_platform_score": 0.39,
+  "best_observed_platform_score": 0.4,
   "motion_external_20261021": {
     "status": "complete",
     "platform_score": null,
@@ -2434,25 +2434,32 @@
   },
   "sliding_windows_20261022": {
     "platform_score": null,
-    "status": "three_existing_architectures_retrained_with_overlapping_windows",
+    "status": "all_three_evaluated_below_originals",
     "candidates": [
       {
         "path": "models/sliding_windows_20261022/01_context_events_step_0p5s_seed2026.onnx",
         "alias": "submissions/sliding_windows_20261022/01_context_events.onnx",
         "sha256": "d64a04abc30b1953a9f63685efdca45d168bdbf2f1ad1a1f1835aae8f94c9efe",
         "bytes": 70777629,
-        "platform_score": null,
+        "platform_score": 0.35,
         "architecture": "context_events",
-        "recipe": "step_0p5s"
+        "recipe": "step_0p5s",
+        "status": "evaluated_below_best",
+        "score_source": "user-reported platform feedback",
+        "submission_id": null
       },
       {
         "path": "models/sliding_windows_20261022/02_cross_events_step_0p5s_seed42.onnx",
         "alias": "submissions/sliding_windows_20261022/02_cross_events.onnx",
         "sha256": "f9aff5575d7d263cf7ae821945d23c1947bdef417ad6211b117931462ca583be",
         "bytes": 84861141,
-        "platform_score": null,
+        "platform_score": 0.34,
         "architecture": "cross_events",
-        "recipe": "step_0p5s"
+        "recipe": "step_0p5s",
+        "status": "evaluated_below_best",
+        "score_source": "user-reported platform feedback",
+        "feedback_date": "2026-10-23",
+        "submission_id": null
       },
       {
         "path": "models/sliding_windows_20261022/03_mixer_step_1s_seed42.onnx",
@@ -2467,5 +2474,17 @@
         "submission_id": null
       }
     ]
+  },
+  "dual039_20261022": {
+    "path": "models/dual039_20261022/01_dual039_equalprob_fp16storage.onnx",
+    "alias": "submissions/dual039_20261022/model.onnx",
+    "sha256": "c129649a841d103975ea481254bd303b87810179e1789166f72dbb42fbc2b250",
+    "bytes": 78238992,
+    "platform_score": 0.4,
+    "status": "current_best",
+    "report": "docs/DUAL039_20261022.md",
+    "score_source": "user-reported platform feedback",
+    "feedback_date": "2026-10-23",
+    "submission_id": null
   }
 }
