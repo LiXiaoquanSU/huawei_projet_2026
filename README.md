@@ -4,6 +4,8 @@
 
 **当前平台最佳：固定概率融合版 0.40**，78.24 MB。最佳入口 `models/best_040/model.onnx`，与 `models/dual039_20261022/01_dual039_equalprob_fp16storage.onnx` 内容相同。[实验报告](docs/DUAL039_20261022.md)。
 
+下一份可选实验候选：`models/training_diversity_20261023/01_cross039_context_physical_seed314_equalprob.onnx`（78.24 MB，平台未知），原跨注意力搭配 seed314 重新训练的上下文模型。15次训练对照未发现更好的损失配方，本地融合29.46%与原组合29.49%基本持平，不作为已验证升级。[报告](docs/TRAINING_DIVERSITY_20261023.md)。
+
 ## 当前结果
 
 | 模型 | 平台分数 | 本地文件 |

@@ -55,8 +55,8 @@
     "untested_candidates": "no proven platform improvement; not ranked as upgrades",
     "historical_priority_file": "models/architecture_batch_20261019/priority.json; frozen historical selection, not current recommendation",
     "all_official_data_experiment": "evaluated .35, below structured_v1 .37; not recommended as upgrade",
-    "next_submission": null,
-    "next_submission_note": "All three sliding models evaluated below their originals. Dual039 ensemble scored .40, new best; no new candidate selected.",
+    "next_submission": "training_diversity_20261023",
+    "next_submission_note": "Training-diversity fixed blend; platform untested. Original .40 remains best.",
     "exploratory_candidate": "fresh_backbones_20261022"
   },
   "training_20261020_mean_teacher_ema": {
@@ -2486,5 +2486,14 @@
     "score_source": "user-reported platform feedback",
     "feedback_date": "2026-10-23",
     "submission_id": null
+  },
+  "training_diversity_20261023": {
+    "path": "models/training_diversity_20261023/01_cross039_context_physical_seed314_equalprob.onnx",
+    "alias": "submissions/training_diversity_20261023/model.onnx",
+    "sha256": "0d1ccfe880edf46981ab38f8e033a535f93d20d18ac2ed42679d615de1e4129b",
+    "bytes": 78241057,
+    "platform_score": null,
+    "status": "research_candidate_platform_unverified",
+    "report": "docs/TRAINING_DIVERSITY_20261023.md"
   }
 }
