@@ -1,0 +1,334 @@
+{
+  "id": "best_047_full",
+  "name": "队友0.47 12视角保护版",
+  "path": "models/best_047_full/model.onnx",
+  "sha256": "3e0da273c26ad3f966b2610a6bca351c365e111487dcbe6625dc30f90160fc33",
+  "bytes": 83680790,
+  "platform_score": 0.47,
+  "score_source": "user-reported platform result 2026-10-24",
+  "owner": "teammate",
+  "submission_id": "49131",
+  "original_filename": "model(3).onnx",
+  "status": "retained_former_best",
+  "structure": {
+    "nodes": 27177,
+    "initializers": 190,
+    "old044_initializers_identical": 178,
+    "additional_initializers": {
+      "__rxg_order_120": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "values": [
+          1,
+          2,
+          0
+        ]
+      },
+      "__rxg_order_201": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "values": [
+          2,
+          0,
+          1
+        ]
+      },
+      "__rxf_half": {
+        "shape": [],
+        "dtype": "float32",
+        "values": 0.5
+      },
+      "__tta_frame_order": {
+        "shape": [
+          600
+        ],
+        "dtype": "int64",
+        "values": {
+          "first": [
+            599,
+            598,
+            597,
+            596,
+            595
+          ],
+          "last": [
+            4,
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      },
+      "__rxf_zero": {
+        "shape": [],
+        "dtype": "int64",
+        "values": 0
+      },
+      "__rxf_two": {
+        "shape": [],
+        "dtype": "int64",
+        "values": 2
+      },
+      "__tta_interval_order": {
+        "shape": [
+          600
+        ],
+        "dtype": "int64",
+        "values": {
+          "first": [
+            598,
+            597,
+            596,
+            595,
+            594
+          ],
+          "last": [
+            3,
+            2,
+            1,
+            0,
+            599
+          ]
+        }
+      },
+      "__rxg_order_102": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "values": [
+          1,
+          0,
+          2
+        ]
+      },
+      "__rxg_sixth": {
+        "shape": [],
+        "dtype": "float32",
+        "values": 0.1666666716337204
+      },
+      "__tta_half": {
+        "shape": [],
+        "dtype": "float32",
+        "values": 0.5
+      },
+      "__rxf_order": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "values": [
+          2,
+          1,
+          0
+        ]
+      },
+      "__rxg_order_021": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "values": [
+          0,
+          2,
+          1
+        ]
+      }
+    },
+    "op_counts": {
+      "Gather": 665,
+      "Cast": 2160,
+      "Constant": 6912,
+      "Unsqueeze": 1044,
+      "Pow": 264,
+      "ReduceSum": 336,
+      "Greater": 96,
+      "CastLike": 1800,
+      "Add": 1219,
+      "Log": 140,
+      "Mul": 1496,
+      "Concat": 1092,
+      "Reshape": 2688,
+      "Clip": 192,
+      "Div": 516,
+      "ReduceMean": 360,
+      "Transpose": 336,
+      "Sub": 564,
+      "Sqrt": 192,
+      "Max": 60,
+      "Min": 60,
+      "Slice": 312,
+      "Shape": 744,
+      "Expand": 1464,
+      "Reciprocal": 12,
+      "Abs": 12,
+      "ReduceMax": 60,
+      "Identity": 132,
+      "Exp": 30,
+      "CumSum": 12,
+      "Conv": 444,
+      "InstanceNormalization": 288,
+      "Range": 288,
+      "Sigmoid": 420,
+      "Gemm": 228,
+      "LayerNormalization": 156,
+      "Sin": 12,
+      "Cos": 12,
+      "MatMul": 228,
+      "Softmax": 72,
+      "Erf": 36,
+      "Squeeze": 12,
+      "ArgMax": 2,
+      "Equal": 4,
+      "Or": 2,
+      "Where": 2,
+      "Sum": 1
+    },
+    "embedded_metadata": {
+      "base_model_sha256": "d41c3d7cff9a31cde80635ea40df30b4f432c9029b50b40430fff7af00ee62ad",
+      "base_submission": "49130",
+      "base_accuracy": "0.47",
+      "transformation": "Protect current .47 class0/class2 outputs; else equal score mean of all six receiver permutations and time reversal",
+      "learned_weights": "All .47 initializers preserved byte for byte and shared",
+      "new_training": "false",
+      "bias": "Original Udirect unchanged; no new fitting",
+      "platform_accuracy": "not yet evaluated"
+    },
+    "note": "Embedded score/submission metadata is provenance text, not independent platform verification. Latest user-reported .47 overrides stale not-yet-evaluated text.",
+    "exact_network_body_copies": 12,
+    "body_proof": [
+      {
+        "namespace": "rx_group_012/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_012/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_021/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_021/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_102/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_102/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_120/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_120/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_201/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_201/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_210/tta_view0/",
+        "nodes": 2259,
+        "exact_body": true
+      },
+      {
+        "namespace": "rx_group_210/tta_view1/",
+        "nodes": 2259,
+        "exact_body": true
+      }
+    ]
+  },
+  "report": "docs/MODELS_047.md",
+  "resource": {
+    "status": "pass",
+    "bytes": 83680790,
+    "sha256": "3e0da273c26ad3f966b2610a6bca351c365e111487dcbe6625dc30f90160fc33",
+    "embedded_weights": true,
+    "cpu_threads": 4,
+    "cases": [
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+        "probability_max_error": 5.7912934003923056e-08,
+        "logit_max_error": 1.3898511319609952e-07,
+        "argmax_matches": true,
+        "reference_margin": 0.26047159604641246,
+        "cpu_mean_s": 0.612734880001517,
+        "cpu_p95_s": 0.6404658299841686
+      },
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\case_gap.npz",
+        "probability_max_error": 1.1961602208732103e-08,
+        "logit_max_error": 8.857164734976664e-08,
+        "argmax_matches": true,
+        "reference_margin": 0.10053677831304414,
+        "cpu_mean_s": 0.6075202900014119,
+        "cpu_p95_s": 0.6228118799597724
+      },
+      {
+        "input": "zero",
+        "probability_max_error": 2.0217717333625984e-08,
+        "logit_max_error": 0.0,
+        "argmax_matches": true,
+        "reference_margin": 0.18333381653434194,
+        "cpu_mean_s": 0.6165534050029237,
+        "cpu_p95_s": 0.6746132000233047
+      }
+    ],
+    "peak_working_set_bytes": 703959040,
+    "peak_commit_bytes": 1546821632,
+    "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+  },
+  "functional_audit": {
+    "cases": 33,
+    "raw_windows": 30,
+    "rooms": [
+      "a1",
+      "b1",
+      "c1",
+      "e1",
+      "g1",
+      "unknown"
+    ],
+    "labels": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "light_full_prediction_disagreements": 5,
+    "light_protected_cases": 18,
+    "full_protected_cases": 20,
+    "max_probability_error": 4.686686344568258e-08,
+    "note": "Only functional/numerical probes. These source records were used for original training; no probe accuracy is claimed."
+  },
+  "source": "user-reported platform result 2026-10-24",
+  "date": "2026-10-24",
+  "lineage_source": "User relayed teammate explanation 2026-10-24; original structure/weights unchanged, inference transforms, fusion and protection added."
+}

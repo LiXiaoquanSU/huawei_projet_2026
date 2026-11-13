@@ -1,0 +1,33 @@
+{
+  "path": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\handoff\\054_models_and_bias_supplement_20261108.zip",
+  "bytes": 116141771,
+  "sha256": "09bb32c7d991a7dfba2b9b8cc8eee167b15446a0fa818649ee1f2517a3d5afd6",
+  "files": 31,
+  "verified": true,
+  "comparison": {
+    "scope": "960 seen labeled windows, training-source diagnostic, NOT hidden or held-out test",
+    "correct": {
+      "gprime": 676,
+      "selective": 679,
+      "stable": 682
+    },
+    "disagreements": 15,
+    "pairs": {
+      "gprime_to_selective": {
+        "changed": 9,
+        "corrected": 6,
+        "broken": 3
+      },
+      "selective_to_stable": {
+        "changed": 8,
+        "corrected": 5,
+        "broken": 2
+      },
+      "gprime_to_stable": {
+        "changed": 13,
+        "corrected": 9,
+        "broken": 3
+      }
+    }
+  }
+}

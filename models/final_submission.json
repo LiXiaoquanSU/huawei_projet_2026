@@ -1,0 +1,12 @@
+{
+  "filename": "model.onnx",
+  "bytes": 83681786,
+  "sha256": "2b189c950412d0d770d82a0f118ebd95699e18b5b6706f56a8539c59a04b4534",
+  "selection_date": "2026-11-13",
+  "platform_score": 0.54,
+  "score_source": "Team/user-reported public platform score; not independently re-scored during cleanup",
+  "original_name": "gprime_full_group_fallback_web054.onnx",
+  "architecture": "Original037 four-route weights, Udirect bias, protected12-view fallback, final class1 +0.35",
+  "final_submission_uploaded": false,
+  "note": "Final local selection only. Private-test accuracy unknown. Filesystem copy verified byte-identical to recorded054."
+}

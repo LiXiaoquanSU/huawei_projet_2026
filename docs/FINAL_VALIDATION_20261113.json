@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-13",
+  "python_syntax_files": 282,
+  "syntax_errors": [],
+  "landing_page_links_valid": true,
+  "credential_pattern_scan_matches": [],
+  "onnx": {
+    "valid": true,
+    "bytes": 83681786,
+    "sha256": "2b189c950412d0d770d82a0f118ebd95699e18b5b6706f56a8539c59a04b4534",
+    "external_weights": false,
+    "cpu_threads": 4,
+    "local_smoke_mean_seconds": [
+      0.9689389800070785,
+      0.9309080799866933
+    ],
+    "runtime_limit_pass_on_this_smoke": false,
+    "note": "One existing smoke sample, two runs on local machine; exceeds0.7s here. Model bytes unchanged from reported platform054. Not a new platform evaluation or full workload benchmark."
+  },
+  "scope": "Final documentation and repository cleanup; existing pending project edits included, no retraining or model mutation. Historical landing pages and pre-cleanup diff saved in ignored _archive/final_cleanup_20261113."
+}

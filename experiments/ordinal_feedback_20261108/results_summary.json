@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-08",
+  "platform_feedback": {
+    "model": "ordinal75_20261107",
+    "score": 0.47
+  },
+  "platform_best": 0.54,
+  "next_submission": null,
+  "new_neural_fits": 12,
+  "new_neural_epochs": 102,
+  "new_linear_fits": 9,
+  "local_totals": {
+    "rng/continue_rng": {
+      "per_fold": [
+        134,
+        137,
+        156
+      ],
+      "correct": 427,
+      "total": 960
+    },
+    "rng/native_loader": {
+      "per_fold": [
+        137,
+        131,
+        177
+      ],
+      "correct": 445,
+      "total": 960
+    },
+    "fixed_ratio/summary": {
+      "per_fold": [
+        69,
+        64,
+        115
+      ],
+      "correct": 248,
+      "total": 960
+    },
+    "fixed_ratio/phase_plus_summary": {
+      "per_fold": [
+        114,
+        88,
+        169
+      ],
+      "correct": 371,
+      "total": 960
+    },
+    "fixed_ratio/joint_plus_summary": {
+      "per_fold": [
+        120,
+        72,
+        140
+      ],
+      "correct": 332,
+      "total": 960
+    },
+    "ratio_network/phase": {
+      "per_fold": [
+        100,
+        99,
+        176
+      ],
+      "correct": 375,
+      "total": 960
+    },
+    "ratio_network/joint": {
+      "per_fold": [
+        93,
+        101,
+        187
+      ],
+      "correct": 381,
+      "total": 960
+    }
+  },
+  "sampler_changed_indices_per_epoch": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "ratio_dependency": [
+    {
+      "fold": "record0",
+      "variant": "phase",
+      "mode": "source_fit",
+      "correct": 568,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record0",
+      "variant": "phase",
+      "mode": "test",
+      "correct": 100,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record0",
+      "variant": "phase",
+      "mode": "static_only",
+      "correct": 102,
+      "total": 320,
+      "prediction_changed_vs_test": 7
+    },
+    {
+      "fold": "record0",
+      "variant": "phase",
+      "mode": "dynamic_only",
+      "correct": 52,
+      "total": 320,
+      "prediction_changed_vs_test": 199
+    },
+    {
+      "fold": "record1",
+      "variant": "phase",
+      "mode": "source_fit",
+      "correct": 549,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record1",
+      "variant": "phase",
+      "mode": "test",
+      "correct": 99,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record1",
+      "variant": "phase",
+      "mode": "static_only",
+      "correct": 100,
+      "total": 320,
+      "prediction_changed_vs_test": 2
+    },
+    {
+      "fold": "record1",
+      "variant": "phase",
+      "mode": "dynamic_only",
+      "correct": 50,
+      "total": 320,
+      "prediction_changed_vs_test": 243
+    },
+    {
+      "fold": "record2",
+      "variant": "phase",
+      "mode": "source_fit",
+      "correct": 549,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record2",
+      "variant": "phase",
+      "mode": "test",
+      "correct": 176,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record2",
+      "variant": "phase",
+      "mode": "static_only",
+      "correct": 176,
+      "total": 320,
+      "prediction_changed_vs_test": 8
+    },
+    {
+      "fold": "record2",
+      "variant": "phase",
+      "mode": "dynamic_only",
+      "correct": 54,
+      "total": 320,
+      "prediction_changed_vs_test": 227
+    },
+    {
+      "fold": "record0",
+      "variant": "joint",
+      "mode": "source_fit",
+      "correct": 618,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record0",
+      "variant": "joint",
+      "mode": "test",
+      "correct": 93,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record0",
+      "variant": "joint",
+      "mode": "static_only",
+      "correct": 93,
+      "total": 320,
+      "prediction_changed_vs_test": 6
+    },
+    {
+      "fold": "record0",
+      "variant": "joint",
+      "mode": "dynamic_only",
+      "correct": 71,
+      "total": 320,
+      "prediction_changed_vs_test": 213
+    },
+    {
+      "fold": "record1",
+      "variant": "joint",
+      "mode": "source_fit",
+      "correct": 566,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record1",
+      "variant": "joint",
+      "mode": "test",
+      "correct": 101,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record1",
+      "variant": "joint",
+      "mode": "static_only",
+      "correct": 100,
+      "total": 320,
+      "prediction_changed_vs_test": 5
+    },
+    {
+      "fold": "record1",
+      "variant": "joint",
+      "mode": "dynamic_only",
+      "correct": 60,
+      "total": 320,
+      "prediction_changed_vs_test": 254
+    },
+    {
+      "fold": "record2",
+      "variant": "joint",
+      "mode": "source_fit",
+      "correct": 575,
+      "total": 640,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record2",
+      "variant": "joint",
+      "mode": "test",
+      "correct": 187,
+      "total": 320,
+      "prediction_changed_vs_test": null
+    },
+    {
+      "fold": "record2",
+      "variant": "joint",
+      "mode": "static_only",
+      "correct": 189,
+      "total": 320,
+      "prediction_changed_vs_test": 4
+    },
+    {
+      "fold": "record2",
+      "variant": "joint",
+      "mode": "dynamic_only",
+      "correct": 70,
+      "total": 320,
+      "prediction_changed_vs_test": 221
+    }
+  ],
+  "scope": "Repeated development record folds; no hidden-label access; no new candidate exported"
+}

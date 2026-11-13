@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-07",
+  "new_neural_fits": 27,
+  "new_neural_epochs": 135,
+  "new_tree_fits": 9,
+  "platform_best": 0.54,
+  "next_submission": null,
+  "platform_score": null,
+  "totals": {
+    "class_sampling/identity": {
+      "per_fold": [
+        137,
+        135,
+        168
+      ],
+      "correct": 440,
+      "total": 960
+    },
+    "class_sampling/time2": {
+      "per_fold": [
+        135,
+        132,
+        169
+      ],
+      "correct": 436,
+      "total": 960
+    },
+    "class_sampling/all12": {
+      "per_fold": [
+        142,
+        132,
+        174
+      ],
+      "correct": 448,
+      "total": 960
+    },
+    "summary_trees": {
+      "per_fold": [
+        155,
+        106,
+        126
+      ],
+      "correct": 387,
+      "total": 960
+    },
+    "full_trees": {
+      "per_fold": [
+        123,
+        112,
+        154
+      ],
+      "correct": 389,
+      "total": 960
+    },
+    "full_boost": {
+      "per_fold": [
+        118,
+        87,
+        156
+      ],
+      "correct": 361,
+      "total": 960
+    }
+  },
+  "status": "completed_negative_controls_no_export",
+  "reports": [
+    "docs/NESTED_CONTEXT_20261107.md",
+    "docs/CONTEXT_SYMMETRY_20261107.md",
+    "docs/RESEARCH_ROUND_20261107.md"
+  ]
+}

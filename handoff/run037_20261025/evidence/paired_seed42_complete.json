@@ -1,0 +1,261 @@
+{
+  "room": "actual",
+  "method": "paired",
+  "seed": 42,
+  "chosen_step": 120,
+  "updated_encoder_parameters": 1512192,
+  "frozen_decoder_sha256": "d588fef0cd3f8a66e45bb9c149b75c93d09a5fbce1cae46285d332b2041e3c5f",
+  "initial_probability_parity_error": 9.357929229736328e-06,
+  "source_sampler_sha256": "7d420eaa5b3217651e7effadc4172206a0535368accbc923430c7628ef074801",
+  "fit_identifiers": [
+    "a_a1_hash033659_3",
+    "a_a1_hash058655_2",
+    "a_a1_hash069403_2",
+    "a_a1_hash221231_1",
+    "a_a1_hash240174_2",
+    "a_a1_hash280746_3",
+    "a_a1_hash330776_4",
+    "a_a1_hash420651_4",
+    "a_a1_hash813694_1",
+    "a_a1_hash844151_4",
+    "a_a1_hash861722_3",
+    "a_a1_hash957492_0",
+    "b_b1_hash962037_0",
+    "c_c1_hash072792_2",
+    "c_c1_hash292683_4",
+    "c_c1_hash347235_1",
+    "c_c1_hash368203_4",
+    "c_c1_hash419093_3",
+    "c_c1_hash534150_4",
+    "c_c1_hash562262_2",
+    "c_c1_hash672642_4",
+    "c_c1_hash712526_3",
+    "c_c1_hash810891_3",
+    "c_c1_hash884642_2",
+    "c_c1_hash906339_1",
+    "e_e1_hash250867_1",
+    "e_e1_hash508136_0",
+    "e_e1_hash657193_0",
+    "g_g1_hash084491_1",
+    "g_g1_hash145095_1",
+    "g_g1_hash158157_0",
+    "g_g1_hash160227_1",
+    "g_g1_hash224345_1",
+    "g_g1_hash242495_0",
+    "g_g1_hash245884_1",
+    "g_g1_hash284913_1",
+    "g_g1_hash299607_1",
+    "g_g1_hash335239_1",
+    "g_g1_hash352161_0",
+    "g_g1_hash401641_0",
+    "g_g1_hash566390_1",
+    "g_g1_hash727659_1",
+    "g_g1_hash740734_0",
+    "g_g1_hash748206_0",
+    "g_g1_hash936406_0",
+    "unknown_unknown_hash081247_1",
+    "unknown_unknown_hash287936_1",
+    "unknown_unknown_hash461239_1"
+  ],
+  "calibration_identifiers": [],
+  "test_identifiers": [
+    "a_a1_hash033659_3",
+    "a_a1_hash058655_2",
+    "a_a1_hash069403_2",
+    "a_a1_hash221231_1",
+    "a_a1_hash240174_2",
+    "a_a1_hash280746_3",
+    "a_a1_hash330776_4",
+    "a_a1_hash420651_4",
+    "a_a1_hash813694_1",
+    "a_a1_hash844151_4",
+    "a_a1_hash861722_3",
+    "a_a1_hash957492_0",
+    "b_b1_hash962037_0",
+    "c_c1_hash072792_2",
+    "c_c1_hash292683_4",
+    "c_c1_hash347235_1",
+    "c_c1_hash368203_4",
+    "c_c1_hash419093_3",
+    "c_c1_hash534150_4",
+    "c_c1_hash562262_2",
+    "c_c1_hash672642_4",
+    "c_c1_hash712526_3",
+    "c_c1_hash810891_3",
+    "c_c1_hash884642_2",
+    "c_c1_hash906339_1",
+    "e_e1_hash250867_1",
+    "e_e1_hash508136_0",
+    "e_e1_hash657193_0",
+    "g_g1_hash084491_1",
+    "g_g1_hash145095_1",
+    "g_g1_hash158157_0",
+    "g_g1_hash160227_1",
+    "g_g1_hash224345_1",
+    "g_g1_hash242495_0",
+    "g_g1_hash245884_1",
+    "g_g1_hash284913_1",
+    "g_g1_hash299607_1",
+    "g_g1_hash335239_1",
+    "g_g1_hash352161_0",
+    "g_g1_hash401641_0",
+    "g_g1_hash566390_1",
+    "g_g1_hash727659_1",
+    "g_g1_hash740734_0",
+    "g_g1_hash748206_0",
+    "g_g1_hash936406_0",
+    "unknown_unknown_hash081247_1",
+    "unknown_unknown_hash287936_1",
+    "unknown_unknown_hash461239_1"
+  ],
+  "paired_room_support": [
+    "a1",
+    "e1",
+    "g1"
+  ],
+  "variants": [
+    {
+      "amount": 0.25,
+      "metrics": {
+        "correct": 710,
+        "total": 960,
+        "accuracy": 0.7395833134651184,
+        "corrected": 24,
+        "broken": 2,
+        "confusion_matrix": [
+          [
+            211,
+            9,
+            0,
+            0,
+            0
+          ],
+          [
+            93,
+            201,
+            20,
+            35,
+            11
+          ],
+          [
+            0,
+            0,
+            77,
+            31,
+            12
+          ],
+          [
+            0,
+            0,
+            1,
+            81,
+            38
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "amount": 0.5,
+      "metrics": {
+        "correct": 730,
+        "total": 960,
+        "accuracy": 0.7604166865348816,
+        "corrected": 47,
+        "broken": 5,
+        "confusion_matrix": [
+          [
+            213,
+            6,
+            1,
+            0,
+            0
+          ],
+          [
+            93,
+            200,
+            23,
+            31,
+            13
+          ],
+          [
+            0,
+            0,
+            90,
+            24,
+            6
+          ],
+          [
+            0,
+            0,
+            2,
+            87,
+            31
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "amount": 1.0,
+      "metrics": {
+        "correct": 762,
+        "total": 960,
+        "accuracy": 0.793749988079071,
+        "corrected": 83,
+        "broken": 9,
+        "confusion_matrix": [
+          [
+            218,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            96,
+            204,
+            30,
+            22,
+            8
+          ],
+          [
+            0,
+            0,
+            110,
+            7,
+            3
+          ],
+          [
+            1,
+            0,
+            4,
+            90,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            140
+          ]
+        ]
+      }
+    }
+  ],
+  "elapsed_s": 20.191848499991465,
+  "platform_score": null
+}

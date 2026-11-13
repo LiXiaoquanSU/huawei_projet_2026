@@ -39,6 +39,7 @@ if __name__=='__main__':
             start=time.perf_counter();session.run(['logits'],inputs);elapsed.append(time.perf_counter()-start)
         results.append(dict(input=case['input'],probability_max_error=pe,logit_max_error=le,argmax_matches=same,reference_margin=margin,cpu_mean_s=float(np.mean(elapsed)),cpu_p95_s=float(np.percentile(elapsed,95))))
     memory=peak_memory();size=path.stat().st_size
-    assert size<100_000_000 and max(r['cpu_mean_s'] for r in results)<.7 and max(memory.values())<6_000_000_000
-    report=dict(status='pass',bytes=size,sha256=hashlib.sha256(path.read_bytes()).hexdigest(),embedded_weights=True,cpu_threads=4,cases=results,**memory,note='local CPU resource/numerical verification; not hidden platform accuracy')
+    passed=dict(size=size<100_000_000,time=max(r['cpu_mean_s'] for r in results)<.7,memory=max(memory.values())<6_000_000_000)
+    report=dict(status='pass' if all(passed.values()) else 'fail',checks=passed,bytes=size,sha256=hashlib.sha256(path.read_bytes()).hexdigest(),embedded_weights=True,cpu_threads=4,cases=results,**memory,note='local CPU resource/numerical verification; not hidden platform accuracy')
     (a.folder/'resource_check.json').write_text(json.dumps(report,indent=2),encoding='utf-8');print(json.dumps(report),flush=True)
+    assert all(passed.values()),passed

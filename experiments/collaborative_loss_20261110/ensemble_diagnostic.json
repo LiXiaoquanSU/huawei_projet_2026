@@ -1,0 +1,20 @@
+{
+  "control": {
+    "equal_probability_correct": 458,
+    "folds": [
+      145,
+      149,
+      164
+    ],
+    "truth_oracle_not_deployable": 534
+  },
+  "no_expert_ce": {
+    "equal_probability_correct": 460,
+    "folds": [
+      150,
+      153,
+      157
+    ],
+    "truth_oracle_not_deployable": 531
+  }
+}

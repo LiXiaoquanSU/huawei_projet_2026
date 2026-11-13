@@ -1,0 +1,71 @@
+{
+  "csv_submissions": 98,
+  "scored": 95,
+  "max_score": 0.54,
+  "count_max": 11,
+  "prediction_rows": 47,
+  "unique_submissions_after_known_duplicate": 46,
+  "known_duplicate_predictions_identical": true,
+  "all47_regression": {
+    "n": 47,
+    "intercept": 0.5333723951581533,
+    "slope": -0.2696061724901227,
+    "pearson": -0.8444009076422784,
+    "rmse": 0.03724518699814282,
+    "loo_rmse": 0.038360274018897
+  },
+  "deduplicated46_regression": {
+    "n": 46,
+    "intercept": 0.5336007876574015,
+    "slope": -0.2718284095951294,
+    "pearson": -0.8446427497311014,
+    "rmse": 0.037504918408666155,
+    "loo_rmse": 0.038658154615781905
+  },
+  "subgroups": {
+    "near_Gprime_d_below_016": {
+      "n": 19,
+      "intercept": 0.5407341146897374,
+      "slope": -0.2809905779334405,
+      "pearson": -0.6960588492046151,
+      "rmse": 0.013274531096985254,
+      "loo_rmse": 0.014925758122697155
+    },
+    "far_d_above_04": {
+      "n": 22,
+      "intercept": 0.6012578637521676,
+      "slope": -0.3854603813934528,
+      "pearson": -0.6218925787269437,
+      "rmse": 0.034694270953280135,
+      "loo_rmse": 0.03977839722665375
+    }
+  },
+  "gprime_class_counts": [
+    495,
+    728,
+    650,
+    352,
+    675
+  ],
+  "loro_counts": {
+    "deep_raw": 215,
+    "deep_source_prior": 197,
+    "linear_raw": 210,
+    "linear_source_prior": 217
+  },
+  "loro_labels": [
+    220,
+    300,
+    120,
+    120,
+    140
+  ],
+  "record_majority_fraction_mean": 0.753448275862069,
+  "record_count": 145,
+  "limitations": [
+    "Source-reported platform scores, not independently checked on live platform.",
+    "Only hard predictions on U; no hidden test labels or paired correctness.",
+    "No weights or raw data in this handoff; no independent retraining.",
+    "Within-U records have correlated windows."
+  ]
+}

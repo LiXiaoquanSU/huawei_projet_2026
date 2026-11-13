@@ -1,7 +1,7 @@
-# 模型记录
+# 模型文件索引
 
-**2026-10-23 平台反馈：固定概率融合版 0.40，成为当前最佳，比原两份 0.39 高 0.01；跨注意力滑窗版 0.34。滑窗三项全部低于对应原版（上下文 0.35 vs 0.39、跨注意力 0.34 vs 0.39、Mixer 0.28 vs 0.33）。以下待测措辞属于历史状态。**
+最终推荐文件是仓库根目录的[model.onnx](../model.onnx)，原版G′，已报告公开平台0.54。文件大小和SHA见[final_submission.json](final_submission.json)。
 
-最佳入口：`best_040/model.onnx`，对应 `dual039_20261022/01_dual039_equalprob_fp16storage.onnx`，78.24 MB。原两份 0.39 和所有已评测模型保留。
+[registry.json](registry.json)保存历史模型身份与实验状态；[platform_scores.csv](platform_scores.csv)保存平台反馈。历史研究文件不因为本地分数高就视为新的提交推荐。
 
-`platform_scores.csv` 按文件 SHA256 记录成绩，`registry.json` 保存来源。权重仅在本机保存，不进入 GitHub。
+其他模型、训练权重和重复提交副本保留本地并由.gitignore排除。此前已纳入Git的best_040/model.onnx保留作为历史版本，勿与最终文件混淆。

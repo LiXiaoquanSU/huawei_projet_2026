@@ -1,0 +1,7 @@
+{
+  "hypothesis": "Individual evidence routes need not each be sufficient fiveclass classifiers; standalone expertCE may encourage room shortcuts.",
+  "primary": "Matched two seeds and three whole-record folds, fixed5epochs",
+  "next_stage": "If both seeds improve and average gain >=3 percentage points, and >=4/6 paired folds improve, investigate room-holdout before full fit. Otherwise record failure and change mechanism.",
+  "decision_timing": "Written after first seed42 fold:137->156 known; other five pairs unseen. Not preregistration of entire experiment.",
+  "no_export_claim": "Local60% is not platform60%; no blind labels available."
+}

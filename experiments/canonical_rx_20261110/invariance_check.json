@@ -1,0 +1,7 @@
+{
+  "windows": 960,
+  "tested_permutations": 6,
+  "max_error": 0.0,
+  "near_tied_sort_keys": 0,
+  "limits": "Observed windows only; exact ties on arbitrary inputs are not guaranteed invariant with stable tie order."
+}

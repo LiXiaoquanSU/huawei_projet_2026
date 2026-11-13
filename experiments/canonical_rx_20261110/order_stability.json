@@ -1,0 +1,393 @@
+{
+  "records": 48,
+  "records_with_order_changes": 2,
+  "mean_majority_fraction": 0.9895833333333334,
+  "orders": {
+    "a_a1_hash033659_3": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash058655_2": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash069403_2": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash221231_1": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash240174_2": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash280746_3": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash330776_4": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash420651_4": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash813694_1": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash844151_4": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash861722_3": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "a_a1_hash957492_0": {
+      "room": "a1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "b_b1_hash962037_0": {
+      "room": "b1",
+      "distinct_orders": 1,
+      "counts": {
+        "012": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash072792_2": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "012": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash292683_4": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash347235_1": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash368203_4": {
+      "room": "c1",
+      "distinct_orders": 2,
+      "counts": {
+        "102": 4,
+        "120": 16
+      },
+      "majority_fraction": 0.8
+    },
+    "c_c1_hash419093_3": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash534150_4": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash562262_2": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash672642_4": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash712526_3": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash810891_3": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash884642_2": {
+      "room": "c1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "c_c1_hash906339_1": {
+      "room": "c1",
+      "distinct_orders": 2,
+      "counts": {
+        "012": 6,
+        "021": 14
+      },
+      "majority_fraction": 0.7
+    },
+    "e_e1_hash250867_1": {
+      "room": "e1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "e_e1_hash508136_0": {
+      "room": "e1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "e_e1_hash657193_0": {
+      "room": "e1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash084491_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash145095_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "021": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash158157_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "120": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash160227_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash224345_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "201": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash242495_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash245884_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash284913_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash299607_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash335239_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash352161_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash401641_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash566390_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash727659_1": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash740734_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "201": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash748206_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "g_g1_hash936406_0": {
+      "room": "g1",
+      "distinct_orders": 1,
+      "counts": {
+        "102": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "unknown_unknown_hash081247_1": {
+      "room": "unknown",
+      "distinct_orders": 1,
+      "counts": {
+        "012": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "unknown_unknown_hash287936_1": {
+      "room": "unknown",
+      "distinct_orders": 1,
+      "counts": {
+        "201": 20
+      },
+      "majority_fraction": 1.0
+    },
+    "unknown_unknown_hash461239_1": {
+      "room": "unknown",
+      "distinct_orders": 1,
+      "counts": {
+        "201": 20
+      },
+      "majority_fraction": 1.0
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "best_044",
+  "name": "队友Udirect文件",
+  "path": "models/best_044/model.onnx",
+  "sha256": "d2c21c3161b3838247d73b4a23d9ba6091090be39a55627683a41604d04d9063",
+  "bytes": 42905225,
+  "platform_score": 0.44,
+  "source": "user-reported platform result",
+  "owner": "teammate",
+  "status": "retained_milestone",
+  "submission_id": null,
+  "bias": [
+    -0.3348125219345093,
+    -1.9802545309066772,
+    0.974480390548706,
+    0.2931640148162842,
+    1.0474226474761963
+  ],
+  "training_details": "not independently provided; do not infer from filename",
+  "file_comparison_to_042": {
+    "same_nodes": true,
+    "initializer_count": 178,
+    "unchanged_initializers": 177,
+    "changed_initializers": [
+      "__roomsense_bias_0_constant"
+    ],
+    "previous_bias": [
+      -0.23435600101947784,
+      -0.7268329858779907,
+      0.37178000807762146,
+      0.37178000807762146,
+      0.21762900054454803
+    ],
+    "conclusion": "In the supplied artifacts only the final fixed bias changed. Bias-estimation procedure and training history not provided."
+  },
+  "local_check": {
+    "status": "pass",
+    "cases": [
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+        "cpu_mean_s": 0.044248059997335075,
+        "logits": [
+          -4.624177932739258,
+          -2.0982136726379395,
+          -2.5260136127471924,
+          -2.6894240379333496,
+          -3.044323682785034
+        ]
+      },
+      {
+        "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\_archive\\history_20261019\\artifacts\\model_design\\case_gap.npz",
+        "cpu_mean_s": 0.04290883998619392,
+        "logits": [
+          -2.727749824523926,
+          -2.1257846355438232,
+          -3.102562665939331,
+          -3.8176004886627197,
+          -3.487988233566284
+        ]
+      },
+      {
+        "input": "zero",
+        "cpu_mean_s": 0.04311326000606641,
+        "logits": [
+          -0.8607515096664429,
+          -3.382103443145752,
+          -2.7226672172546387,
+          -2.8229382038116455,
+          -1.3198647499084473
+        ]
+      }
+    ],
+    "note": "interface and CPU smoke checks only; platform .44 is user-reported"
+  },
+  "original_filename": "orig037_fp16_Udirect.onnx"
+}

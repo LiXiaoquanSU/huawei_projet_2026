@@ -1,0 +1,13 @@
+{
+  "id": "best_037",
+  "name": "四路线原版",
+  "path": "models/best_037/model.onnx",
+  "sha256": "0fb02b7410899ad24be99b0b4d7a4077b3de106da3666dc054fc4e1d4e299aed",
+  "bytes": 82057525,
+  "platform_score": 0.37,
+  "source": "user-reported platform result",
+  "owner": "self",
+  "status": "retained_milestone",
+  "submission_id": null,
+  "checkpoint": "models/best_037/final.pt"
+}

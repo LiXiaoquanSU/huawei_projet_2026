@@ -1,4 +1,4 @@
-"""Retained full-data baseline/SAM recipes. Cleanup does not run training."""
+"""Retained full-data baseline recipe. Never starts during project cleanup."""
 import argparse,json,random
 from pathlib import Path
 import blosc2,numpy as np,torch
@@ -39,21 +39,8 @@ def main(args):
         model.train();correct=total=0;losses=[]
         for x,summary,label,target in loader:
             x,summary,label,target=x.cuda(),summary.cuda(),label.cuda(),target.cuda()
-            rng,crng=torch.get_rng_state(),torch.cuda.get_rng_state()
             optimizer.zero_grad(set_to_none=True);tasks=model.forward_tasks(x,summary);loss,_=task_loss(tasks,label,target,'physical')
             assert torch.isfinite(loss);loss.backward()
-            if args.method=='sam':
-                params=[p for p in model.parameters() if p.grad is not None]
-                norm=torch.linalg.vector_norm(torch.stack([p.grad.norm() for p in params]));assert torch.isfinite(norm)
-                saved=[p.detach().clone() for p in params]
-                with torch.no_grad():
-                    for p in params:p.add_(p.grad,alpha=float(.05/(norm+1e-12)))
-                optimizer.zero_grad(set_to_none=True);torch.set_rng_state(rng);torch.cuda.set_rng_state(crng)
-                try:
-                    robust,_=task_loss(model.forward_tasks(x,summary),label,target,'physical');assert torch.isfinite(robust);robust.backward()
-                finally:
-                    with torch.no_grad():
-                        for p,v in zip(params,saved):p.copy_(v)
             norm=torch.nn.utils.clip_grad_norm_(model.parameters(),3);assert torch.isfinite(norm);optimizer.step()
             correct+=(tasks['logits'].argmax(1)==label).sum().item();total+=len(label);losses.append(loss.item())
         history.append(dict(epoch=epoch,sampled_train_accuracy=correct/total,loss=float(np.mean(losses))));print(history[-1],flush=True)
@@ -62,4 +49,4 @@ def main(args):
     (args.output/'config.json').write_text(json.dumps(config,indent=2));write_csv(args.output/'history.csv',history)
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--method',choices=['baseline','sam'],default='baseline');p.add_argument('--data-root',type=Path,default=Path('D:/huawei2026-data'));p.add_argument('--output',type=Path,required=True);main(p.parse_args())
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--method',choices=['baseline'],default='baseline');p.add_argument('--data-root',type=Path,default=Path('D:/huawei2026-data'));p.add_argument('--output',type=Path,required=True);main(p.parse_args())

@@ -1,0 +1,103 @@
+{
+  "completed_date": "2026-11-11",
+  "fits": 6,
+  "epochs": 30,
+  "aggregate": {
+    "matched_random": {
+      "correct": 455,
+      "total": 960,
+      "fold_correct": [
+        137,
+        149,
+        169
+      ],
+      "confusion": [
+        [
+          128,
+          84,
+          3,
+          5,
+          0
+        ],
+        [
+          147,
+          170,
+          39,
+          4,
+          0
+        ],
+        [
+          14,
+          15,
+          35,
+          46,
+          10
+        ],
+        [
+          0,
+          15,
+          49,
+          34,
+          22
+        ],
+        [
+          1,
+          1,
+          20,
+          30,
+          88
+        ]
+      ]
+    },
+    "same_class": {
+      "correct": 452,
+      "total": 960,
+      "fold_correct": [
+        139,
+        142,
+        171
+      ],
+      "confusion": [
+        [
+          132,
+          79,
+          3,
+          6,
+          0
+        ],
+        [
+          154,
+          163,
+          41,
+          2,
+          0
+        ],
+        [
+          14,
+          4,
+          18,
+          54,
+          30
+        ],
+        [
+          0,
+          16,
+          34,
+          34,
+          36
+        ],
+        [
+          0,
+          0,
+          11,
+          24,
+          105
+        ]
+      ]
+    }
+  },
+  "paired_sampling_and_eligibility_verified": true,
+  "next_submission": null,
+  "status": "negative_no_export",
+  "platform_score": null
+}

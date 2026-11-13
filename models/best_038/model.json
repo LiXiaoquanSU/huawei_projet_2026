@@ -1,0 +1,12 @@
+{
+  "id": "best_038",
+  "name": "局部事件",
+  "path": "models/best_038/model.onnx",
+  "sha256": "6d3799c7179b01f0cb9c36194aa8f60d6709b4851db82290bdb60db1143a06e3",
+  "bytes": 69362182,
+  "platform_score": 0.38,
+  "source": "user-reported platform result",
+  "owner": "self",
+  "status": "retained_milestone",
+  "submission_id": null
+}

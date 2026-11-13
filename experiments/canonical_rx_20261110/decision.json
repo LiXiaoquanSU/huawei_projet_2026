@@ -1,0 +1,9 @@
+{
+  "hypothesis": "Receiver labels are arbitrary; canonicalizing their order before original037 may reduce dependence on device channel numbering while retaining spatial differences.",
+  "control": "collaborative_loss control: exact same two seeds,three recordfolds,5epochs,original losses/native sampling",
+  "candidate": "Only deterministic receiver ordering by per-window mean log amplitude; all signal channels and summary consistently permuted.",
+  "checks": "960 labeled windows x6permutations exactly identical canonical inputs; no sort-key ties in this data; no label-dependent order.",
+  "limitations": "Not invariance to physical antenna relocation, only renaming. Sorting may be discontinuous across close channel means. Tie handling can depend on original order. U remains unlabeled.",
+  "next_stage": "Both seeds gain, >=4of6pairedfolds gain, mean >=3pp before room holdout/fullfit consideration",
+  "status": "prepared_not_yet_trained"
+}

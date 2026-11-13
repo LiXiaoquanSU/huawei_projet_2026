@@ -23,8 +23,8 @@ import torch
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = Path('D:/huawei2026-experiments/global_local_20261021')
 SPECS = [
-    ('cross_events', 42, '01_cross_events_seed42.onnx', '5553bdec10f5faeab55759aab5750c522634ae149a4730bbe185cf26710ea24d'),
-    ('context_events', 2026, '02_context_events_seed2026.onnx', 'f2ed6fb013e74cdf8d22f3597d11250df517f73a852048603efa64993b50cfb8'),
+    ('cross_events', 42, 'models/best_039/model.onnx', '5553bdec10f5faeab55759aab5750c522634ae149a4730bbe185cf26710ea24d'),
+    ('context_events', 2026, 'models/best_039_context/model.onnx', 'f2ed6fb013e74cdf8d22f3597d11250df517f73a852048603efa64993b50cfb8'),
 ]
 
 
@@ -79,7 +79,7 @@ def assemble(work):
     models = []
     compression = []
     for index, (name, seed, filename, expected) in enumerate(SPECS):
-        path = ROOT/'models/global_local_20261021'/filename
+        path = ROOT/filename
         assert sha(path) == expected
         graph = compose.add_prefix(onnx.load(path), f'branch{index}_', rename_inputs=False)
         cast_nodes, replaced = [], []
@@ -137,7 +137,9 @@ def references(work):
     refs = []
     for x, y in zip(*both):
         assert x['input'] == y['input']
-        refs.append(dict(input=x['input'], logits=np.log(np.maximum((probability(x['logits'])+probability(y['logits']))*.5, 1e-12)).tolist()))
+        source = 'zero' if x['input']=='zero' else str(ROOT/'checks'/Path(x['input']).name)
+        if source!='zero':assert Path(source).is_file(),source
+        refs.append(dict(input=source, logits=np.log(np.maximum((probability(x['logits'])+probability(y['logits']))*.5, 1e-12)).tolist()))
     save(work/'references.json', refs)
 
 

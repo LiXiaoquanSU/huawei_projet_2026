@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "workspace": "C:\\Users\\lxq_1\\Desktop\\huawei2026",
+  "archive": "D:\\huawei2026-experiments\\project_archive_20261023_044",
+  "date": "2026-10-23",
+  "logical_bytes": 12882946211,
+  "stored_bytes": 9375976165,
+  "unique_blobs": 2558,
+  "excluded": [
+    ".git",
+    ".venv",
+    "data",
+    "D drive original datasets and prior experiment directories"
+  ]
+}

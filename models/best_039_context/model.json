@@ -1,0 +1,12 @@
+{
+  "id": "best_039_context",
+  "name": "上下文事件",
+  "path": "models/best_039_context/model.onnx",
+  "sha256": "f2ed6fb013e74cdf8d22f3597d11250df517f73a852048603efa64993b50cfb8",
+  "bytes": 70777629,
+  "platform_score": 0.39,
+  "source": "user-reported platform result",
+  "owner": "self",
+  "status": "retained_milestone",
+  "submission_id": null
+}

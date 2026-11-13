@@ -1,0 +1,42 @@
+{
+  "original": {
+    "time_reverse": {
+      "agreement": 0.9399999976158142,
+      "marginal_adjusted": 0.8853697816477525
+    },
+    "receiver_forward": {
+      "agreement": 0.6919999718666077,
+      "marginal_adjusted": 0.39210520000338805
+    }
+  },
+  "seed42": {
+    "time_reverse": {
+      "agreement": 0.8999999761581421,
+      "marginal_adjusted": 0.8568428733972843
+    },
+    "receiver_forward": {
+      "agreement": 0.4320000112056732,
+      "marginal_adjusted": 0.20867854928668242
+    }
+  },
+  "seed0": {
+    "time_reverse": {
+      "agreement": 0.9133333563804626,
+      "marginal_adjusted": 0.857861407185999
+    },
+    "receiver_forward": {
+      "agreement": 0.5080000162124634,
+      "marginal_adjusted": 0.28928212922184593
+    }
+  },
+  "seed304": {
+    "time_reverse": {
+      "agreement": 0.8533333539962769,
+      "marginal_adjusted": 0.8054130833565365
+    },
+    "receiver_forward": {
+      "agreement": 0.46000000834465027,
+      "marginal_adjusted": 0.2799317406468862
+    }
+  }
+}

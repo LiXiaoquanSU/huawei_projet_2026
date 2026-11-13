@@ -1,0 +1,82 @@
+{
+  "old_42": {
+    "correct": 485,
+    "last_correct": 360,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "old_2026": {
+    "correct": 476,
+    "last_correct": 362,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "moments_42": {
+    "correct": 446,
+    "last_correct": 352,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "moments_2026": {
+    "correct": 480,
+    "last_correct": 351,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      2
+    ]
+  },
+  "distribution_42": {
+    "correct": 464,
+    "last_correct": 358,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "distribution_2026": {
+    "correct": 480,
+    "last_correct": 341,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      2
+    ]
+  },
+  "old_plus_distribution_42": {
+    "correct": 488,
+    "last_correct": 365,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "old_plus_distribution_2026": {
+    "correct": 480,
+    "last_correct": 359,
+    "total": 960,
+    "epochs": [
+      2,
+      1,
+      1
+    ]
+  }
+}

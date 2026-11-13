@@ -38,11 +38,23 @@ _clean/
 outputs/
 runs/
 /models/*/
+!/models/best_*/
+!/models/best_*/model.json
 
 # Generated local reports, visualizations and submission copies
 /output/
 /submissions/
 /submission_retry_47547/
 /checks/*
-!/checks/cleanup_equivalence.json
-!/checks/sam_download_error_audit.json
+!/checks/best044_20261023.json
+!/checks/cleanup_044_backup.json
+
+# Final publication: generated research data and teammate material stay local
+*.npy
+*.joblib
+*.tmp
+*.temp
+/handoff/claude_review_20261110/
+/2026-10-25_037配方与种子复现/
+# Exact final scored submission, intentionally published
+!/model.onnx

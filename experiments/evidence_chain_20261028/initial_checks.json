@@ -1,0 +1,10 @@
+{
+  "parameters_each": [
+    186554,
+    186554,
+    186554
+  ],
+  "identical_seed42_initial_weights": true,
+  "full_vs_no_context_initial_logit_error": 0.0,
+  "zero_input_finite": true
+}

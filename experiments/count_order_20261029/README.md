@@ -1,0 +1,9 @@
+# Same-room cross-record count ordering
+
+Purpose: verify a count-specific learning constraint rather than a synchrony or motion-strength surrogate. Raw motion/energy descriptors may correlate with count in opposite directions in a1 andc1. The18feature trend audit uses one mean per recording,1—4people, and is exploratory; unadjusted permutationp values are not feature-selection criteria. No test-room baseline enters the model.
+
+Controlled training comparison: network.py is text-identical to texture_chain_20261028 apart from line endings (5,432,581parameters). Same seed42, initialization, data splits, sampler,20epoch schedule,AdamW0.0003,decay0.02,batch24,double time view. Only new loss is0.2times mean softplus(0.5true_count_gap - predicted_expected_count_gap), computed for batch pairs with same known room, different recording, and positive count gap. Unknown room recordings are separate groups. The expected count comes from the existing five-class probabilities; no extra input or head at inference. This encourages order of learned evidence, not monotonicity of any raw physical feature.
+
+Pair construction uses only fit indices; calibration/test labels are used only for evaluation, and source balanced NLL still selects epoch. Same-room pairs may share layout/session confounds: the experiment cannot establish causality from room matching alone. Reused development splits and one seed limit conclusions. Save selected and fixed20 weights and all predictions. Test ranking is computed from record-mean expected counts, not treated as window accuracy or platform score.
+
+`diagnose.py`:record-level trend audit. `train_chain.py --record`:three whole-record folds. Leave-room/full-data stages remain pending until explicitly run; do not claim them completed. Outputs:D:/huawei2026-experiments/count_order_20261029/.

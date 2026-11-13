@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-31",
+  "model": "models/evidence_large_20261028/01_large_relation_chain_seed42.onnx",
+  "sha256": "8b7948552790bd212b98e4473b86d39ad81a225135f4de0eec0ed2568239a5b1",
+  "platform_score": 0.25,
+  "source": "user-reported; refers to immediately preceding recommended file",
+  "submission_id": null,
+  "status": "scored_not_recommended",
+  "best_platform_score": 0.54
+}

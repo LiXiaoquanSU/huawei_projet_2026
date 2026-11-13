@@ -1,0 +1,3191 @@
+{
+  "protocol": "Within each complete record compare lower/upper halves of measured motion; same room and count. Descriptive reused-room analysis. Actual backbone saw all labeled records and is training-fit only.",
+  "records": [
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash033659_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 1,
+      "predicted_counts": [
+        0,
+        5,
+        14,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.27236658334732056,
+          "spread": 0.5467163324356079,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.1,
+          "high_minus_low": 0.1,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.21016304194927216,
+          "spread": 0.30406272411346436,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.1,
+          "high_minus_low": 0.1,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash058655_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 5,
+      "predicted_counts": [
+        0,
+        13,
+        5,
+        1,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.485933393239975,
+          "spread": 0.5616509318351746,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.1,
+          "high_minus_low": -0.30000000000000004,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20810016989707947,
+          "spread": 0.0711628645658493,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.1,
+          "high_minus_low": -0.30000000000000004,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash069403_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 7,
+      "predicted_counts": [
+        0,
+        6,
+        7,
+        7,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6061121225357056,
+          "spread": 0.35268229246139526,
+          "low_accuracy": 0.5,
+          "high_accuracy": 0.2,
+          "high_minus_low": -0.3,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2799874246120453,
+          "spread": 0.381191611289978,
+          "low_accuracy": 0.5,
+          "high_accuracy": 0.2,
+          "high_minus_low": -0.3,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash221231_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 4,
+      "predicted_counts": [
+        0,
+        4,
+        12,
+        4,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.628869354724884,
+          "spread": 0.25921306014060974,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.0,
+          "high_minus_low": -0.4,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2421395480632782,
+          "spread": 0.2472153604030609,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.3,
+          "high_minus_low": 0.19999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash240174_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 8,
+      "predicted_counts": [
+        0,
+        11,
+        8,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.17801687121391296,
+          "spread": 0.34299567341804504,
+          "low_accuracy": 0.2,
+          "high_accuracy": 0.6,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16842904686927795,
+          "spread": 0.015229731798171997,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.4,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash280746_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        6,
+        14,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.25059276819229126,
+          "spread": 0.44648078083992004,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19346638023853302,
+          "spread": 0.29093560576438904,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash330776_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        19,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.11959080398082733,
+          "spread": 0.022778965532779694,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16822953522205353,
+          "spread": 0.014025896787643433,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash420651_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        19,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12146512418985367,
+          "spread": 0.03312668949365616,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16917601227760315,
+          "spread": 0.009374156594276428,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash813694_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        19,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6425489187240601,
+          "spread": 0.29515013098716736,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.25820448994636536,
+          "spread": 0.17406950891017914,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash844151_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        19,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12487001717090607,
+          "spread": 0.35102832317352295,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16675478219985962,
+          "spread": 0.06217513978481293,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash861722_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 1,
+      "predicted_counts": [
+        0,
+        4,
+        15,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.20466844737529755,
+          "spread": 0.38884153962135315,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.1,
+          "high_minus_low": 0.1,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16700194776058197,
+          "spread": 0.015802666544914246,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.0,
+          "high_minus_low": -0.1,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "a1",
+      "room": "a1",
+      "identifier": "a_a1_hash957492_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        5,
+        10,
+        5,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7332459688186646,
+          "spread": 0.1747167706489563,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.3619246482849121,
+          "spread": 0.1251574456691742,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash072792_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 16,
+      "predicted_counts": [
+        1,
+        2,
+        16,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.44159603118896484,
+          "spread": 0.44963574409484863,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.9,
+          "high_minus_low": 0.20000000000000007,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2240380346775055,
+          "spread": 0.23201514780521393,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.9,
+          "high_minus_low": 0.20000000000000007,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash292683_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        1,
+        10,
+        9,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7049013376235962,
+          "spread": 0.4991532862186432,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2514408230781555,
+          "spread": 0.5049037933349609,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash347235_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 9,
+      "predicted_counts": [
+        0,
+        9,
+        11,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6100413799285889,
+          "spread": 0.6340923309326172,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.6,
+          "high_minus_low": 0.3,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.33262553811073303,
+          "spread": 0.282125860452652,
+          "low_accuracy": 0.2,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.49999999999999994,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash368203_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        4,
+        16,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.588897168636322,
+          "spread": 0.5353213548660278,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2042008340358734,
+          "spread": 0.06424331665039062,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash419093_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        5,
+        15,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.5072402358055115,
+          "spread": 0.43490850925445557,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2422672063112259,
+          "spread": 0.43655627965927124,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash534150_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        7,
+        13,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6698269844055176,
+          "spread": 0.44383811950683594,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.25937792658805847,
+          "spread": 0.2265700399875641,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash562262_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 7,
+      "predicted_counts": [
+        0,
+        13,
+        7,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6974846720695496,
+          "spread": 0.3500877022743225,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.3,
+          "high_minus_low": -0.10000000000000003,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2642473578453064,
+          "spread": 0.1587541550397873,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.4,
+          "high_minus_low": 0.10000000000000003,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash672642_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        6,
+        14,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.8857822418212891,
+          "spread": 0.41954392194747925,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.7305117249488831,
+          "spread": 0.7443607449531555,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash712526_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        11,
+        9,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7327795028686523,
+          "spread": 0.19191014766693115,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.26791614294052124,
+          "spread": 0.09201709926128387,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash810891_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        5,
+        15,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6841773390769958,
+          "spread": 0.5719784498214722,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2644956707954407,
+          "spread": 0.3185562789440155,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash884642_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 8,
+      "predicted_counts": [
+        0,
+        11,
+        8,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.45646077394485474,
+          "spread": 0.3394264876842499,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.4,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19319719076156616,
+          "spread": 0.042111918330192566,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.4,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "c1",
+      "room": "c1",
+      "identifier": "c_c1_hash906339_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6412156820297241,
+          "spread": 0.4782525599002838,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.27872592210769653,
+          "spread": 0.2763445973396301,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash084491_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 13,
+      "predicted_counts": [
+        7,
+        13,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.22076931595802307,
+          "spread": 0.32800933718681335,
+          "low_accuracy": 0.8,
+          "high_accuracy": 0.5,
+          "high_minus_low": -0.30000000000000004,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.1926368772983551,
+          "spread": 0.05292372405529022,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.6,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash145095_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.17418095469474792,
+          "spread": 0.13928928971290588,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18831473588943481,
+          "spread": 0.04037465155124664,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash158157_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.26788872480392456,
+          "spread": 0.20620085299015045,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.21312332153320312,
+          "spread": 0.07456079125404358,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash160227_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 16,
+      "predicted_counts": [
+        0,
+        16,
+        0,
+        0,
+        4
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.10949653387069702,
+          "spread": 0.0502161830663681,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.6,
+          "high_minus_low": -0.4,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17023222148418427,
+          "spread": 0.014489948749542236,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.7,
+          "high_minus_low": -0.20000000000000007,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash224345_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12995083630084991,
+          "spread": 0.08203472942113876,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17708821594715118,
+          "spread": 0.04014343023300171,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash242495_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        18,
+        0,
+        0,
+        2
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.11285029351711273,
+          "spread": 0.03853880614042282,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17243953049182892,
+          "spread": 0.015509158372879028,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash245884_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        1,
+        19,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1549559235572815,
+          "spread": 0.09786592423915863,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18866124749183655,
+          "spread": 0.03878489136695862,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash284913_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 11,
+      "predicted_counts": [
+        9,
+        11,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.2360815554857254,
+          "spread": 0.11014467477798462,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.4,
+          "high_minus_low": -0.29999999999999993,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18987421691417694,
+          "spread": 0.0316024124622345,
+          "low_accuracy": 0.6,
+          "high_accuracy": 0.5,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash299607_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.27967578172683716,
+          "spread": 0.09506705403327942,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18851765990257263,
+          "spread": 0.0363432914018631,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash335239_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 16,
+      "predicted_counts": [
+        4,
+        16,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1682870090007782,
+          "spread": 0.11383822560310364,
+          "low_accuracy": 0.8,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18397191166877747,
+          "spread": 0.02351798117160797,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.7,
+          "high_minus_low": -0.20000000000000007,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash352161_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.15450610220432281,
+          "spread": 0.12795251607894897,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18569320440292358,
+          "spread": 0.025719478726387024,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash401641_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        17,
+        0,
+        0,
+        3
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.10841766744852066,
+          "spread": 0.0797245129942894,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17131882905960083,
+          "spread": 0.02326253056526184,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash566390_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        1,
+        19,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.21394427120685577,
+          "spread": 0.1208169013261795,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18593230843544006,
+          "spread": 0.026984095573425293,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash727659_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.105323925614357,
+          "spread": 0.04135124385356903,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16918599605560303,
+          "spread": 0.02091182768344879,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash740734_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        19,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1211274266242981,
+          "spread": 0.06789565086364746,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16860926151275635,
+          "spread": 0.03144006431102753,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash748206_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        17,
+        0,
+        0,
+        3
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12801116704940796,
+          "spread": 0.07806586474180222,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18436364829540253,
+          "spread": 0.02722245454788208,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "g1",
+      "room": "g1",
+      "identifier": "g_g1_hash936406_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.2431224137544632,
+          "spread": 1.0389039516448975,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20152752101421356,
+          "spread": 0.196450874209404,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "e1",
+      "room": "e1",
+      "identifier": "e_e1_hash250867_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        1,
+        19,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.5456107258796692,
+          "spread": 0.2964503765106201,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.38175275921821594,
+          "spread": 0.34886571764945984,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "e1",
+      "room": "e1",
+      "identifier": "e_e1_hash508136_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.473844051361084,
+          "spread": 0.15466541051864624,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20130756497383118,
+          "spread": 0.053198084235191345,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "e1",
+      "room": "e1",
+      "identifier": "e_e1_hash657193_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.42731156945228577,
+          "spread": 0.10512286424636841,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19206281006336212,
+          "spread": 0.03414437174797058,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash033659_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 12,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        12,
+        8
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.27236658334732056,
+          "spread": 0.5467163324356079,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.4,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.21016304194927216,
+          "spread": 0.30406272411346436,
+          "low_accuracy": 0.5,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.19999999999999996,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash058655_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 17,
+      "predicted_counts": [
+        0,
+        0,
+        17,
+        1,
+        2
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.485933393239975,
+          "spread": 0.5616509318351746,
+          "low_accuracy": 0.8,
+          "high_accuracy": 0.9,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20810016989707947,
+          "spread": 0.0711628645658493,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.8,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash069403_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 10,
+      "predicted_counts": [
+        0,
+        0,
+        10,
+        10,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6061121225357056,
+          "spread": 0.35268229246139526,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2799874246120453,
+          "spread": 0.381191611289978,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash221231_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        1,
+        0,
+        0,
+        13,
+        6
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.628869354724884,
+          "spread": 0.25921306014060974,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2421395480632782,
+          "spread": 0.2472153604030609,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash240174_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 15,
+      "predicted_counts": [
+        0,
+        0,
+        15,
+        2,
+        3
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.17801687121391296,
+          "spread": 0.34299567341804504,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.10000000000000009,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16842904686927795,
+          "spread": 0.015229731798171997,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.10000000000000009,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash280746_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 8,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        8,
+        12
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.25059276819229126,
+          "spread": 0.44648078083992004,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.4,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19346638023853302,
+          "spread": 0.29093560576438904,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.5,
+          "high_minus_low": 0.2,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash330776_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.11959080398082733,
+          "spread": 0.022778965532779694,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16822953522205353,
+          "spread": 0.014025896787643433,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash420651_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12146512418985367,
+          "spread": 0.03312668949365616,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16917601227760315,
+          "spread": 0.009374156594276428,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash813694_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        0,
+        19,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6425489187240601,
+          "spread": 0.29515013098716736,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.25820448994636536,
+          "spread": 0.17406950891017914,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash844151_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12487001717090607,
+          "spread": 0.35102832317352295,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16675478219985962,
+          "spread": 0.06217513978481293,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash861722_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 10,
+      "predicted_counts": [
+        0,
+        0,
+        1,
+        10,
+        9
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.20466844737529755,
+          "spread": 0.38884153962135315,
+          "low_accuracy": 0.2,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.6000000000000001,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16700194776058197,
+          "spread": 0.015802666544914246,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "a1",
+      "identifier": "a_a1_hash957492_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 18,
+      "predicted_counts": [
+        18,
+        2,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7332459688186646,
+          "spread": 0.1747167706489563,
+          "low_accuracy": 0.8,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.19999999999999996,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.3619246482849121,
+          "spread": 0.1251574456691742,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.9,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "b1",
+      "identifier": "b_b1_hash962037_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12306438386440277,
+          "spread": 0.3333130180835724,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16641844809055328,
+          "spread": 0.04779393970966339,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash072792_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 10,
+      "predicted_counts": [
+        0,
+        0,
+        10,
+        8,
+        2
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.44159603118896484,
+          "spread": 0.44963574409484863,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2240380346775055,
+          "spread": 0.23201514780521393,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.7,
+          "high_minus_low": 0.39999999999999997,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash292683_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 17,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        3,
+        17
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7049013376235962,
+          "spread": 0.4991532862186432,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.8,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2514408230781555,
+          "spread": 0.5049037933349609,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.8,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash347235_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        19,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6100413799285889,
+          "spread": 0.6340923309326172,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.33262553811073303,
+          "spread": 0.282125860452652,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash368203_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        1,
+        19
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.588897168636322,
+          "spread": 0.5353213548660278,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2042008340358734,
+          "spread": 0.06424331665039062,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash419093_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        19,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.5072402358055115,
+          "spread": 0.43490850925445557,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2422672063112259,
+          "spread": 0.43655627965927124,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash534150_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6698269844055176,
+          "spread": 0.44383811950683594,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.25937792658805847,
+          "spread": 0.2265700399875641,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash562262_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 3,
+      "predicted_counts": [
+        0,
+        0,
+        3,
+        17,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6974846720695496,
+          "spread": 0.3500877022743225,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.2,
+          "high_minus_low": 0.1,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2642473578453064,
+          "spread": 0.1587541550397873,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.2,
+          "high_minus_low": 0.1,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash672642_4",
+      "label": 4,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.8857822418212891,
+          "spread": 0.41954392194747925,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.7305117249488831,
+          "spread": 0.7443607449531555,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash712526_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.7327795028686523,
+          "spread": 0.19191014766693115,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.26791614294052124,
+          "spread": 0.09201709926128387,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash810891_3",
+      "label": 3,
+      "windows": 20,
+      "correct": 5,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        5,
+        15
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6841773390769958,
+          "spread": 0.5719784498214722,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.2,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.2644956707954407,
+          "spread": 0.3185562789440155,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.2,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash884642_2",
+      "label": 2,
+      "windows": 20,
+      "correct": 11,
+      "predicted_counts": [
+        0,
+        0,
+        11,
+        9,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.45646077394485474,
+          "spread": 0.3394264876842499,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.4,
+          "high_minus_low": -0.29999999999999993,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19319719076156616,
+          "spread": 0.042111918330192566,
+          "low_accuracy": 0.7,
+          "high_accuracy": 0.4,
+          "high_minus_low": -0.29999999999999993,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "c1",
+      "identifier": "c_c1_hash906339_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        19,
+        0,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.6412156820297241,
+          "spread": 0.4782525599002838,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.27872592210769653,
+          "spread": 0.2763445973396301,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "e1",
+      "identifier": "e_e1_hash250867_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 17,
+      "predicted_counts": [
+        1,
+        17,
+        0,
+        0,
+        2
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.5456107258796692,
+          "spread": 0.2964503765106201,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.8,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.38175275921821594,
+          "spread": 0.34886571764945984,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.7,
+          "high_minus_low": -0.30000000000000004,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "e1",
+      "identifier": "e_e1_hash508136_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.473844051361084,
+          "spread": 0.15466541051864624,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20130756497383118,
+          "spread": 0.053198084235191345,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "e1",
+      "identifier": "e_e1_hash657193_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 12,
+      "predicted_counts": [
+        12,
+        8,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.42731156945228577,
+          "spread": 0.10512286424636841,
+          "low_accuracy": 0.6,
+          "high_accuracy": 0.6,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.19206281006336212,
+          "spread": 0.03414437174797058,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.4,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash084491_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 10,
+      "predicted_counts": [
+        10,
+        10,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.22076931595802307,
+          "spread": 0.32800933718681335,
+          "low_accuracy": 0.4,
+          "high_accuracy": 0.6,
+          "high_minus_low": 0.19999999999999996,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.1926368772983551,
+          "spread": 0.05292372405529022,
+          "low_accuracy": 0.6,
+          "high_accuracy": 0.4,
+          "high_minus_low": -0.19999999999999996,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash145095_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 1,
+      "predicted_counts": [
+        19,
+        1,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.17418095469474792,
+          "spread": 0.13928928971290588,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.0,
+          "high_minus_low": -0.1,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18831473588943481,
+          "spread": 0.04037465155124664,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.0,
+          "high_minus_low": -0.1,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash158157_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.26788872480392456,
+          "spread": 0.20620085299015045,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.21312332153320312,
+          "spread": 0.07456079125404358,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash160227_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 17,
+      "predicted_counts": [
+        3,
+        17,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.10949653387069702,
+          "spread": 0.0502161830663681,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.8,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17023222148418427,
+          "spread": 0.014489948749542236,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.7,
+          "high_minus_low": -0.30000000000000004,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash224345_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12995083630084991,
+          "spread": 0.08203472942113876,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17708821594715118,
+          "spread": 0.04014343023300171,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash242495_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 16,
+      "predicted_counts": [
+        16,
+        3,
+        1,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.11285029351711273,
+          "spread": 0.03853880614042282,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.6,
+          "high_minus_low": -0.4,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17243953049182892,
+          "spread": 0.015509158372879028,
+          "low_accuracy": 0.9,
+          "high_accuracy": 0.7,
+          "high_minus_low": -0.20000000000000007,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash245884_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 2,
+      "predicted_counts": [
+        18,
+        2,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1549559235572815,
+          "spread": 0.09786592423915863,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.2,
+          "high_minus_low": 0.2,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18866124749183655,
+          "spread": 0.03878489136695862,
+          "low_accuracy": 0.1,
+          "high_accuracy": 0.1,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash284913_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        19,
+        0,
+        0,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.2360815554857254,
+          "spread": 0.11014467477798462,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18987421691417694,
+          "spread": 0.0316024124622345,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash299607_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.27967578172683716,
+          "spread": 0.09506705403327942,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18851765990257263,
+          "spread": 0.0363432914018631,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash335239_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        19,
+        0,
+        1,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1682870090007782,
+          "spread": 0.11383822560310364,
+          "low_accuracy": 0.9,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18397191166877747,
+          "spread": 0.02351798117160797,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash352161_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.15450610220432281,
+          "spread": 0.12795251607894897,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18569320440292358,
+          "spread": 0.025719478726387024,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash401641_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.10841766744852066,
+          "spread": 0.0797245129942894,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17131882905960083,
+          "spread": 0.02326253056526184,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash566390_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 11,
+      "predicted_counts": [
+        3,
+        11,
+        0,
+        0,
+        6
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.21394427120685577,
+          "spread": 0.1208169013261795,
+          "low_accuracy": 0.5,
+          "high_accuracy": 0.6,
+          "high_minus_low": 0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18593230843544006,
+          "spread": 0.026984095573425293,
+          "low_accuracy": 0.3,
+          "high_accuracy": 0.8,
+          "high_minus_low": 0.5,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash727659_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 0,
+      "predicted_counts": [
+        19,
+        0,
+        0,
+        0,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.105323925614357,
+          "spread": 0.04135124385356903,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16918599605560303,
+          "spread": 0.02091182768344879,
+          "low_accuracy": 0.0,
+          "high_accuracy": 0.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash740734_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.1211274266242981,
+          "spread": 0.06789565086364746,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.16860926151275635,
+          "spread": 0.03144006431102753,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash748206_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.12801116704940796,
+          "spread": 0.07806586474180222,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.18436364829540253,
+          "spread": 0.02722245454788208,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "g1",
+      "identifier": "g_g1_hash936406_0",
+      "label": 0,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.2431224137544632,
+          "spread": 1.0389039516448975,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20152752101421356,
+          "spread": 0.196450874209404,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "unknown",
+      "identifier": "unknown_unknown_hash081247_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 19,
+      "predicted_counts": [
+        0,
+        19,
+        0,
+        0,
+        1
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.4053400158882141,
+          "spread": 0.22871187329292297,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.20723585784435272,
+          "spread": 0.07826881110668182,
+          "low_accuracy": 1.0,
+          "high_accuracy": 0.9,
+          "high_minus_low": -0.09999999999999998,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "unknown",
+      "identifier": "unknown_unknown_hash287936_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.3168202340602875,
+          "spread": 0.07156085968017578,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.186052605509758,
+          "spread": 0.015808552503585815,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    },
+    {
+      "evaluation": "actual",
+      "room": "unknown",
+      "identifier": "unknown_unknown_hash461239_1",
+      "label": 1,
+      "windows": 20,
+      "correct": 20,
+      "predicted_counts": [
+        0,
+        20,
+        0,
+        0,
+        0
+      ],
+      "activity": {
+        "amplitude_motion": {
+          "mean": 0.17519515752792358,
+          "spread": 0.06781038641929626,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        },
+        "amplitude_derivative": {
+          "mean": 0.17293371260166168,
+          "spread": 0.011305630207061768,
+          "low_accuracy": 1.0,
+          "high_accuracy": 1.0,
+          "high_minus_low": 0.0,
+          "informative": true
+        }
+      }
+    }
+  ],
+  "summary": {
+    "heldout_rooms_amplitude_motion": {
+      "records": 44,
+      "low_accuracy": 0.325,
+      "high_accuracy": 0.3068181818181819,
+      "mean_high_minus_low": -0.018181818181818184,
+      "record_bootstrap_ci95": [
+        -0.06136363636363637,
+        0.025
+      ],
+      "by_class": {
+        "0": {
+          "records": 10,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "1": {
+          "records": 15,
+          "low": 0.78,
+          "high": 0.7200000000000001
+        },
+        "2": {
+          "records": 6,
+          "low": 0.43333333333333335,
+          "high": 0.4166666666666667
+        },
+        "3": {
+          "records": 6,
+          "low": 0.0,
+          "high": 0.03333333333333333
+        },
+        "4": {
+          "records": 7,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "heldout_rooms_amplitude_derivative": {
+      "records": 44,
+      "low_accuracy": 0.3181818181818182,
+      "high_accuracy": 0.3136363636363636,
+      "mean_high_minus_low": -0.00454545454545455,
+      "record_bootstrap_ci95": [
+        -0.03863636363636364,
+        0.03181818181818181
+      ],
+      "by_class": {
+        "0": {
+          "records": 10,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "1": {
+          "records": 15,
+          "low": 0.7466666666666666,
+          "high": 0.7533333333333334
+        },
+        "2": {
+          "records": 6,
+          "low": 0.44999999999999996,
+          "high": 0.39999999999999997
+        },
+        "3": {
+          "records": 6,
+          "low": 0.016666666666666666,
+          "high": 0.016666666666666666
+        },
+        "4": {
+          "records": 7,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "actual_training_fit_amplitude_motion": {
+      "records": 48,
+      "low_accuracy": 0.6895833333333333,
+      "high_accuracy": 0.71875,
+      "mean_high_minus_low": 0.029166666666666664,
+      "record_bootstrap_ci95": [
+        -0.012499999999999992,
+        0.07291666666666667
+      ],
+      "by_class": {
+        "0": {
+          "records": 11,
+          "low": 0.9454545454545454,
+          "high": 0.9272727272727272
+        },
+        "1": {
+          "records": 18,
+          "low": 0.5333333333333333,
+          "high": 0.5444444444444445
+        },
+        "2": {
+          "records": 6,
+          "low": 0.4833333333333334,
+          "high": 0.6166666666666668
+        },
+        "3": {
+          "records": 6,
+          "low": 0.5499999999999999,
+          "high": 0.6833333333333332
+        },
+        "4": {
+          "records": 7,
+          "low": 0.9857142857142858,
+          "high": 0.9571428571428572
+        }
+      }
+    },
+    "actual_training_fit_amplitude_derivative": {
+      "records": 48,
+      "low_accuracy": 0.69375,
+      "high_accuracy": 0.7145833333333332,
+      "mean_high_minus_low": 0.020833333333333332,
+      "record_bootstrap_ci95": [
+        -0.022916666666666665,
+        0.06874999999999999
+      ],
+      "by_class": {
+        "0": {
+          "records": 11,
+          "low": 0.9272727272727272,
+          "high": 0.9454545454545454
+        },
+        "1": {
+          "records": 18,
+          "low": 0.55,
+          "high": 0.5277777777777778
+        },
+        "2": {
+          "records": 6,
+          "low": 0.5,
+          "high": 0.6
+        },
+        "3": {
+          "records": 6,
+          "low": 0.5666666666666667,
+          "high": 0.6666666666666666
+        },
+        "4": {
+          "records": 7,
+          "low": 0.9714285714285714,
+          "high": 0.9714285714285714
+        }
+      }
+    }
+  }
+}

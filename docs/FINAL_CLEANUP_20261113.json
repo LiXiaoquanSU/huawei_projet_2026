@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-13",
+  "scope": "Recreatable Python bytecode caches only; no model, dataset, or experiment source deletion",
+  "removed": [
+    {
+      "path": "src\\__pycache__",
+      "files": 3,
+      "bytes": 44045.0
+    },
+    {
+      "path": "tools\\__pycache__",
+      "files": 5,
+      "bytes": 52502.0
+    },
+    {
+      "path": "experiments\\adapter049_20261024\\__pycache__",
+      "files": 5,
+      "bytes": 81266.0
+    },
+    {
+      "path": "experiments\\bias050_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 7961.0
+    },
+    {
+      "path": "experiments\\bias054_20261025\\__pycache__",
+      "files": 8,
+      "bytes": 103768.0
+    },
+    {
+      "path": "experiments\\branch_audit_20261110\\__pycache__",
+      "files": 1,
+      "bytes": 9941.0
+    },
+    {
+      "path": "experiments\\canonical_rx_20261110\\__pycache__",
+      "files": 2,
+      "bytes": 24142.0
+    },
+    {
+      "path": "experiments\\class_failure_20261026\\__pycache__",
+      "files": 1,
+      "bytes": 10485.0
+    },
+    {
+      "path": "experiments\\clock_origin_20261025\\__pycache__",
+      "files": 1,
+      "bytes": 17545.0
+    },
+    {
+      "path": "experiments\\collaborative_loss_20261110\\__pycache__",
+      "files": 2,
+      "bytes": 21648.0
+    },
+    {
+      "path": "experiments\\conditional_style_20261111\\__pycache__",
+      "files": 1,
+      "bytes": 16376.0
+    },
+    {
+      "path": "experiments\\correlation049_20261024\\__pycache__",
+      "files": 7,
+      "bytes": 89061.0
+    },
+    {
+      "path": "experiments\\count_identity_20261029\\__pycache__",
+      "files": 2,
+      "bytes": 31778.0
+    },
+    {
+      "path": "experiments\\count_order_20261029\\__pycache__",
+      "files": 3,
+      "bytes": 43329.0
+    },
+    {
+      "path": "experiments\\covariance_20261026\\__pycache__",
+      "files": 2,
+      "bytes": 21328.0
+    },
+    {
+      "path": "experiments\\dynamic_evidence_20261108\\__pycache__",
+      "files": 1,
+      "bytes": 11634.0
+    },
+    {
+      "path": "experiments\\environment_protocol_20261025\\__pycache__",
+      "files": 8,
+      "bytes": 110123.0
+    },
+    {
+      "path": "experiments\\evidence_chain_20261028\\__pycache__",
+      "files": 2,
+      "bytes": 31573.0
+    },
+    {
+      "path": "experiments\\evidence_large_20261028\\__pycache__",
+      "files": 2,
+      "bytes": 33286.0
+    },
+    {
+      "path": "experiments\\final_bias_20261024\\__pycache__",
+      "files": 2,
+      "bytes": 30797.0
+    },
+    {
+      "path": "experiments\\g60_20261025\\__pycache__",
+      "files": 4,
+      "bytes": 66746.0
+    },
+    {
+      "path": "experiments\\global_local_20261021\\__pycache__",
+      "files": 1,
+      "bytes": 16670.0
+    },
+    {
+      "path": "experiments\\high_count_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 12639.0
+    },
+    {
+      "path": "experiments\\information_audit_20261027\\__pycache__",
+      "files": 2,
+      "bytes": 21830.0
+    },
+    {
+      "path": "experiments\\joint_spectrum_20261031\\__pycache__",
+      "files": 2,
+      "bytes": 30281.0
+    },
+    {
+      "path": "experiments\\multiscale049_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 14191.0
+    },
+    {
+      "path": "experiments\\nested_context_20261107\\__pycache__",
+      "files": 1,
+      "bytes": 18217.0
+    },
+    {
+      "path": "experiments\\next053_20261025\\__pycache__",
+      "files": 3,
+      "bytes": 46342.0
+    },
+    {
+      "path": "experiments\\ordinal_consensus_20261024\\__pycache__",
+      "files": 2,
+      "bytes": 18300.0
+    },
+    {
+      "path": "experiments\\ordinal_feedback_20261108\\__pycache__",
+      "files": 2,
+      "bytes": 28956.0
+    },
+    {
+      "path": "experiments\\pair_evidence_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 21653.0
+    },
+    {
+      "path": "experiments\\presence_rescue_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 31749.0
+    },
+    {
+      "path": "experiments\\protected_context_20261024\\__pycache__",
+      "files": 1,
+      "bytes": 34596.0
+    },
+    {
+      "path": "experiments\\protection_arbiter_20261025\\__pycache__",
+      "files": 9,
+      "bytes": 118276.0
+    },
+    {
+      "path": "experiments\\record_mix_20261109\\__pycache__",
+      "files": 4,
+      "bytes": 54893.0
+    },
+    {
+      "path": "experiments\\resolution_20261109\\__pycache__",
+      "files": 4,
+      "bytes": 42573.0
+    },
+    {
+      "path": "experiments\\route_attention_20261025\\__pycache__",
+      "files": 10,
+      "bytes": 105866.0
+    },
+    {
+      "path": "experiments\\seed_experts_20261025\\__pycache__",
+      "files": 4,
+      "bytes": 58590.0
+    },
+    {
+      "path": "experiments\\shared_hierarchy_20261025\\__pycache__",
+      "files": 5,
+      "bytes": 62506.0
+    },
+    {
+      "path": "experiments\\spectral_views_20261025\\__pycache__",
+      "files": 1,
+      "bytes": 12026.0
+    },
+    {
+      "path": "experiments\\stable_chain_20261028\\__pycache__",
+      "files": 2,
+      "bytes": 37812.0
+    },
+    {
+      "path": "experiments\\static_texture_20261029\\__pycache__",
+      "files": 2,
+      "bytes": 30398.0
+    },
+    {
+      "path": "experiments\\strength_ablation_20261026\\__pycache__",
+      "files": 2,
+      "bytes": 21470.0
+    },
+    {
+      "path": "experiments\\structure_events_20261021\\__pycache__",
+      "files": 1,
+      "bytes": 10138.0
+    },
+    {
+      "path": "experiments\\subnet_expectation_20261025\\__pycache__",
+      "files": 3,
+      "bytes": 45440.0
+    },
+    {
+      "path": "experiments\\synchrony_20261029\\__pycache__",
+      "files": 1,
+      "bytes": 15816.0
+    },
+    {
+      "path": "experiments\\texture_chain_20261028\\__pycache__",
+      "files": 2,
+      "bytes": 28807.0
+    },
+    {
+      "path": "experiments\\tta_policy_20261024\\__pycache__",
+      "files": 2,
+      "bytes": 32445.0
+    },
+    {
+      "path": "experiments\\u_ssl_20261025\\__pycache__",
+      "files": 7,
+      "bytes": 110529.0
+    }
+  ],
+  "total_files": 140.0,
+  "total_bytes": 1942343.0
+}

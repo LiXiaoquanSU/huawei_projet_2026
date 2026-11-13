@@ -1,0 +1,17 @@
+{
+  "size": "spectral",
+  "mode": "physical",
+  "seed": 42,
+  "epochs": 5,
+  "fold_best_epochs": [
+    1,
+    19,
+    5
+  ],
+  "records": 48,
+  "windows": 960,
+  "independent_accuracy": null,
+  "room_area_labels": false,
+  "human_motion_labels": false,
+  "signal_proxy": "input-derived coherence"
+}

@@ -1,0 +1,1051 @@
+{
+  "platform_feedback": {
+    "id": "ordinal75_20261107",
+    "name": "Gprime054 ordinal75 direct25",
+    "path": "models/ordinal_head_20261107/01_gprime_ordinal75.onnx",
+    "sha256": "2256be773daac553142ba974c040e0eb2045e7ef2747fa176e4dce2577dcba33",
+    "bytes": 83675180,
+    "platform_score": 0.47,
+    "status": "scored_not_recommended",
+    "base_model": "teammate_gprime_20261025",
+    "base_platform_score": 0.54,
+    "change": "Each view: .75 ordinal + .25 direct probabilities instead of .5/.5. All original weights, biases and policy node formulas preserved; altered scores can change policy branches.",
+    "training": "Candidate reuses scored054 weights; six new objective-control fits and six linear probes did not yield a better replacement.",
+    "development": {
+      "room_proxy_baseline": 278,
+      "room_proxy_candidate": 284,
+      "total": 880,
+      "corrected": 12,
+      "broken": 6,
+      "room_deltas": {
+        "a1": 0,
+        "c1": 5,
+        "g1": 1,
+        "e1": 0
+      },
+      "record_bootstrap_difference95": [
+        -0.00454545444,
+        0.01931818244
+      ],
+      "context_record_control": 477,
+      "context_record_ordinal75": 485,
+      "context_total": 960,
+      "actual_seen_records_baseline": 676,
+      "actual_seen_records_candidate": 679,
+      "actual_seen_total": 960,
+      "seen_class_diagonal_baseline": [
+        206,
+        194,
+        66,
+        74,
+        136
+      ],
+      "seen_class_diagonal_candidate": [
+        204,
+        203,
+        61,
+        76,
+        135
+      ]
+    },
+    "limitations": "Small gain on reused development proxies, interval includes zero. Seen-record fit is not validation. Reduced seen-class2 accuracy. Hidden platform score unknown;0.60 not achieved.",
+    "resource": {
+      "status": "pass",
+      "checks": {
+        "size": true,
+        "time": true,
+        "memory": true
+      },
+      "bytes": 83675180,
+      "sha256": "2256be773daac553142ba974c040e0eb2045e7ef2747fa176e4dce2577dcba33",
+      "embedded_weights": true,
+      "cpu_threads": 4,
+      "cases": [
+        {
+          "input": "D:\\huawei2026-experiments\\ordinal_policy_20261107\\export\\raw_reference_740.npz",
+          "probability_max_error": 2.9650735366981706e-08,
+          "logit_max_error": 2.384185791015625e-07,
+          "argmax_matches": true,
+          "reference_margin": 0.17249845194090252,
+          "cpu_mean_s": 0.5046114649740048,
+          "cpu_p95_s": 0.5225599549594335
+        },
+        {
+          "input": "D:\\huawei2026-experiments\\ordinal_policy_20261107\\export\\raw_reference_748.npz",
+          "probability_max_error": 5.272520553489812e-08,
+          "logit_max_error": 4.76837158203125e-07,
+          "argmax_matches": true,
+          "reference_margin": 0.006734635628488472,
+          "cpu_mean_s": 0.6351664800080471,
+          "cpu_p95_s": 0.7361436099279672
+        },
+        {
+          "input": "D:\\huawei2026-experiments\\ordinal_policy_20261107\\export\\raw_reference_750.npz",
+          "probability_max_error": 1.6424056115127428e-08,
+          "logit_max_error": 4.76837158203125e-07,
+          "argmax_matches": true,
+          "reference_margin": 0.0035356252197099036,
+          "cpu_mean_s": 0.6122163649881258,
+          "cpu_p95_s": 0.6380126499920152
+        },
+        {
+          "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\smoke_input.npz",
+          "probability_max_error": 1.960941115042303e-08,
+          "logit_max_error": 0.0,
+          "argmax_matches": true,
+          "reference_margin": 0.32031885539317945,
+          "cpu_mean_s": 0.6094034150009975,
+          "cpu_p95_s": 0.6315818798611872
+        },
+        {
+          "input": "C:\\Users\\lxq_1\\Desktop\\huawei2026\\checks\\case_gap.npz",
+          "probability_max_error": 7.833487219999213e-09,
+          "logit_max_error": 0.0,
+          "argmax_matches": true,
+          "reference_margin": 0.3879740441680499,
+          "cpu_mean_s": 0.6240870150155388,
+          "cpu_p95_s": 0.6663730000029319
+        },
+        {
+          "input": "zero",
+          "probability_max_error": 2.142824681583555e-08,
+          "logit_max_error": 2.384185791015625e-07,
+          "argmax_matches": true,
+          "reference_margin": 0.4292323534727165,
+          "cpu_mean_s": 0.6303917249548249,
+          "cpu_p95_s": 0.6819021048257128
+        }
+      ],
+      "peak_working_set_bytes": 705978368,
+      "peak_commit_bytes": 1547853824,
+      "note": "local CPU resource/numerical verification; not hidden platform accuracy"
+    },
+    "raw_audit_cases": 103,
+    "report": "docs/ORDINAL75_CANDIDATE_20261107.md",
+    "platform_feedback_date": "2026-11-08",
+    "source": "User-reported platform score0.47; submission ID not supplied"
+  },
+  "scope": "Counterfactual diagnosis, not submitted or newly tuned candidates; actual denotes seen training records. Hidden test errors unavailable.",
+  "results": [
+    {
+      "room": "a1",
+      "method": "baseline",
+      "correct": 45,
+      "total": 240,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 9,
+      "confusion": [
+        [
+          0,
+          5,
+          10,
+          5,
+          0
+        ],
+        [
+          0,
+          23,
+          13,
+          4,
+          0
+        ],
+        [
+          0,
+          30,
+          20,
+          9,
+          1
+        ],
+        [
+          0,
+          15,
+          43,
+          2,
+          0
+        ],
+        [
+          0,
+          57,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "a1",
+      "method": "score_only_old_route",
+      "correct": 46,
+      "total": 240,
+      "corrected": 3,
+      "broken": 2,
+      "route_changed": 9,
+      "confusion": [
+        [
+          0,
+          5,
+          10,
+          5,
+          0
+        ],
+        [
+          0,
+          21,
+          13,
+          4,
+          2
+        ],
+        [
+          0,
+          29,
+          20,
+          10,
+          1
+        ],
+        [
+          0,
+          16,
+          39,
+          5,
+          0
+        ],
+        [
+          1,
+          56,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "a1",
+      "method": "route_only_old_score",
+      "correct": 47,
+      "total": 240,
+      "corrected": 2,
+      "broken": 0,
+      "route_changed": 9,
+      "confusion": [
+        [
+          0,
+          5,
+          10,
+          5,
+          0
+        ],
+        [
+          0,
+          23,
+          13,
+          4,
+          0
+        ],
+        [
+          0,
+          30,
+          20,
+          9,
+          1
+        ],
+        [
+          0,
+          15,
+          41,
+          4,
+          0
+        ],
+        [
+          0,
+          57,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "a1",
+      "method": "actual_failed_candidate",
+      "correct": 45,
+      "total": 240,
+      "corrected": 2,
+      "broken": 2,
+      "route_changed": 9,
+      "confusion": [
+        [
+          0,
+          5,
+          10,
+          5,
+          0
+        ],
+        [
+          0,
+          21,
+          13,
+          4,
+          2
+        ],
+        [
+          0,
+          29,
+          20,
+          10,
+          1
+        ],
+        [
+          0,
+          17,
+          39,
+          4,
+          0
+        ],
+        [
+          1,
+          56,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "c1",
+      "method": "baseline",
+      "correct": 40,
+      "total": 240,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 6,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          31,
+          0,
+          0
+        ],
+        [
+          1,
+          26,
+          31,
+          2,
+          0
+        ],
+        [
+          0,
+          21,
+          39,
+          0,
+          0
+        ],
+        [
+          1,
+          27,
+          52,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "c1",
+      "method": "score_only_old_route",
+      "correct": 44,
+      "total": 240,
+      "corrected": 6,
+      "broken": 2,
+      "route_changed": 6,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          10,
+          30,
+          0,
+          0
+        ],
+        [
+          3,
+          21,
+          34,
+          2,
+          0
+        ],
+        [
+          2,
+          15,
+          43,
+          0,
+          0
+        ],
+        [
+          4,
+          19,
+          57,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "c1",
+      "method": "route_only_old_score",
+      "correct": 40,
+      "total": 240,
+      "corrected": 1,
+      "broken": 1,
+      "route_changed": 6,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          31,
+          0,
+          0
+        ],
+        [
+          1,
+          25,
+          31,
+          3,
+          0
+        ],
+        [
+          0,
+          22,
+          38,
+          0,
+          0
+        ],
+        [
+          1,
+          27,
+          52,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "c1",
+      "method": "actual_failed_candidate",
+      "correct": 45,
+      "total": 240,
+      "corrected": 7,
+      "broken": 2,
+      "route_changed": 6,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          10,
+          30,
+          0,
+          0
+        ],
+        [
+          3,
+          20,
+          35,
+          2,
+          0
+        ],
+        [
+          2,
+          16,
+          42,
+          0,
+          0
+        ],
+        [
+          4,
+          19,
+          57,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "g1",
+      "method": "baseline",
+      "correct": 174,
+      "total": 340,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 3,
+      "confusion": [
+        [
+          0,
+          131,
+          1,
+          0,
+          8
+        ],
+        [
+          22,
+          174,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "g1",
+      "method": "score_only_old_route",
+      "correct": 177,
+      "total": 340,
+      "corrected": 3,
+      "broken": 0,
+      "route_changed": 3,
+      "confusion": [
+        [
+          0,
+          139,
+          0,
+          1,
+          0
+        ],
+        [
+          22,
+          177,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "g1",
+      "method": "route_only_old_score",
+      "correct": 172,
+      "total": 340,
+      "corrected": 0,
+      "broken": 2,
+      "route_changed": 3,
+      "confusion": [
+        [
+          0,
+          132,
+          0,
+          0,
+          8
+        ],
+        [
+          22,
+          172,
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "g1",
+      "method": "actual_failed_candidate",
+      "correct": 175,
+      "total": 340,
+      "corrected": 3,
+      "broken": 2,
+      "route_changed": 3,
+      "confusion": [
+        [
+          0,
+          140,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          175,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "e1",
+      "method": "baseline",
+      "correct": 19,
+      "total": 60,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 1,
+      "confusion": [
+        [
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          19,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "e1",
+      "method": "score_only_old_route",
+      "correct": 19,
+      "total": 60,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 1,
+      "confusion": [
+        [
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          19,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "e1",
+      "method": "route_only_old_score",
+      "correct": 19,
+      "total": 60,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 1,
+      "confusion": [
+        [
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          19,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "e1",
+      "method": "actual_failed_candidate",
+      "correct": 19,
+      "total": 60,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 1,
+      "confusion": [
+        [
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          19,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "room": "actual",
+      "method": "baseline",
+      "correct": 676,
+      "total": 960,
+      "corrected": 0,
+      "broken": 0,
+      "route_changed": 46,
+      "confusion": [
+        [
+          206,
+          13,
+          1,
+          0,
+          0
+        ],
+        [
+          94,
+          194,
+          19,
+          34,
+          19
+        ],
+        [
+          0,
+          0,
+          66,
+          47,
+          7
+        ],
+        [
+          0,
+          0,
+          1,
+          74,
+          45
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          136
+        ]
+      ]
+    },
+    {
+      "room": "actual",
+      "method": "score_only_old_route",
+      "correct": 675,
+      "total": 960,
+      "corrected": 22,
+      "broken": 23,
+      "route_changed": 46,
+      "confusion": [
+        [
+          204,
+          16,
+          0,
+          0,
+          0
+        ],
+        [
+          89,
+          200,
+          17,
+          35,
+          19
+        ],
+        [
+          0,
+          0,
+          60,
+          52,
+          8
+        ],
+        [
+          0,
+          0,
+          1,
+          76,
+          43
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          135
+        ]
+      ]
+    },
+    {
+      "room": "actual",
+      "method": "route_only_old_score",
+      "correct": 672,
+      "total": 960,
+      "corrected": 4,
+      "broken": 8,
+      "route_changed": 46,
+      "confusion": [
+        [
+          205,
+          14,
+          1,
+          0,
+          0
+        ],
+        [
+          94,
+          196,
+          17,
+          35,
+          18
+        ],
+        [
+          0,
+          0,
+          61,
+          51,
+          8
+        ],
+        [
+          0,
+          0,
+          1,
+          74,
+          45
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          136
+        ]
+      ]
+    },
+    {
+      "room": "actual",
+      "method": "actual_failed_candidate",
+      "correct": 679,
+      "total": 960,
+      "corrected": 26,
+      "broken": 23,
+      "route_changed": 46,
+      "confusion": [
+        [
+          204,
+          16,
+          0,
+          0,
+          0
+        ],
+        [
+          90,
+          203,
+          17,
+          33,
+          17
+        ],
+        [
+          0,
+          0,
+          61,
+          50,
+          9
+        ],
+        [
+          0,
+          0,
+          1,
+          76,
+          43
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          135
+        ]
+      ]
+    }
+  ]
+}

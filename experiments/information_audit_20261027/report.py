@@ -1,0 +1,32 @@
+import json,shutil
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+def main():
+    a=json.loads((ROOT/'docs/ACTIVITY_AUDIT_20261027.json').read_text());p=json.loads((ROOT/'docs/POOLING_AUDIT_20261027.json').read_text())
+    assert len(p['records'])==48 and len({r['identifier'] for r in p['records']})==48
+    s=p['summary'];lines=['# 官方说明之后的信息诊断：2026-10-27','','本轮先完成诊断，没有新训练或新平台成绩。原平台最佳0.54保持不变。','',
+    '## 官方说明的使用边界','','依据用户提供的管理员回复：志愿者进行思考、写字、做报告等日常活动；有标签与测试样本独立同分布，二者均无紧邻房间外经过的人；无标签样本环境可能更多样，也可能有室外经过者。没有提供活动标签，没有确认风扇/设备条件，没有说明每个房间人数均匀，也没有说明训练测试属于同一物理房间。本轮不据此推断隐藏标签。','',
+    '## 阶段一：是否安静窗口更容易错？','','在同一条完整记录内部，以测得的幅度运动量或幅度差分强度排序，比较最低一半与最高一半窗口。因此人数和房间保持一致。没有把这些指标称作真实人体活动标签。旧模型的四个留房间代理共44条记录、880窗口；实际054权重的48条记录仅作训练拟合诊断。','',
+    '|评估|指标|较弱一半|较强一半|强减弱|整记录bootstrap 95%区间|','|---|---|---:|---:|---:|---|']
+    for k,v in a['summary'].items():lines.append(f"|{k}|信号指标|{v['low_accuracy']:.2%}|{v['high_accuracy']:.2%}|{v['mean_high_minus_low']:+.2%}|{v['record_bootstrap_ci95']}|")
+    lines+=['','目前没有稳定证据支持“总体错误主要集中在较安静窗口”。尤其留房间0人和4人两组高低活动窗口都失效，活动强度无法解释其错误分布。这个分析不能排除呼吸等更细的微动信息，因为指标本身是粗粒度幅度统计，而且仅比较同记录内部。先降低直接增加微动分支的优先级。','',
+    '## 阶段二：预处理到底压缩了什么？','',
+    '|环节|代码中的实际处理|不能误读成什么|','|---|---|---|',
+    '|幅度频率|1024子载波按8个一组，加掩码平均为128组|保留细节一定更好|',
+    '|幅度时间|600帧按4帧平均为150帧|600帧已经覆盖所有活动周期|',
+    '|幅度归一化|静态分支保留归一化频率形状，动态分支去时间均值|原模型完全没有静态信息|',
+    '|强度信息|原模型另有17维摘要和强度路径|归一化把所有绝对强度都丢掉了|',
+    '|相位|天线对相位按32子载波平均，按时间均值方向对齐、标准化，再4帧平均|绝对相位或细频率相位完整保留|','',
+    '抽查全部48条有标签记录的固定中间600帧窗口。幅度取log(1+功率)/2，只在整个窗口保持有效的频点统计。频率指标是8点平均后重建的动态幅度残差平方和/原动态幅度平方和；时间指标在128组幅度上计算4帧平均后的相应残差比。两者基准不同，不能相加；它们不是人数信息损失率。','',
+    '|指标|中位数|25%分位|75%分位|','|---|---:|---:|---:|']
+    for k in ('frequency8_relative_squared_residual','time4_relative_squared_residual','discarded_frequency_lag1','discarded_frequency_lag4','retained_frequency_lag1','retained_frequency_lag4'):
+        v=s[k];lines.append(f"|{k}|{v['median']:.4f}|{v['q25']:.4f}|{v['q75']:.4f}|")
+    lines+=['',f"抽查窗口时长中位数{s['duration_seconds']['median']:.3f}秒；范围{s['duration_seconds']['minimum']:.3f}—{s['duration_seconds']['maximum']:.3f}秒。",'',
+    '滞后相关比较的是被频率平均删除的残差与保留部分各自的时间连续性。相关性不等于人数相关性，低相关也不能严格证明是噪声；这里没有针对相位细节作同样定量审计。','',
+    '## 下一步的有界对照','','被删除频率细节的邻帧相关中位数约0.001，保留部分约0.528。这与删除部分包含大量不连续噪声的解释相符，但不构成噪声成分的严格鉴定。暂不优先将整个输入恢复到1024子载波。先检查时间细节和相位对齐/归一化；固定原骨干及静态信息路径，做单因素信息保留对照，并配置同参数规模的无额外信息分支作为容量对照。每次都从源房间或源记录训练，不能把已见全数据的原权重拿来声称独立验证。验证同时使用整记录留出和整房间留出；选择依据不能只有训练准确率或单一人数的召回率。',
+    '', '本轮仅证实预处理存在可测压缩，尚未证实被删除的部分能帮助人数识别。不能据此承诺突破0.60，也没有新提交候选。','',
+    '## 复现','','`experiments/information_audit_20261027/activity.py`、`pooling.py`、`report.py`；完整逐记录结果在`docs/ACTIVITY_AUDIT_20261027.json`和`docs/POOLING_AUDIT_20261027.json`。原始CSI、模型权重均未修改。']
+    path=ROOT/'docs/INFORMATION_AUDIT_20261027.md';path.write_text('\n'.join(lines)+'\n',encoding='utf-8');shutil.copyfile(path,ROOT/'2026-10-25_037配方与种子复现/官方说明后的信息诊断_20261027.md')
+    regpath=ROOT/'models/registry.json';reg=json.loads(regpath.read_text(encoding='utf-8-sig'));reg['research_status']='information_audit_stage1_2_completed';reg['research_report']='docs/INFORMATION_AUDIT_20261027.md';reg['updated_date']='2026-10-27';regpath.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print('Saved report, team copy and registry; no model exported.')
+if __name__=='__main__':main()

@@ -1,0 +1,20 @@
+{
+  "id": "best_042",
+  "name": "队友偏置校正版",
+  "path": "models/best_042/model.onnx",
+  "sha256": "a64a7a659b973a08bd8fb158eb1e58c48b2c933199786ffb7c8b26657ca66d52",
+  "bytes": 42905230,
+  "platform_score": 0.42,
+  "source": "user-reported platform result",
+  "owner": "teammate",
+  "status": "retained_milestone",
+  "submission_id": null,
+  "bias": [
+    -0.23435600101947784,
+    -0.7268329858779907,
+    0.37178000807762146,
+    0.37178000807762146,
+    0.21762900054454803
+  ],
+  "training_details": "not independently provided; do not infer from filename"
+}

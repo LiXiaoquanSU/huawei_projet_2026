@@ -1,0 +1,12 @@
+{
+  "id": "best_039",
+  "name": "跨注意力事件",
+  "path": "models/best_039/model.onnx",
+  "sha256": "5553bdec10f5faeab55759aab5750c522634ae149a4730bbe185cf26710ea24d",
+  "bytes": 84861141,
+  "platform_score": 0.39,
+  "source": "user-reported platform result",
+  "owner": "self",
+  "status": "retained_milestone",
+  "submission_id": null
+}

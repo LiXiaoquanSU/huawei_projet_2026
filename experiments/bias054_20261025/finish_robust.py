@@ -1,0 +1,101 @@
+"""Publish a bounded, repeated-record-calibration preferred bias trial."""
+import csv,shutil
+from robust_search import *
+
+def main():
+    s=read(RWORK/'selection_repeated.json');deployment=read(RWORK/'selection.json');folder=RWORK/'export';v=read(folder/'validation.json');resource=read(folder/'resource_check.json');proof=read(folder/'structure_proof.json')
+    assert s['eligible'] and v['raw_windows']==960 and resource['status']=='pass';assert v['correct']==s['source']['correct']==682
+    assert sha(folder/'model.onnx')==resource['sha256']==proof['candidate_sha256'];assert sha(BASES[s['base']]['path'])==BASES[s['base']]['sha256']
+    dest=ROOT/'models/robust_bias054_20261025/01_selective054_bias_stable.onnx';dest.parent.mkdir(parents=True,exist_ok=True);assert not dest.exists();shutil.copy2(folder/'model.onnx',dest)
+    meta=dict(id='robust_bias054_20261025',name='选择性054重复记录校准首选',path=dest.relative_to(ROOT).as_posix(),sha256=sha(dest),bytes=dest.stat().st_size,platform_score=None,status='awaiting_platform',owner='self_bias_on_scored_selective054',source='bounded bias search and repeatedrecord calibration; platform unknown',report='docs/ROBUST_BIAS054_20261025.md',experiment_root=str(RWORK),base_sha256=proof['base_sha256'],base_platform_score=.54,delta=s['delta'],selection=s,local_validation=v,resource_check=resource,structure_proof=proof,training='No neuralnetwork training orweightchanges. 57122vectors,12postprocessingrecipes,3recordfolds,5additionalfixedsplitseeds; nearbestsmaller-radiuschoice.',caveats='Boundedgridanddeclaredcriteriapreferred,NOTglobalorhiddenplatform optimum. CalibrationrecordCV reusesoldproxyteachersandfullsourceteacheralreadysawlabels; notfullynestedblindvalidation. Finalfit312/880isfit,notCV.')
+    save(dest.with_suffix('.json'),meta)
+    for name in ('validation.json','resource_check.json','structure_proof.json'):shutil.copy2(folder/name,dest.parent/name)
+    oldpath=ROOT/'models/bias054_20261025/01_g54_bias_2p020_0m010.json';previous=read(oldpath);assert previous['platform_score'] is None
+    previous.update(status='retained_secondary_untested',recommendation='Superseded as first choice by repeatedrecordcalibration; stillunscored,notafailedplatformmodel.');save(oldpath,previous)
+    reg=read(ROOT/'models/registry.json');reg['research_candidates']=[previous if x.get('sha256')==previous['sha256'] else x for x in reg.get('research_candidates',[]) if x.get('id')!=meta['id']]+[meta]
+    reg['next_submission']=meta;reg['research_status']='repeated_record_bias_checked_awaiting_platform';reg['latest_research']=dict(report=meta['report'],status='preferred_bounded_bias_candidate',best_scored=.54,experiment_root=str(RWORK),vectors=57122,recipes=12,repeat_seeds=5,record_folds=3,new_neural_training_runs=0)
+    reg['candidate_note']='Previousbiaschosenbyrelativegainnotabsoluteaccuracywasnotprovenbest. Expandedboundedgridandrecordselectionstabilitynowpreferselective054delta[-.05,0,.15,-.15,-.15]. Allplatformscoresremainunchanged; thisisuntested.';save(ROOT/'models/registry.json',reg)
+    cp=ROOT/'models/platform_scores.csv'
+    with cp.open(encoding='utf-8-sig',newline='') as f:reader=csv.DictReader(f);fields=reader.fieldnames;rows=list(reader)
+    for row in rows:
+        if row['sha256']==previous['sha256']:row['status']='retained_secondary_untested'
+    entry={k:'' for k in fields};entry.update(model=meta['name'],path=meta['path'],sha256=meta['sha256'],source=meta['source'],status=meta['status'],availability='retained',original_path=meta['path']);rows.append(entry)
+    with cp.open('w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+    snapshot=RWORK/'source_snapshot';snapshot.mkdir(exist_ok=True);codes={}
+    for p in Path(__file__).parent.glob('*.py'):shutil.copy2(p,snapshot/p.name);codes[p.name]=sha(p)
+    recipes=read(RWORK/'repeat_results.json');initial=read(RWORK/'recipes.json');save(ROOT/'checks/robust_bias054_20261025.json',dict(metadata=meta,initial_plan=read(RWORK/'plan.json'),repeat_plan=read(RWORK/'repeat_plan.json'),repeated_recipes=recipes,initial_recipes=initial,folds=read(RWORK/'folds.json'),code_sha256=codes))
+    table='\n'.join(f"|{r['base']}|{r['radius']}|{r['objective']}|{r['mean_cv_macro']*100:.3f}%|{r['std_cv_macro']*100:.3f}pp|{r['mean_cv_correct']:.1f}|{r['positive_repeats']}/5|{r['fit']['correct']}|{r['source']['correct']}|" for r in sorted(recipes,key=lambda r:r['mean_cv_macro'],reverse=True))
+    room_table='\n'.join(f"|{room}|{m['correct']-m['corrected']+m['broken']}/{m['total']}|{m['correct']}/{m['total']}|{m['corrected']}|{m['broken']}|" for room,m in deployment['rooms'].items() if room!='actual')
+    class_table='\n'.join(f"|{k}|{v['baseline_confusion_matrix'][k][k]}|{v['confusion_matrix'][k][k]}|" for k in range(5))
+    neighbors='\n'.join(f"|{n['delta']}|{n['proxy_correct']}|{n['source_correct']}|" for n in s['neighbors'])
+    report=f'''# 扩大054偏置搜索与记录划分稳定性（2026-10-25）
+
+## 结论与边界
+
+上一份`01_g54_bias_2p020_0m010.onnx`只经过有限方向、4个组合比较，且按相对净增选择，不是已证明的最佳偏置。其原Gprime底座本来就有更低的代理基线；按相对增量跨底座选型有局限。此次纠正为比较最终绝对表现，并检查选参流程的记录划分敏感性。
+
+当前首选`{meta['path']}`，{meta['bytes']/1e6:.2f}MB，SHA256 `{meta['sha256']}`。底座改为**已评分选择性054**，SHA256 `{proof['base_sha256']}`。只在最后加`[-0.05,0,+0.15,-0.15,-0.15]`，顺序0–4人；原结构、权重、预处理、内部偏置和分支选择规则保持。它与上一份基于原Gprime的83.68MB版本不同，不能混用其676/960或278/880基线。
+
+这是**限定范围与本轮保守选择规则下的首选**，不是数学全局最优，也不是老师平台最优。平台仍未知，已评分最好仍054。旧偏置候选仍未有分数，保留为备选，不把“取消首选”登记成平台失败。
+
+## 搜索空间与为什么没有五个独立自由度
+
+给5个logit同时加相同常数不改变argmax，因此固定1人残差为0，搜索另外4个相对坐标。每个坐标[-0.30,+0.30]、步长0.05，共13^4=28,561向量/底座，两份054合计57,122向量。没有遍历连续实数或范围以外的偏置，因此不称全局最优。全部在精确预处理预测缓存上比较，不是57,122次神经网络训练。
+
+比较偏置半径0.10/0.20/0.30，与两种选参目标：等房间准确率减0.02×平均偏置平方；等房间NLL加0.10×平均偏置平方。共12种校准流程。使用等房间目标防止样本多的房间独占选择；它仍是一个开发偏好，不能证明老师测试的房间比例相同。
+
+每次选择限制训练侧代理任一房间下降≤2pp，训练侧来源总正确数不减，空房最多损5、4人最多损1，按训练侧数量缩放。这些约束没有看该次留出记录标签再调整。来源仍由已见这些训练标签的全数据教师产生，属于保守诊断约束，而不是新泛化证据。
+
+## 记录级划分能说明什么
+
+880个开发代理窗来自44条完整记录。按房间/人数尽可能均衡分3折，同一原记录20窗全部在同一折，绝不随机把相邻窗分两侧。每折用另外2折挑偏置，再到留出的记录检验。初始一次划分后发现0.30/0.20只差约一窗，于是提前另存repeat_plan.json，固定5个额外划分种子17/137/2026/90421/314159，重复同样流程。
+
+**这些不是新数据或真正新的房间盲测。** 代理教师和房间已经反复用于之前实验；不同外层教师间的训练记录也有重叠，全数据来源教师更已见过标签。本轮不声称教师层面完全嵌套独立。重复划分只检查后处理选参的敏感性，不能消除历史开发选择偏差。
+
+下表CV是“每折重新选偏置的流程”拼接结果，5次重复的平均正确数可为小数；**不是最终同一向量在5个新测试集的成绩**。最终全量拟合列则已用全部代理记录选参，不能冒称独立验证。
+
+|底座|半径|目标|CV房间均值|划分标准差|CV平均正确/880|净增为正次数|最终拟合/880|来源/960|
+|---|---:|---|---:|---:|---:|---:|---:|---:|
+{table}
+
+五组重复前固定规则：均值净增为正，至少4/5次净增为正，平均至少2房间改善，平均任一房间下降≤2pp。先按绝对CV等房间均值比较，若距最高均值≤0.25个百分点，优先较小偏置半径，再看较低划分波动。这是初次结果后的自适应补充设计，不能包装成整轮一开始已预注册。
+
+0.30方案CV平均308.0/880、房间均值32.377%；0.20为307.2/880、32.282%，差仅0.8窗/约0.096pp，但波动更低（0.101pp vs0.170pp）、偏置幅度更小，来源682而非679，因此按规则选择0.20流程。**若只追求这次开发表的最大数值，应选0.30；本轮首选重视小幅和稳定，不把两者混称。** NLL流程没有稳定改善，未选择。
+
+## 最终拟合向量与邻域
+
+在上述流程选定后，用相同准则在全部开发记录上拟合一次，得到`{s['delta']}`。相对原模型，2人相对3/4人的logit提高0.30，3与4的相对分数不变；这可以调整2/3/4分界，却不等于模型学到了新信号或新人数先验。0/1分界只改变0.05。其余边界仍可能变化，054高人数输出不保证逐值保留。
+
+单坐标±0.05邻域如下，来源是已训练诊断、代理是拟合数据，均不能作独立验证：
+
+|残差|代理正确/880|来源正确/960|
+|---|---:|---:|
+{neighbors}
+
+不是所有方向都不敏感：2人残差从0.15降到0.10时代理312→303。邻域比较用于公开敏感性，没有再拿来源最高的邻点替换已选流程。
+
+## 最终固定向量的开发拟合结果
+
+原选择性054为289/880，新向量312/880（+23）。此前原Gprime两参数候选299/880，选择性底座相同两参数版本306/880；这些都是反复开发过的数据比较，不证明平台将同比提升。
+
+|房间|原选择性054|新偏置|纠正|改坏|
+|---|---:|---:|---:|---:|
+{room_table}
+
+## 最终原始输入与资源核对
+
+实际960个原始窗口逐条跑最终ONNX，**{v['correct']}/960，对照{v['base_correct']}/960**，纠正{v['corrected']}、改错{v['broken']}。所有新输出逐值等于同图原输出加指定残差，原节点/参数逐字节核对保留。源数据已用于训练，只是诊断，不是隐藏测试。
+
+|真实人数|原正确|新正确|
+|---|---:|---:|
+{class_table}
+
+空房损1、4人损1，1人增5，2/3人正确数不变。偏置不是无损改进。独立CPU4线程平均最慢{max(c['cpu_mean_s'] for c in resource['cases']):.3f}秒/窗，95分位最慢{max(c['cpu_p95_s'] for c in resource['cases']):.3f}秒；峰值commit {resource['peak_commit_bytes']/1e9:.2f}GB，文件内嵌权重，官方输入/5维FLOAT输出检查通过。
+
+本轮只新增这一份待测文件。旧两参数偏置取消首选但保留文件、成绩未知；两份已评分054和已评分051均不改动。大网格、逐记录表、划分、程序快照和全960预测保留D:/huawei2026-experiments/robust_bias054_20261025，小型证据为checks/robust_bias054_20261025.json。没有Git推送。平台实测才决定是否超过054。
+'''
+    (ROOT/meta['report']).write_text(report,encoding='utf-8')
+    for filename,link in [('README.md',meta['report']),('docs/SUMMARY.md','ROBUST_BIAS054_20261025.md'),('models/README.md','../'+meta['report'])]:
+        p=ROOT/filename;text=p.read_text(encoding='utf-8');heading,rest=text.split('\n',1);p.write_text(heading+'\n\n最新首选：选择性054最终偏置[-.05,0,.15,-.15,-.15]，57122组有界对照与重复记录校准后按近最佳保守规则选择。旧两参数候选保留为未测备选。平台最佳仍054，新文件未测，不能称平台最优。'+f'[完整记录]({link})。以下旧状态为历史。\n'+rest,encoding='utf-8')
+    print('ROBUST_PUBLISHED',dest,meta['sha256'],flush=True)
+if __name__=='__main__':main()

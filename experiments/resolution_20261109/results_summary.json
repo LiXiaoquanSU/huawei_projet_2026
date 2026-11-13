@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-09",
+  "fits": 6,
+  "epochs": 72,
+  "aggregate": {
+    "raw": {
+      "correct": 367,
+      "total": 960,
+      "accuracy": 0.38229166666666664,
+      "fold_correct": [
+        84,
+        103,
+        180
+      ],
+      "confusion": [
+        [
+          40,
+          180,
+          0,
+          0,
+          0
+        ],
+        [
+          156,
+          160,
+          42,
+          2,
+          0
+        ],
+        [
+          4,
+          32,
+          4,
+          75,
+          5
+        ],
+        [
+          0,
+          19,
+          27,
+          44,
+          30
+        ],
+        [
+          0,
+          0,
+          5,
+          16,
+          119
+        ]
+      ],
+      "recall": [
+        0.18181818181818182,
+        0.4444444444444444,
+        0.03333333333333333,
+        0.36666666666666664,
+        0.85
+      ],
+      "source_correct": 1715,
+      "source_total": 1920,
+      "parameters": 349093
+    },
+    "time300": {
+      "correct": 369,
+      "total": 960,
+      "accuracy": 0.384375,
+      "fold_correct": [
+        84,
+        104,
+        181
+      ],
+      "confusion": [
+        [
+          40,
+          179,
+          1,
+          0,
+          0
+        ],
+        [
+          159,
+          160,
+          40,
+          1,
+          0
+        ],
+        [
+          7,
+          32,
+          0,
+          75,
+          6
+        ],
+        [
+          0,
+          3,
+          38,
+          60,
+          19
+        ],
+        [
+          0,
+          0,
+          4,
+          27,
+          109
+        ]
+      ],
+      "recall": [
+        0.18181818181818182,
+        0.4444444444444444,
+        0.0,
+        0.5,
+        0.7785714285714286
+      ],
+      "source_correct": 1735,
+      "source_total": 1920,
+      "parameters": 349093
+    },
+    "freq64": {
+      "correct": 358,
+      "total": 960,
+      "accuracy": 0.3729166666666667,
+      "fold_correct": [
+        102,
+        85,
+        171
+      ],
+      "confusion": [
+        [
+          40,
+          180,
+          0,
+          0,
+          0
+        ],
+        [
+          159,
+          160,
+          40,
+          1,
+          0
+        ],
+        [
+          15,
+          37,
+          6,
+          44,
+          18
+        ],
+        [
+          0,
+          7,
+          14,
+          55,
+          44
+        ],
+        [
+          0,
+          0,
+          9,
+          34,
+          97
+        ]
+      ],
+      "recall": [
+        0.18181818181818182,
+        0.4444444444444444,
+        0.05,
+        0.4583333333333333,
+        0.6928571428571428
+      ],
+      "source_correct": 1635,
+      "source_total": 1920,
+      "parameters": 349093
+    }
+  },
+  "contrasts": {
+    "time300": {
+      "corrected": 16,
+      "broken": 14,
+      "changed": 58,
+      "record_bootstrap95": [
+        -0.02395833469927311,
+        0.02604166604578495
+      ]
+    },
+    "freq64": {
+      "corrected": 39,
+      "broken": 48,
+      "changed": 138,
+      "record_bootstrap95": [
+        -0.07502604443579909,
+        0.0520833320915699
+      ]
+    }
+  },
+  "cache_checks": {
+    "rows": "See D cache manifest",
+    "baseline_forward_max_error": 0.0,
+    "time_reduction_baseline_max_error": 5.960464477539063e-08,
+    "source": "raw CSI; identical carrier validity mask and bounded ratio transform; no labels used for preprocessing"
+  },
+  "platform_score": null,
+  "platform_best": 0.54,
+  "next_submission": null,
+  "status": "complete_no_export"
+}
